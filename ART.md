@@ -43,3 +43,7 @@ The five final original 4 × 2 atlases are retained in `art-sources/foes-a.png`,
 Processing consists only of slicing each equal grid cell, resizing its canvas to 448 × 448, and WebP encoding at quality 90 with full-quality alpha. No character content was painted or reconstructed programmatically. The atlas originals remain unchanged. `art-sources/asset-report.json` records the source generation filename, grid cell and visible bounds of every delivered sprite.
 
 No external copyrighted game assets are included in these creature sheets.
+
+## Approved hero direction and interface art
+
+The four selection portraits are cropped from the user-approved clean manga sheet, with the original faces, vivid limited colors and themed backgrounds retained. The title gateway, four arena backgrounds and dedicated crossed-blade crown icon were generated specifically for Hollow Oath II. Their source images are retained in the originating image-generation conversation. Game assets are encoded in WebP; app icons are PNG at 192 and 512 px with a separate maskable declaration. No external image URLs are required at runtime.
