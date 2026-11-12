@@ -1,0 +1,265 @@
+{
+  "music-title": {
+    "title": "An Open Gate",
+    "bpm": 92,
+    "bars": 32,
+    "duration": 83.47827664399092,
+    "loop": true,
+    "loopStart": 0,
+    "loopEnd": 83.478272,
+    "notes": 617,
+    "instruments": 9,
+    "samePitchOverlaps": 0,
+    "peakDb": -1.514414278762366,
+    "rmsDb": -15.66812423904505,
+    "loopSeamJump": 0.008442211055276386,
+    "files": {
+      "ogg": "audio/music-title.ogg",
+      "m4a": "audio/music-title.m4a"
+    }
+  },
+  "music-camp": {
+    "title": "A Fire for Two",
+    "bpm": 84,
+    "bars": 24,
+    "duration": 68.57145124716553,
+    "loop": true,
+    "loopStart": 0,
+    "loopEnd": 68.571456,
+    "notes": 386,
+    "instruments": 9,
+    "samePitchOverlaps": 0,
+    "peakDb": -1.7754306526835921,
+    "rmsDb": -15.39102157243452,
+    "loopSeamJump": 0.012288436954238521,
+    "files": {
+      "ogg": "audio/music-camp.ogg",
+      "m4a": "audio/music-camp.m4a"
+    }
+  },
+  "music-battle-1": {
+    "title": "The Briar Road",
+    "bpm": 138,
+    "bars": 48,
+    "duration": 83.47834467120181,
+    "loop": true,
+    "loopStart": 0,
+    "loopEnd": 83.478336,
+    "notes": 2010,
+    "instruments": 9,
+    "samePitchOverlaps": 0,
+    "peakDb": -2.022814831647933,
+    "rmsDb": -15.39102157243452,
+    "loopSeamJump": 0.015556390597381078,
+    "files": {
+      "ogg": "audio/music-battle-1.ogg",
+      "m4a": "audio/music-battle-1.m4a"
+    }
+  },
+  "music-battle-2": {
+    "title": "Brass and Undertow",
+    "bpm": 144,
+    "bars": 48,
+    "duration": 80.00006802721089,
+    "loop": true,
+    "loopStart": 0,
+    "loopEnd": 80.000064,
+    "notes": 1978,
+    "instruments": 9,
+    "samePitchOverlaps": 0,
+    "peakDb": -1.5144142787623671,
+    "rmsDb": -15.670489132288967,
+    "loopSeamJump": 0.0102,
+    "files": {
+      "ogg": "audio/music-battle-2.ogg",
+      "m4a": "audio/music-battle-2.m4a"
+    }
+  },
+  "music-battle-3": {
+    "title": "Across the Violet Sky",
+    "bpm": 152,
+    "bars": 48,
+    "duration": 75.78950113378684,
+    "loop": true,
+    "loopStart": 0,
+    "loopEnd": 75.789504,
+    "notes": 2010,
+    "instruments": 9,
+    "samePitchOverlaps": 0,
+    "peakDb": -1.9599167993067412,
+    "rmsDb": -15.391021572434521,
+    "loopSeamJump": 0.004150497561527758,
+    "files": {
+      "ogg": "audio/music-battle-3.ogg",
+      "m4a": "audio/music-battle-3.m4a"
+    }
+  },
+  "music-boss": {
+    "title": "The Guardian Wakes",
+    "bpm": 160,
+    "bars": 48,
+    "duration": 72.0,
+    "loop": true,
+    "loopStart": 0,
+    "loopEnd": 72.0,
+    "notes": 2106,
+    "instruments": 9,
+    "samePitchOverlaps": 0,
+    "peakDb": -1.5144142787623671,
+    "rmsDb": -16.309774177562282,
+    "loopSeamJump": 0.011024853392907007,
+    "files": {
+      "ogg": "audio/music-boss.ogg",
+      "m4a": "audio/music-boss.m4a"
+    }
+  },
+  "music-final": {
+    "title": "Two Against the Eclipse",
+    "bpm": 168,
+    "bars": 48,
+    "duration": 68.57145124716553,
+    "loop": true,
+    "loopStart": 0,
+    "loopEnd": 68.571456,
+    "notes": 2106,
+    "instruments": 9,
+    "samePitchOverlaps": 0,
+    "peakDb": -1.5144142787623671,
+    "rmsDb": -16.69492266282323,
+    "loopSeamJump": 0.008211360634081913,
+    "files": {
+      "ogg": "audio/music-final.ogg",
+      "m4a": "audio/music-final.m4a"
+    }
+  },
+  "music-bonus": {
+    "title": "Lanterns Below",
+    "bpm": 128,
+    "bars": 48,
+    "duration": 90.0,
+    "loop": true,
+    "loopStart": 0,
+    "loopEnd": 90.0,
+    "notes": 2010,
+    "instruments": 9,
+    "samePitchOverlaps": 0,
+    "peakDb": -1.5144142787623671,
+    "rmsDb": -17.062105512252465,
+    "loopSeamJump": 0.0071359223300970845,
+    "files": {
+      "ogg": "audio/music-bonus.ogg",
+      "m4a": "audio/music-bonus.m4a"
+    }
+  },
+  "music-victory": {
+    "title": "A Promise Kept",
+    "bpm": 116,
+    "duration": 6.637936507936508,
+    "loop": false,
+    "notes": 24,
+    "samePitchOverlaps": 0,
+    "peakDb": -1.5144142787623682,
+    "rmsDb": -17.638949652000264,
+    "loopSeamJump": null,
+    "files": {
+      "ogg": "audio/music-victory.ogg",
+      "m4a": "audio/music-victory.m4a"
+    }
+  },
+  "music-defeat": {
+    "title": "Embers Remain",
+    "bpm": 76,
+    "duration": 8.81578231292517,
+    "loop": false,
+    "notes": 16,
+    "samePitchOverlaps": 0,
+    "peakDb": -1.5144142787623671,
+    "rmsDb": -15.713854326251768,
+    "loopSeamJump": null,
+    "files": {
+      "ogg": "audio/music-defeat.ogg",
+      "m4a": "audio/music-defeat.m4a"
+    }
+  },
+  "sfx-steel": {
+    "duration": 0.24,
+    "loop": false,
+    "peakDb": -9.370421659154896,
+    "files": {
+      "ogg": "audio/sfx-steel.ogg",
+      "m4a": "audio/sfx-steel.m4a"
+    }
+  },
+  "sfx-fire": {
+    "duration": 0.5,
+    "loop": false,
+    "peakDb": -11.372724716820253,
+    "files": {
+      "ogg": "audio/sfx-fire.ogg",
+      "m4a": "audio/sfx-fire.m4a"
+    }
+  },
+  "sfx-ice": {
+    "duration": 0.56,
+    "loop": false,
+    "peakDb": -11.372724716820253,
+    "files": {
+      "ogg": "audio/sfx-ice.ogg",
+      "m4a": "audio/sfx-ice.m4a"
+    }
+  },
+  "sfx-heal": {
+    "duration": 0.72,
+    "loop": false,
+    "peakDb": -11.372724716820253,
+    "files": {
+      "ogg": "audio/sfx-heal.ogg",
+      "m4a": "audio/sfx-heal.m4a"
+    }
+  },
+  "sfx-guard": {
+    "duration": 0.52,
+    "loop": false,
+    "peakDb": -11.372724716820253,
+    "files": {
+      "ogg": "audio/sfx-guard.ogg",
+      "m4a": "audio/sfx-guard.m4a"
+    }
+  },
+  "sfx-reward": {
+    "duration": 0.85,
+    "loop": false,
+    "peakDb": -11.372724716820253,
+    "files": {
+      "ogg": "audio/sfx-reward.ogg",
+      "m4a": "audio/sfx-reward.m4a"
+    }
+  },
+  "sfx-select": {
+    "duration": 0.09,
+    "loop": false,
+    "peakDb": -11.372724716820253,
+    "files": {
+      "ogg": "audio/sfx-select.ogg",
+      "m4a": "audio/sfx-select.m4a"
+    }
+  },
+  "sfx-hit": {
+    "duration": 0.19,
+    "loop": false,
+    "peakDb": -9.370421659154896,
+    "files": {
+      "ogg": "audio/sfx-hit.ogg",
+      "m4a": "audio/sfx-hit.m4a"
+    }
+  },
+  "sfx-storm": {
+    "duration": 0.46,
+    "loop": false,
+    "peakDb": -9.370421659154896,
+    "files": {
+      "ogg": "audio/sfx-storm.ogg",
+      "m4a": "audio/sfx-storm.m4a"
+    }
+  }
+}
