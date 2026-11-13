@@ -1,3 +1,4 @@
+import {bossPhases} from './bosses.ts';
 import {CHAPTERS,FOES,chapterIndex,MODE_INFO} from './content.ts';
 import type {Run,CombatEvent,Enemy} from './engine.ts';
 import {POSES,creatureStem,creaturePose,poseAsset,deathOpacity} from './animation.ts';
@@ -81,7 +82,7 @@ export class Arena {
         c.translate(x+recoil,base+bob);c.scale(breathe,breathe);c.drawImage(sprite,-dw/2,-dh*(CREATURE_ANCHORS[stem]??.94),dw,dh);c.setTransform(Math.min(2,window.devicePixelRatio||1),0,0,Math.min(2,window.devicePixelRatio||1),0,0);
       }
       if(e.hp>0){
-        const barWidth=count===1?Math.min(w-44,300):Math.min(size*.94,170),barY=Math.max(36,rect.y-10);
+        const barWidth=count===1?Math.min(w-44,300):Math.min(size*.94,170),barY=Math.max(e.boss?58:36,rect.y-10);
         this.label(e,x,barY,barWidth,chosen,r);
       }
       c.restore();
@@ -96,8 +97,9 @@ export class Arena {
     c.textAlign='center';c.font=`600 ${e.boss?14:11}px system-ui`;c.lineWidth=3;c.strokeStyle='#0b1a2dee';c.fillStyle=selected?'#fff3c5':'#f2f5ef';
     const name=e.name.length>23&&r.enemies.length>1?e.name.slice(0,21)+'…':e.name;c.strokeText(name,x,y-7);c.fillText(name,x,y-7);
     c.fillStyle='#112338ee';this.round(x-w/2,y,w,6,3);c.fill();c.fillStyle=e.boss?'#edb476':selected?'#90dfad':'#c3d6cc';this.round(x-w/2,y,w*Math.max(0,e.hp/e.maxHp),6,3);c.fill();
+    if(e.chapterBoss){c.fillStyle='#101f2dcc';for(let i=1;i<bossPhases(r.trip?.wave??r.wave).length;i++)c.fillRect(x-w/2+w*i/bossPhases(r.trip?.wave??r.wave).length-1,y,2,6);}
     if(e.preparation>0){
-      c.fillStyle='#1a1428ee';this.round(x-w/2,y+11,w,16,3);c.fill();c.fillStyle=e.intent==='heal'?'#a7edbd':'#ffd79a';c.font='700 9px system-ui';c.fillText(`${e.intent==='heal'?'MENDING':e.intent==='curse'?'CURSE':'HEAVY BLOW'} · ${e.preparation.toFixed(1)}s`,x,y+22);
+      c.fillStyle='#1a1428ee';this.round(x-w/2,y+11,w,16,3);c.fill();c.fillStyle=e.intent==='heal'?'#a7edbd':'#ffd79a';c.font='700 9px system-ui';c.fillText(`${e.intent==='heal'?'MENDING':e.intent==='curse'?'CURSE':e.intent==='strike'?'STRIKE':'HEAVY BLOW'} · ${e.preparation.toFixed(1)}s`,x,y+22);
     }else{
       c.font='600 8px system-ui';c.fillStyle='#f2f6e9';c.strokeStyle='#0b1a2d';c.lineWidth=3;
       const status=e.ward?`SEAL: ${MODE_INFO[e.ward].name.toUpperCase()}`:e.exposedUntil>r.time?'EXPOSED':e.markedUntil>r.time?'MARKED':e.chapterBoss?`FORM ${e.form} / 2`:e.boss?'WARDEN':e.role==='guard'&&r.enemies.some(a=>a.id!==e.id&&a.hp>0)?'PROTECTING':`WEAK: ${FOES[e.family]!.weakness.toUpperCase()}`;

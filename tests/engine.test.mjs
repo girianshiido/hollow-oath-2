@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {newRun,newHero,stats,spawnGroup,tick,cast,recruit,buyGear,buySkill,retreat,resume,enterExpedition,nextDepth,dayKey,contractRule} from '../src/engine.ts';
+import {newRun,newHero,stats,spawnGroup,tick,cast,recruit,buyGear,buySkill,retreat,resume,enterExpedition,nextDepth,dayKey,contractRule,finishBossScene} from '../src/engine.ts';
 import {CLASSES,CLASS_IDS} from '../src/content.ts';
 import {defaults,decodeProfile,validRun,exportText,importText} from '../src/saves.ts';
 
@@ -35,8 +35,8 @@ test('Mend targets the most wounded living ally and never revives a fallen ally'
  r.heroes[1].hp=0;r.heroes[0].cooldowns[0]=0;r.heroes[0].mp=100;cast(r,0,0);assert.equal(r.heroes[1].hp,0);
 });
 test('boss transformation changes behavior without replacing HP or losing progress',()=>{
- const r=newRun('vanguard');r.wave=4;r.cursor=31;spawnGroup(r);const e=r.enemies[0];e.hp=e.maxHp*.51;r.heroes[0].level=20;
- const oldSpeed=e.speed;cast(r,0,0);assert.equal(e.form,2);assert.ok(e.speed>oldSpeed);assert.ok(e.hp<=e.maxHp*.5);assert.ok(e.hp>0);
+ const r=newRun('vanguard');r.wave=4;r.cursor=31;spawnGroup(r);finishBossScene(r);const e=r.enemies[0];e.hp=e.maxHp*.68;r.heroes[0].level=20;
+ const oldSpeed=e.speed;cast(r,0,0);assert.equal(e.form,2);assert.ok(e.speed>oldSpeed);assert.ok(e.hp<=Math.ceil(e.maxHp*2/3));assert.ok(e.hp>0);
 });
 test('retreat preserves earnings, upgrades and XP while resetting only wave position',()=>{
  const r=newRun('vanguard');r.gold=500;r.essence=12;r.heroes[0].xp=30;r.cursor=10;
@@ -47,8 +47,8 @@ test('bonus expeditions do not advance or overwrite campaign progression',()=>{
  const r=newRun('vanguard');r.phase='recruit';r.cleared=4;r.wave=5;recruit(r,'hexweaver');assert.ok(enterExpedition(r,'lantern'));assert.equal(r.trip.mode,'sanctuary');assert.equal(r.wave,5);retreat(r);assert.equal(r.trip,null);assert.equal(r.wave,5);assert.equal(r.cleared,4);
 });
 test('sanctuary first-clear relic is awarded once; replays remain possible',()=>{
- const r=newRun('vanguard');r.phase='recruit';r.cleared=4;r.wave=5;recruit(r,'hexweaver');enterExpedition(r,'lantern');r.trip.cursor=31;spawnGroup(r);r.enemies[0].hp=1;r.heroes[0].clock=.99;tick(r,3);
- assert.equal(r.phase,'expedition-clear');assert.deepEqual(r.relics,['lantern']);assert.deepEqual(r.sanctuaries,['lantern']);retreat(r);enterExpedition(r,'lantern');r.trip.cursor=31;spawnGroup(r);r.enemies[0].hp=1;r.heroes[0].clock=.99;tick(r,3);assert.equal(r.relics.length,1);
+ const r=newRun('vanguard');r.phase='recruit';r.cleared=4;r.wave=5;recruit(r,'hexweaver');enterExpedition(r,'lantern');r.trip.cursor=31;spawnGroup(r);finishBossScene(r);r.enemies[0].stage=3;r.enemies[0].hp=1;r.heroes[0].clock=.99;tick(r,3);
+ assert.equal(r.phase,'expedition-clear');assert.deepEqual(r.relics,['lantern']);assert.deepEqual(r.sanctuaries,['lantern']);retreat(r);enterExpedition(r,'lantern');r.trip.cursor=31;spawnGroup(r);finishBossScene(r);r.enemies[0].stage=3;r.enemies[0].hp=1;r.heroes[0].clock=.99;tick(r,3);assert.equal(r.relics.length,1);
 });
 test('Abyss continues by depths and offers limited recovery',()=>{
  const r=newRun('vanguard');r.phase='recruit';r.wave=5;r.cleared=4;recruit(r,'hexweaver');enterExpedition(r,'abyss');r.phase='expedition-clear';r.heroes[0].hp=10;const max=stats(r.heroes[0]).hp;assert.ok(nextDepth(r));assert.equal(r.trip.floor,2);assert.ok(r.heroes[0].hp>10&&r.heroes[0].hp<max);assert.equal(r.wave,5);

@@ -10,7 +10,7 @@ Play: **https://girianshiido.github.io/hollow-oath-2/**
 - Recruit one of the other three heroes after wave 4. Six duos, twelve starting orders. Companions inherit the leader's level and equipment ranks.
 - Exactly 32 waves of 32 enemies, including the guardian: 1,024 enemies in the campaign. Groups of one to three arrive automatically.
 - A shared focus target, enemy guards and healers, visible preparations, interruptions, shields, exposure, marks and elemental weaknesses. Both heroes keep attacking while abilities recover.
-- Forty-eight illustrated regular monster families (32 base designs plus 16 introduced every second wave) and eight boss designs with two forms each. Every creature/form has five original animation drawings: two breathing idles, attack anticipation, actual strike and hurt. The hurt pose is reused for the death fade. Chapter guardians transform at half HP, changing speed, attack and armor. Intermediate wardens use the chapter's first-form illustration.
+- Forty-eight illustrated regular monster families (32 base designs plus 16 introduced every second wave) and eight boss designs with two forms each. Every creature/form has five original animation drawings: two breathing idles, attack anticipation, actual strike and hurt. The hurt pose is reused for the death fade. Chapter guardians transform around the middle combat phase, changing speed, attack and armor. Intermediate wardens use the chapter's first-form illustration.
 - Four original battle environments, an illustrated title screen and dedicated app icon, all in the approved vivid manga direction.
 - Nine original full-length music loops including dedicated title and selection themes, victory/defeat stingers and eleven sound recordings, including three swords. Web Audio gain buses control all playing voices; sample-aligned buffer loops use OGG with decoded AAC/M4A fallback for iOS. See AUDIO.md.
 - Permanent gold equipment upgrades and essence ability upgrades, available at camp after retreat, defeat and chapter breaks. No forced weapon-rank damage penalty. Earned gold, essence, XP and upgrades survive defeat.
@@ -66,3 +66,13 @@ All 28 creature identities/forms use five distinct transparent drawings, 140 fra
 HP, damage and level-up recovery were rebalanced alongside independent combat orders and breakable seals. All twelve starting orders complete in deterministic tactical simulations (48.5–64.5 simulation minutes, 4–19 defeats); these are automated outcomes, not human completion targets. Existing version-one saves and backups remain valid.
 
 Audio regression checks cover atomic starts, stale decode cancellation, duplicate requests, live volume/mute, sample loop bounds, background restoration and stalled WebKit context recovery. A physical iPhone SE remains necessary to verify device-specific audio behavior.
+
+## Chapter guardian revision (1.3)
+
+Every fourth campaign wave now ends with a 3.2-second animated guardian reveal, chapter-colored rune, full creature illustration, name and tactical hint. The existing boss/final music starts with the reveal. Presentations can be skipped, respect reduced motion, and freeze combat, recovery and cooldown clocks. Entry waits for the illustration to finish loading.
+
+Chapter guardian endurance is 4.5–6 times that of a same-wave warden. Chapters I–IV have three named phases, V–VII four, and VIII five. Each phase changes the seal and rotates the guardian's attack pattern; later stages shorten preparations. Physical form changes retain the second illustrated creature sequence. A 1.6-second protected phase reveal prevents either side attacking during the transition. Health remains one continuous pool, with boundary caps ensuring each phase is encountered even with very high damage; no phase resets HP. The Root Queen's finite healing cannot restore a completed phase.
+
+Existing in-progress encounters retain their saved HP and do not receive an endurance increase midway through combat. Optional presentation and stage fields preserve version-one save compatibility. The same guardian presentation rules apply to expedition guardians.
+
+Revision 1.3 verification: 47 regression tests pass. All twelve starting orders complete (52.1–76.6 simulation minutes, 3–26 defeats). One tactical Hexweaver/Oathkeeper run cleared individual guardians in 23–56 combat seconds, excluding presentation time; these figures are automated balance checks, not human playtime targets.

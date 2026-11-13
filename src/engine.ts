@@ -1,3 +1,4 @@
+import {chapterEndurance,bossPhases,bossWard,bossMove,bossForm,bossPhase} from './bosses.ts';
 import {CLASSES,CLASS_IDS,SKILLS,FOES,CHAPTERS,SANCTUARIES,ABYSS_RULES,chapterIndex,COMBAT_MODES,MODE_INFO,foeUnlockWave} from './content.ts';
 import type {ClassId,SkillId,EnemyRole,CombatMode} from './content.ts';
 
@@ -10,7 +11,7 @@ export interface Enemy {
   id:number; family:number; name:string; role:EnemyRole; hp:number; maxHp:number; atk:number; armor:number; speed:number;
   clock:number; attacks:number; preparation:number; intent:'strike'|'heavy'|'heal'|'curse';
   exposedUntil:number; markedUntil:number; slowUntil:number; burnUntil:number; healSpent:number;
-  boss:boolean; chapterBoss:boolean; form:1|2; formName:string; art:string;ward?:Exclude<CombatMode,'mend'>;
+  boss:boolean; chapterBoss:boolean; form:1|2; formName:string; art:string;ward?:Exclude<CombatMode,'mend'>;stage?:number;
 }
 export type Phase='fight'|'transition'|'camp'|'recruit'|'complete'|'expedition-clear'|'defeat';
 export type Mode='campaign'|'sanctuary'|'abyss'|'contract';
@@ -19,9 +20,9 @@ export interface Run {
   id:string;name:string;created:number;heroes:Hero[];wave:number;cursor:number;cleared:number;
   gold:number;essence:number;deaths:number;kills:number;time:number;phase:Phase;enemies:Enemy[];target:number|null;
   transition:number;trip:Trip|null;relics:string[];relic:string|null;sanctuaries:string[];abyssBest:number;
-  contracts:string[];interrupts:number;totalGold:number;log:string[];
+  contracts:string[];interrupts:number;totalGold:number;log:string[];bossScene?:{kind:'entrance'|'shift';remaining:number;duration:number};
 }
-export interface CombatEvent {kind:'damage'|'heal'|'shield'|'cast'|'death'|'transform'|'reward'|'interrupt'|'hero-hit'|'enemy-strike'|'ward-break';target:number;amount?:number;hero?:number;skill?:SkillId;critical?:boolean;action?:CombatMode;}
+export interface CombatEvent {kind:'damage'|'heal'|'shield'|'cast'|'death'|'transform'|'reward'|'interrupt'|'hero-hit'|'enemy-strike'|'ward-break'|'boss-phase';target:number;amount?:number;hero?:number;skill?:SkillId;critical?:boolean;action?:CombatMode;}
 export interface Stats {hp:number;mp:number;atk:number;armor:number;speed:number;regen:number;}
 export const xpGoal=(level:number)=>Math.round(45+level*19+level**1.5*6);
 export function stats(h:Hero):Stats {
@@ -52,11 +53,11 @@ function enemyAt(wave:number,family:number,id:number,boss=false,chapter=false,fl
   const guard=f.role==='guard',swift=f.role==='swift';
   const chapterId=chapterIndex(wave),c=CHAPTERS[chapterId]!;
   const pressure=1+Math.min(.50,Math.max(0,wave-1)*.025);
-  const hp=Math.round((boss?(chapter?465:230):(guard?58:swift?39:49))*scale*pressure);
+  const hp=Math.round((boss?(chapter?230*chapterEndurance(wave):230):(guard?58:swift?39:49))*scale*pressure);
   return {id,family:family%FOES.length,name:boss?(chapter?c.boss:`${CHAPTERS[chapterId]!.short} Warden`):f.name,role:boss?'striker':f.role,
     hp,maxHp:hp,atk:(boss?(chapter?31:25):swift?11:guard?15:14)*scale**.87,armor:(boss?6:guard?9:3)*scale**.65,
     speed:boss?.85:swift?1.12:guard?.57:.73,clock:0,attacks:0,preparation:0,intent:'strike',exposedUntil:0,markedUntil:0,slowUntil:0,burnUntil:0,healSpent:0,
-    boss,chapterBoss:chapter,form:1,formName:chapter?c.form:'Unbound',art:boss?`boss-${chapterId+1}`:`foe-${family%FOES.length+1}`};
+    boss,chapterBoss:chapter,...(chapter?{stage:1}:{}),form:1,formName:chapter?c.form:'Unbound',art:boss?`boss-${chapterId+1}`:`foe-${family%FOES.length+1}`};
 }
 export function spawnGroup(r:Run){
   const wave=effectiveWave(r),n=cursor(r),boss=n===31;
@@ -68,10 +69,11 @@ export function spawnGroup(r:Run){
     const family=arrival!==undefined&&n===0&&i===0?arrival:wave===1&&n<5?[0,2,4,1,3][n]!:available[((n+i)*7+(wave-1)*11)%available.length]!;
     const e=enemyAt(wave,family,n+i,boss,boss&&(r.trip!==null||wave%4===0),r.trip?.mode==='abyss'?r.trip.floor:0);
     if(r.trip?.rule==='fury')e.atk*=1.12;
-    if(wave>=2&&(e.chapterBoss||!boss&&[7,15,23].includes(n+i)))e.ward=(['steel','ember','rime','storm'] as const)[(wave+n+i)%4];
+    if(e.chapterBoss)e.ward=bossWard(wave,1);else if(wave>=2&&!boss&&[7,15,23].includes(n+i))e.ward=(['steel','ember','rime','storm'] as const)[(wave+n+i)%4];
     return e;
   });
   r.target=r.enemies[0]!.id;r.phase='fight';r.transition=0;
+  if(r.enemies[0]?.chapterBoss)r.bossScene={kind:'entrance',remaining:3.2,duration:3.2};else delete r.bossScene;
   for(const h of r.heroes)h.clock=Math.min(.65,h.clock);
 }
 export function recruit(r:Run,id:ClassId):boolean {
@@ -101,7 +103,7 @@ export function retreat(r:Run):boolean {
   if(!['fight','transition','defeat','expedition-clear'].includes(r.phase))return false;
   if(r.trip){r.trip=null;}r.enemies=[];r.target=null;r.cursor=0;
   r.phase=r.cleared>=32?'complete':r.heroes.length===1&&r.cleared>=4?'recruit':'camp';
-  refill(r);note(r,'Returned to camp. Earned gold, essence and experience are safe.');return true;
+  delete r.bossScene;refill(r);note(r,'Returned to camp. Earned gold, essence and experience are safe.');return true;
 }
 export function enterExpedition(r:Run,id:string,day=dayKey()):boolean{
   if(!canPrepare(r)||r.heroes.length<2)return false;
@@ -130,6 +132,8 @@ export function setMode(r:Run,index:number,mode:CombatMode):boolean{
   const h=r.heroes[index];if(!h||h.hp<=0||!COMBAT_MODES.includes(mode)||!['fight','transition'].includes(r.phase))return false;
   h.mode=mode;return true;
 }
+export function finishBossScene(r:Run){if(!r.bossScene)return false;delete r.bossScene;return true;}
+export function currentBossStage(r:Run,e:Enemy){const count=bossPhases(effectiveWave(r)).length;return e.stage??Math.min(count,Math.max(e.form===2?Math.floor(count/2)+1:1,Math.floor((1-e.hp/e.maxHp)*count)+1));}
 function hurtEnemy(r:Run,e:Enemy,raw:number,element:'physical'|'fire'|'ice'|'light',events:CombatEvent[],hero?:number){
   if(e.hp<=0)return;
   const weakness=FOES[e.family]!.weakness;
@@ -141,7 +145,9 @@ function hurtEnemy(r:Run,e:Enemy,raw:number,element:'physical'|'fire'|'ice'|'lig
   if(element==='physical'&&r.relic==='forge')power*=1.12;
   if(alive(r).some(g=>g.id!==e.id&&g.role==='guard'))power*=.65;
   const damage=Math.max(1,Math.round(power-(element==='light'?0:e.armor*(element==='physical'?1:.45))));
-  e.hp=Math.max(0,e.hp-damage);events.push({kind:'damage',target:e.id,amount:damage,hero,critical:r.time<e.markedUntil||r.time<e.exposedUntil});
+  const stage=currentBossStage(r,e),count=bossPhases(effectiveWave(r)).length;
+  const boundary=e.chapterBoss&&stage<count?Math.min(e.hp,Math.ceil(e.maxHp*(count-stage)/count)):0;
+  const previousHp=e.hp;e.hp=Math.max(boundary,e.hp-damage);events.push({kind:'damage',target:e.id,amount:Math.round(previousHp-e.hp),hero,critical:r.time<e.markedUntil||r.time<e.exposedUntil});
   if(e.hp<=0){
     events.push({kind:'death',target:e.id});r.kills++;
     const wave=effectiveWave(r),xp=Math.round((e.boss?75:8)*(1+wave*.22)),gold=Math.round((e.boss?55:8)*(1+wave*.18));
@@ -149,10 +155,13 @@ function hurtEnemy(r:Run,e:Enemy,raw:number,element:'physical'|'fire'|'ice'|'lig
     for(const h of r.heroes){h.xp+=xp;while(h.level<99&&h.xp>=xpGoal(h.level)){h.xp-=xpGoal(h.level);h.level++;const s=stats(h);if(h.hp>0)h.hp=Math.min(s.hp,h.hp+4);h.mp=Math.min(s.mp,h.mp+2);}}
     if(r.relic==='lantern')for(const h of r.heroes)if(h.hp>0)h.mp=Math.min(stats(h).mp,h.mp+2);
     if(r.trip?.rule==='swarm')for(const other of alive(r)){other.atk*=1.12;other.speed*=1.04;}
-  }else if(e.chapterBoss&&e.form===1&&e.hp<=e.maxHp*.5){
-    e.form=2;e.name=e.formName;e.preparation=0;e.clock=0;e.speed*=1.22;e.atk*=1.15;e.armor*=.7;
-    e.ward=(['steel','ember','rime','storm'] as const)[(chapterIndex(effectiveWave(r))+1)%4];
-    events.push({kind:'transform',target:e.id});note(r,`${e.name} has awakened.`);
+  }else if(e.chapterBoss&&stage<count&&e.hp<=boundary){
+    e.stage=stage+1;e.preparation=0;e.clock=0;e.intent='strike';e.burnUntil=0;
+    const form=bossForm(effectiveWave(r),e.stage),changed=form!==e.form;
+    if(changed){e.form=form;e.name=e.formName;e.speed*=1.15;e.atk*=1.10;e.armor*=.7;}
+    e.ward=bossWard(effectiveWave(r),e.stage);
+    r.bossScene={kind:'shift',remaining:1.6,duration:1.6};
+    events.push({kind:changed?'transform':'boss-phase',target:e.id});note(r,bossPhase(effectiveWave(r),e.stage)+'.');
   }
 }
 function interrupt(r:Run,e:Enemy,events:CombatEvent[]){
@@ -162,7 +171,7 @@ function interrupt(r:Run,e:Enemy,events:CombatEvent[]){
 }
 export function cast(r:Run,heroIndex:number,index:number):CombatEvent[]{
   const events:CombatEvent[]=[],h=r.heroes[heroIndex];
-  if(r.phase!=='fight'||!h||h.hp<=0||(index!==0&&index!==1)||h.cooldowns[index]!>0)return events;
+  if(r.phase!=='fight'||r.bossScene||!h||h.hp<=0||(index!==0&&index!==1)||h.cooldowns[index]!>0)return events;
   const cost=skillCost(h,index),e=target(r);if(h.mp+1e-6<cost||!e)return events;
   const id=CLASSES[h.classId].skills[index] as SkillId,rank=h.skills[index]!,s=stats(h),boost=1+(rank-1)*.22;
   h.mp-=cost;h.cooldowns[index]=SKILLS[id].cooldown;h.clock=Math.min(h.clock,.25);
@@ -211,7 +220,8 @@ function enemyAttack(r:Run,e:Enemy,events:CombatEvent[]){
   events.push({kind:'enemy-strike',target:e.id});
   if(e.intent==='heal'){
     const other=alive(r).sort((a,b)=>a.hp/a.maxHp-b.hp/b.maxHp)[0]!;
-    const amount=Math.min(other.maxHp*.14,other.maxHp-other.hp,e.maxHp*.3-e.healSpent);
+    const phaseCap=e.chapterBoss?Math.ceil(e.maxHp*(bossPhases(effectiveWave(r)).length-currentBossStage(r,e)+1)/bossPhases(effectiveWave(r)).length):other.maxHp;
+    const amount=Math.min(other.maxHp*.08,phaseCap-other.hp,e.maxHp*(e.chapterBoss?.12:.3)-e.healSpent);
     if(amount>0){other.hp+=amount;e.healSpent+=amount;events.push({kind:'heal',target:other.id,amount:Math.round(amount),hero:-1});}return;
   }
   const living=r.heroes.map((h,i)=>({h,i})).filter(({h})=>h.hp>0);
@@ -229,12 +239,14 @@ function enemyAttack(r:Run,e:Enemy,events:CombatEvent[]){
 export function tick(r:Run,seconds:number):CombatEvent[]{
   if(!Number.isFinite(seconds)||seconds<=0)return[];
   const events:CombatEvent[]=[];let left=Math.min(seconds,60);
-  while(left>1e-7&&(r.phase==='fight'||r.phase==='transition')){
+  if(r.bossScene){r.bossScene.remaining=Math.max(0,r.bossScene.remaining-left);if(r.bossScene.remaining===0)finishBossScene(r);return events;}
+  while(left>1e-7&&!r.bossScene&&(r.phase==='fight'||r.phase==='transition')){
     const dt=Math.min(.05,left);left-=dt;r.time+=dt;
     if(r.phase==='transition'){
       r.transition-=dt;if(r.transition<=0){r.transition=0;if(cursor(r)>=32)endSeries(r);else spawnGroup(r);}continue;
     }
     for(const h of r.heroes){
+      if(r.bossScene)break;
       if(h.hp<=0)continue;
       const s=stats(h);h.mp=Math.min(s.mp,h.mp+dt*s.regen*(r.trip?.rule==='silence'?.4:1)*(r.relic==='stars'?1.15:1));
       if(h.shieldUntil<=r.time)h.shield=0;
@@ -255,17 +267,18 @@ export function tick(r:Run,seconds:number):CombatEvent[]{
         }
       }
     }
-    afterActions(r,events);if(r.phase!=='fight')continue;
+    afterActions(r,events);if(r.phase!=='fight'||r.bossScene)continue;
     for(const e of alive(r)){
-      if(e.burnUntil>r.time){e.hp=Math.max(1,e.hp-dt*stats(r.heroes.find(h=>h.classId==='hexweaver')??r.heroes[0]!).atk*.11);}
+      if(e.burnUntil>r.time){const floor=e.chapterBoss?Math.max(1,Math.ceil(e.maxHp*(bossPhases(effectiveWave(r)).length-currentBossStage(r,e))/bossPhases(effectiveWave(r)).length)):1;e.hp=Math.max(Math.min(e.hp,floor),e.hp-dt*stats(r.heroes.find(h=>h.classId==='hexweaver')??r.heroes[0]!).atk*.11);}
       if(e.preparation>0){e.preparation-=dt;if(e.preparation<=0){e.preparation=0;enemyAttack(r,e,events);e.clock=0;e.intent='strike';}continue;}
       e.clock+=dt*e.speed*(e.slowUntil>r.time?.55:1);
       if(e.clock>=1){
         e.clock-=1;e.attacks++;
         const special=e.boss||e.role==='caster'||e.role==='healer'||e.attacks%3===0;
         if(special){
-          e.intent=e.role==='healer'&&e.healSpent<e.maxHp*.3?'heal':e.boss&&chapterIndex(effectiveWave(r))===4&&e.attacks%4===0&&e.healSpent<e.maxHp*.3?'heal':e.role==='caster'?'curse':'heavy';
-          e.preparation=(e.boss?2.3:1.4)*(r.trip?.rule==='fury'?.68:1);
+          e.intent=e.chapterBoss?bossMove(effectiveWave(r),currentBossStage(r,e),e.attacks):e.role==='healer'&&e.healSpent<e.maxHp*.3?'heal':e.boss&&chapterIndex(effectiveWave(r))===4&&e.attacks%4===0&&e.healSpent<e.maxHp*.3?'heal':e.role==='caster'?'curse':'heavy';
+          if(e.intent==='heal'&&e.healSpent>=e.maxHp*.12&&e.chapterBoss)e.intent='heavy';
+          e.preparation=(e.chapterBoss?Math.max(1.65,2.65-(currentBossStage(r,e)-1)*.2):e.boss?2.3:1.4)*(r.trip?.rule==='fury'?.68:1);
         }else{e.intent='strike';enemyAttack(r,e,events);}
       }
     }

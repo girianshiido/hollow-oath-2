@@ -1,3 +1,4 @@
+import {bossPhases} from './bosses.ts';
 import {CLASS_IDS,CLASSES,SKILLS,SANCTUARIES,FOES,COMBAT_MODES} from './content.ts';
 import type {ClassId} from './content.ts';
 import {stats} from './engine.ts';
@@ -21,6 +22,7 @@ function hero(v:unknown):v is Hero {
 }
 function enemy(v:unknown):v is Enemy {
   if(!object(v)||!text(v.name)||!text(v.formName)||!text(v.art,50)||!/^((foe|boss)-\d+)$/.test(v.art))return false;
+  if(v.stage!==undefined&&(!number(v.stage,1,5)||!Number.isInteger(v.stage)||v.chapterBoss!==true))return false;
   if(v.ward!==undefined&&!['steel','ember','rime','storm'].includes(String(v.ward)))return false;
   if(!['id','family','hp','maxHp','atk','armor','speed','clock','attacks','preparation','exposedUntil','markedUntil','slowUntil','burnUntil','healSpent'].every(k=>number(v[k])))return false;
   return number(v.id,0,31)&&Number.isInteger(v.id)&&number(v.family,0,FOES.length-1)&&Number.isInteger(v.family)&&number(v.maxHp,1,1e12)&&(v.hp as number)<=(v.maxHp as number)&&['striker','guard','caster','healer','swift'].includes(String(v.role))&&['strike','heavy','heal','curse'].includes(String(v.intent))&&typeof v.boss==='boolean'&&typeof v.chapterBoss==='boolean'&&(v.form===1||v.form===2);
@@ -37,6 +39,8 @@ export function validRun(v:unknown):v is Run {
   if(!number(v.wave,1,32)||!number(v.cursor,0,32)||!number(v.cleared,0,32)||!['wave','cursor','cleared'].every(k=>Number.isInteger(v[k])))return false;
   if(!['fight','transition','camp','recruit','complete','expedition-clear','defeat'].includes(String(v.phase))||!trip(v.trip))return false;
   if(!Array.isArray(v.enemies)||v.enemies.length>3||!v.enemies.every(enemy)||new Set(v.enemies.map(e=>e.id)).size!==v.enemies.length)return false;
+  if(v.bossScene!==undefined){const b=v.bossScene;if(!object(b)||!['entrance','shift'].includes(String(b.kind))||!number(b.duration,.1,3.2)||!number(b.remaining,0,b.duration)||v.phase!=='fight'||!v.enemies.some(e=>e.chapterBoss&&e.hp>0))return false;}
+  if(v.enemies.some(e=>e.stage!==undefined&&e.stage>bossPhases((v.trip as Trip|null)?.wave??Number(v.wave)).length))return false;
   if(!(v.target===null||number(v.target,0,31)))return false;
   if(!list(v.relics,4)||!list(v.sanctuaries,4)||!list(v.contracts,366)||!list(v.log,12))return false;
   const ids=SANCTUARIES.map(s=>s.id);if(!v.relics.every(id=>ids.includes(id))||!v.sanctuaries.every(id=>ids.includes(id)))return false;
