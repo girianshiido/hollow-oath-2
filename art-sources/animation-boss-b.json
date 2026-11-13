@@ -1,0 +1,1057 @@
+{
+  "status": "complete",
+  "forms": 8,
+  "framesPerForm": 5,
+  "frameOrder": [
+    "idle",
+    "idle2",
+    "windup",
+    "attack",
+    "hurt"
+  ],
+  "deathPose": "hurt",
+  "normalization": "Same union crop and scale for all five frames within each form. Uniform 448px canvases, baseline421px.",
+  "artwork": "Original imagegen animation drawings plus dedicated imagegen alpha/gutter cleanup, no procedural pose synthesis.",
+  "files": [
+    {
+      "file": "boss-5.webp",
+      "atlas": "animation-boss-5.png",
+      "cell": [
+        0,
+        0
+      ],
+      "unionCrop": [
+        61,
+        76,
+        343,
+        336
+      ],
+      "commonScale": 1.3971631205673758,
+      "offset": [
+        27,
+        58
+      ],
+      "bounds": [
+        109,
+        58,
+        421,
+        421
+      ],
+      "bytes": 51554
+    },
+    {
+      "file": "boss-5-idle2.webp",
+      "atlas": "animation-boss-5.png",
+      "cell": [
+        0,
+        1
+      ],
+      "unionCrop": [
+        61,
+        76,
+        343,
+        336
+      ],
+      "commonScale": 1.3971631205673758,
+      "offset": [
+        27,
+        58
+      ],
+      "bounds": [
+        88,
+        58,
+        392,
+        421
+      ],
+      "bytes": 51592
+    },
+    {
+      "file": "boss-5-windup.webp",
+      "atlas": "animation-boss-5.png",
+      "cell": [
+        0,
+        2
+      ],
+      "unionCrop": [
+        61,
+        76,
+        343,
+        336
+      ],
+      "commonScale": 1.3971631205673758,
+      "offset": [
+        27,
+        58
+      ],
+      "bounds": [
+        46,
+        76,
+        371,
+        421
+      ],
+      "bytes": 54732
+    },
+    {
+      "file": "boss-5-attack.webp",
+      "atlas": "animation-boss-5.png",
+      "cell": [
+        0,
+        3
+      ],
+      "unionCrop": [
+        61,
+        76,
+        343,
+        336
+      ],
+      "commonScale": 1.3971631205673758,
+      "offset": [
+        27,
+        58
+      ],
+      "bounds": [
+        27,
+        73,
+        386,
+        421
+      ],
+      "bytes": 67452
+    },
+    {
+      "file": "boss-5-hurt.webp",
+      "atlas": "animation-boss-5.png",
+      "cell": [
+        0,
+        4
+      ],
+      "unionCrop": [
+        61,
+        76,
+        343,
+        336
+      ],
+      "commonScale": 1.3971631205673758,
+      "offset": [
+        27,
+        58
+      ],
+      "bounds": [
+        31,
+        80,
+        361,
+        421
+      ],
+      "bytes": 48506
+    },
+    {
+      "file": "boss-5-form2.webp",
+      "atlas": "animation-boss-5.png",
+      "cell": [
+        1,
+        0
+      ],
+      "unionCrop": [
+        49,
+        63,
+        350,
+        323
+      ],
+      "commonScale": 1.308970099667774,
+      "offset": [
+        27,
+        81
+      ],
+      "bounds": [
+        99,
+        81,
+        421,
+        420
+      ],
+      "bytes": 67554
+    },
+    {
+      "file": "boss-5-form2-idle2.webp",
+      "atlas": "animation-boss-5.png",
+      "cell": [
+        1,
+        1
+      ],
+      "unionCrop": [
+        49,
+        63,
+        350,
+        323
+      ],
+      "commonScale": 1.308970099667774,
+      "offset": [
+        27,
+        81
+      ],
+      "bounds": [
+        76,
+        81,
+        395,
+        420
+      ],
+      "bytes": 66666
+    },
+    {
+      "file": "boss-5-form2-windup.webp",
+      "atlas": "animation-boss-5.png",
+      "cell": [
+        1,
+        2
+      ],
+      "unionCrop": [
+        49,
+        63,
+        350,
+        323
+      ],
+      "commonScale": 1.308970099667774,
+      "offset": [
+        27,
+        81
+      ],
+      "bounds": [
+        57,
+        84,
+        363,
+        421
+      ],
+      "bytes": 59270
+    },
+    {
+      "file": "boss-5-form2-attack.webp",
+      "atlas": "animation-boss-5.png",
+      "cell": [
+        1,
+        3
+      ],
+      "unionCrop": [
+        49,
+        63,
+        350,
+        323
+      ],
+      "commonScale": 1.308970099667774,
+      "offset": [
+        27,
+        81
+      ],
+      "bounds": [
+        27,
+        81,
+        409,
+        421
+      ],
+      "bytes": 68338
+    },
+    {
+      "file": "boss-5-form2-hurt.webp",
+      "atlas": "animation-boss-5.png",
+      "cell": [
+        1,
+        4
+      ],
+      "unionCrop": [
+        49,
+        63,
+        350,
+        323
+      ],
+      "commonScale": 1.308970099667774,
+      "offset": [
+        27,
+        81
+      ],
+      "bounds": [
+        47,
+        117,
+        378,
+        421
+      ],
+      "bytes": 48508
+    },
+    {
+      "file": "boss-6.webp",
+      "atlas": "animation-boss-6.png",
+      "cell": [
+        0,
+        0
+      ],
+      "unionCrop": [
+        20,
+        72,
+        323,
+        329
+      ],
+      "commonScale": 1.3003300330033003,
+      "offset": [
+        27,
+        87
+      ],
+      "bounds": [
+        106,
+        89,
+        412,
+        419
+      ],
+      "bytes": 59440
+    },
+    {
+      "file": "boss-6-idle2.webp",
+      "atlas": "animation-boss-6.png",
+      "cell": [
+        0,
+        1
+      ],
+      "unionCrop": [
+        20,
+        72,
+        323,
+        329
+      ],
+      "commonScale": 1.3003300330033003,
+      "offset": [
+        27,
+        87
+      ],
+      "bounds": [
+        100,
+        87,
+        406,
+        418
+      ],
+      "bytes": 59382
+    },
+    {
+      "file": "boss-6-windup.webp",
+      "atlas": "animation-boss-6.png",
+      "cell": [
+        0,
+        2
+      ],
+      "unionCrop": [
+        20,
+        72,
+        323,
+        329
+      ],
+      "commonScale": 1.3003300330033003,
+      "offset": [
+        27,
+        87
+      ],
+      "bounds": [
+        74,
+        117,
+        403,
+        418
+      ],
+      "bytes": 56062
+    },
+    {
+      "file": "boss-6-attack.webp",
+      "atlas": "animation-boss-6.png",
+      "cell": [
+        0,
+        3
+      ],
+      "unionCrop": [
+        20,
+        72,
+        323,
+        329
+      ],
+      "commonScale": 1.3003300330033003,
+      "offset": [
+        27,
+        87
+      ],
+      "bounds": [
+        27,
+        130,
+        421,
+        416
+      ],
+      "bytes": 63478
+    },
+    {
+      "file": "boss-6-hurt.webp",
+      "atlas": "animation-boss-6.png",
+      "cell": [
+        0,
+        4
+      ],
+      "unionCrop": [
+        20,
+        72,
+        323,
+        329
+      ],
+      "commonScale": 1.3003300330033003,
+      "offset": [
+        27,
+        87
+      ],
+      "bounds": [
+        70,
+        143,
+        415,
+        421
+      ],
+      "bytes": 53718
+    },
+    {
+      "file": "boss-6-form2.webp",
+      "atlas": "animation-boss-6.png",
+      "cell": [
+        1,
+        0
+      ],
+      "unionCrop": [
+        43,
+        70,
+        333,
+        330
+      ],
+      "commonScale": 1.3586206896551725,
+      "offset": [
+        27,
+        68
+      ],
+      "bounds": [
+        64,
+        68,
+        421,
+        421
+      ],
+      "bytes": 75338
+    },
+    {
+      "file": "boss-6-form2-idle2.webp",
+      "atlas": "animation-boss-6.png",
+      "cell": [
+        1,
+        1
+      ],
+      "unionCrop": [
+        43,
+        70,
+        333,
+        330
+      ],
+      "commonScale": 1.3586206896551725,
+      "offset": [
+        27,
+        68
+      ],
+      "bounds": [
+        57,
+        70,
+        413,
+        421
+      ],
+      "bytes": 74174
+    },
+    {
+      "file": "boss-6-form2-windup.webp",
+      "atlas": "animation-boss-6.png",
+      "cell": [
+        1,
+        2
+      ],
+      "unionCrop": [
+        43,
+        70,
+        333,
+        330
+      ],
+      "commonScale": 1.3586206896551725,
+      "offset": [
+        27,
+        68
+      ],
+      "bounds": [
+        56,
+        74,
+        402,
+        419
+      ],
+      "bytes": 68054
+    },
+    {
+      "file": "boss-6-form2-attack.webp",
+      "atlas": "animation-boss-6.png",
+      "cell": [
+        1,
+        3
+      ],
+      "unionCrop": [
+        43,
+        70,
+        333,
+        330
+      ],
+      "commonScale": 1.3586206896551725,
+      "offset": [
+        27,
+        68
+      ],
+      "bounds": [
+        27,
+        74,
+        411,
+        419
+      ],
+      "bytes": 71998
+    },
+    {
+      "file": "boss-6-form2-hurt.webp",
+      "atlas": "animation-boss-6.png",
+      "cell": [
+        1,
+        4
+      ],
+      "unionCrop": [
+        43,
+        70,
+        333,
+        330
+      ],
+      "commonScale": 1.3586206896551725,
+      "offset": [
+        27,
+        68
+      ],
+      "bounds": [
+        49,
+        85,
+        404,
+        419
+      ],
+      "bytes": 69926
+    },
+    {
+      "file": "boss-7.webp",
+      "atlas": "animation-boss-7.png",
+      "cell": [
+        0,
+        0
+      ],
+      "unionCrop": [
+        22,
+        90,
+        335,
+        360
+      ],
+      "commonScale": 1.2587859424920127,
+      "offset": [
+        27,
+        81
+      ],
+      "bounds": [
+        118,
+        83,
+        421,
+        418
+      ],
+      "bytes": 63912
+    },
+    {
+      "file": "boss-7-idle2.webp",
+      "atlas": "animation-boss-7.png",
+      "cell": [
+        0,
+        1
+      ],
+      "unionCrop": [
+        22,
+        90,
+        335,
+        360
+      ],
+      "commonScale": 1.2587859424920127,
+      "offset": [
+        27,
+        81
+      ],
+      "bounds": [
+        95,
+        82,
+        399,
+        418
+      ],
+      "bytes": 61126
+    },
+    {
+      "file": "boss-7-windup.webp",
+      "atlas": "animation-boss-7.png",
+      "cell": [
+        0,
+        2
+      ],
+      "unionCrop": [
+        22,
+        90,
+        335,
+        360
+      ],
+      "commonScale": 1.2587859424920127,
+      "offset": [
+        27,
+        81
+      ],
+      "bounds": [
+        72,
+        81,
+        385,
+        419
+      ],
+      "bytes": 61356
+    },
+    {
+      "file": "boss-7-attack.webp",
+      "atlas": "animation-boss-7.png",
+      "cell": [
+        0,
+        3
+      ],
+      "unionCrop": [
+        22,
+        90,
+        335,
+        360
+      ],
+      "commonScale": 1.2587859424920127,
+      "offset": [
+        27,
+        81
+      ],
+      "bounds": [
+        27,
+        83,
+        405,
+        421
+      ],
+      "bytes": 66640
+    },
+    {
+      "file": "boss-7-hurt.webp",
+      "atlas": "animation-boss-7.png",
+      "cell": [
+        0,
+        4
+      ],
+      "unionCrop": [
+        22,
+        90,
+        335,
+        360
+      ],
+      "commonScale": 1.2587859424920127,
+      "offset": [
+        27,
+        81
+      ],
+      "bounds": [
+        54,
+        139,
+        384,
+        421
+      ],
+      "bytes": 53770
+    },
+    {
+      "file": "boss-7-form2.webp",
+      "atlas": "animation-boss-7.png",
+      "cell": [
+        1,
+        0
+      ],
+      "unionCrop": [
+        28,
+        67,
+        341,
+        330
+      ],
+      "commonScale": 1.2587859424920127,
+      "offset": [
+        27,
+        90
+      ],
+      "bounds": [
+        97,
+        96,
+        419,
+        417
+      ],
+      "bytes": 63214
+    },
+    {
+      "file": "boss-7-form2-idle2.webp",
+      "atlas": "animation-boss-7.png",
+      "cell": [
+        1,
+        1
+      ],
+      "unionCrop": [
+        28,
+        67,
+        341,
+        330
+      ],
+      "commonScale": 1.2587859424920127,
+      "offset": [
+        27,
+        90
+      ],
+      "bounds": [
+        91,
+        93,
+        400,
+        416
+      ],
+      "bytes": 63210
+    },
+    {
+      "file": "boss-7-form2-windup.webp",
+      "atlas": "animation-boss-7.png",
+      "cell": [
+        1,
+        2
+      ],
+      "unionCrop": [
+        28,
+        67,
+        341,
+        330
+      ],
+      "commonScale": 1.2587859424920127,
+      "offset": [
+        27,
+        90
+      ],
+      "bounds": [
+        55,
+        90,
+        389,
+        419
+      ],
+      "bytes": 60396
+    },
+    {
+      "file": "boss-7-form2-attack.webp",
+      "atlas": "animation-boss-7.png",
+      "cell": [
+        1,
+        3
+      ],
+      "unionCrop": [
+        28,
+        67,
+        341,
+        330
+      ],
+      "commonScale": 1.2587859424920127,
+      "offset": [
+        27,
+        90
+      ],
+      "bounds": [
+        27,
+        115,
+        421,
+        420
+      ],
+      "bytes": 64514
+    },
+    {
+      "file": "boss-7-form2-hurt.webp",
+      "atlas": "animation-boss-7.png",
+      "cell": [
+        1,
+        4
+      ],
+      "unionCrop": [
+        28,
+        67,
+        341,
+        330
+      ],
+      "commonScale": 1.2587859424920127,
+      "offset": [
+        27,
+        90
+      ],
+      "bounds": [
+        59,
+        135,
+        383,
+        421
+      ],
+      "bytes": 47672
+    },
+    {
+      "file": "boss-8.webp",
+      "atlas": "animation-boss-8.png",
+      "cell": [
+        0,
+        0
+      ],
+      "unionCrop": [
+        39,
+        54,
+        346,
+        347
+      ],
+      "commonScale": 1.283387622149837,
+      "offset": [
+        27,
+        45
+      ],
+      "bounds": [
+        107,
+        47,
+        410,
+        416
+      ],
+      "bytes": 43254
+    },
+    {
+      "file": "boss-8-idle2.webp",
+      "atlas": "animation-boss-8.png",
+      "cell": [
+        0,
+        1
+      ],
+      "unionCrop": [
+        39,
+        54,
+        346,
+        347
+      ],
+      "commonScale": 1.283387622149837,
+      "offset": [
+        27,
+        45
+      ],
+      "bounds": [
+        88,
+        45,
+        421,
+        416
+      ],
+      "bytes": 42710
+    },
+    {
+      "file": "boss-8-windup.webp",
+      "atlas": "animation-boss-8.png",
+      "cell": [
+        0,
+        2
+      ],
+      "unionCrop": [
+        39,
+        54,
+        346,
+        347
+      ],
+      "commonScale": 1.283387622149837,
+      "offset": [
+        27,
+        45
+      ],
+      "bounds": [
+        76,
+        62,
+        384,
+        421
+      ],
+      "bytes": 41228
+    },
+    {
+      "file": "boss-8-attack.webp",
+      "atlas": "animation-boss-8.png",
+      "cell": [
+        0,
+        3
+      ],
+      "unionCrop": [
+        39,
+        54,
+        346,
+        347
+      ],
+      "commonScale": 1.283387622149837,
+      "offset": [
+        27,
+        45
+      ],
+      "bounds": [
+        27,
+        59,
+        416,
+        421
+      ],
+      "bytes": 44802
+    },
+    {
+      "file": "boss-8-hurt.webp",
+      "atlas": "animation-boss-8.png",
+      "cell": [
+        0,
+        4
+      ],
+      "unionCrop": [
+        39,
+        54,
+        346,
+        347
+      ],
+      "commonScale": 1.283387622149837,
+      "offset": [
+        27,
+        45
+      ],
+      "bounds": [
+        64,
+        75,
+        381,
+        414
+      ],
+      "bytes": 39754
+    },
+    {
+      "file": "boss-8-form2.webp",
+      "atlas": "animation-boss-8.png",
+      "cell": [
+        1,
+        0
+      ],
+      "unionCrop": [
+        34,
+        49,
+        348,
+        340
+      ],
+      "commonScale": 1.2547770700636942,
+      "offset": [
+        27,
+        56
+      ],
+      "bounds": [
+        75,
+        56,
+        420,
+        411
+      ],
+      "bytes": 66680
+    },
+    {
+      "file": "boss-8-form2-idle2.webp",
+      "atlas": "animation-boss-8.png",
+      "cell": [
+        1,
+        1
+      ],
+      "unionCrop": [
+        34,
+        49,
+        348,
+        340
+      ],
+      "commonScale": 1.2547770700636942,
+      "offset": [
+        27,
+        56
+      ],
+      "bounds": [
+        76,
+        58,
+        412,
+        409
+      ],
+      "bytes": 63260
+    },
+    {
+      "file": "boss-8-form2-windup.webp",
+      "atlas": "animation-boss-8.png",
+      "cell": [
+        1,
+        2
+      ],
+      "unionCrop": [
+        34,
+        49,
+        348,
+        340
+      ],
+      "commonScale": 1.2547770700636942,
+      "offset": [
+        27,
+        56
+      ],
+      "bounds": [
+        67,
+        68,
+        369,
+        415
+      ],
+      "bytes": 55054
+    },
+    {
+      "file": "boss-8-form2-attack.webp",
+      "atlas": "animation-boss-8.png",
+      "cell": [
+        1,
+        3
+      ],
+      "unionCrop": [
+        34,
+        49,
+        348,
+        340
+      ],
+      "commonScale": 1.2547770700636942,
+      "offset": [
+        27,
+        56
+      ],
+      "bounds": [
+        27,
+        62,
+        416,
+        421
+      ],
+      "bytes": 71746
+    },
+    {
+      "file": "boss-8-form2-hurt.webp",
+      "atlas": "animation-boss-8.png",
+      "cell": [
+        1,
+        4
+      ],
+      "unionCrop": [
+        34,
+        49,
+        348,
+        340
+      ],
+      "commonScale": 1.2547770700636942,
+      "offset": [
+        27,
+        56
+      ],
+      "bounds": [
+        69,
+        83,
+        390,
+        416
+      ],
+      "bytes": 50882
+    }
+  ]
+}

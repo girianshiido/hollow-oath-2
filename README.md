@@ -10,7 +10,7 @@ Play: **https://girianshiido.github.io/hollow-oath-2/**
 - Recruit one of the other three heroes after wave 4. Six duos, twelve starting orders. Companions inherit the leader's level and equipment ranks.
 - Exactly 32 waves of 32 enemies, including the guardian: 1,024 enemies in the campaign. Groups of one to three arrive automatically.
 - A shared focus target, enemy guards and healers, visible preparations, interruptions, shields, exposure, marks and elemental weaknesses. Both heroes keep attacking while abilities recover.
-- Twelve illustrated regular monster families, each with idle and attack poses; eight boss designs, each with a second form. Chapter guardians transform at half HP, changing speed, attack and armor. Intermediate wardens use the chapter's first-form illustration.
+- Twelve illustrated regular monster families and eight boss designs with two forms each. Every creature/form has five original animation drawings: two breathing idles, attack anticipation, actual strike and hurt. The hurt pose is reused for the death fade. Chapter guardians transform at half HP, changing speed, attack and armor. Intermediate wardens use the chapter's first-form illustration.
 - Four original battle environments, an illustrated title screen and dedicated app icon, all in the approved vivid manga direction.
 - Eight original full-length music loops, victory/defeat stingers and nine sound effects. OGG with AAC/M4A fallback for iOS. See AUDIO.md.
 - Permanent gold equipment upgrades and essence ability upgrades, available at camp after retreat, defeat and chapter breaks. No forced weapon-rank damage penalty. Earned gold, essence, XP and upgrades survive defeat.
@@ -51,4 +51,8 @@ The build creates a content-addressed service worker. All public assets are prec
 
 ## Project structure
 
-`src/content.ts`: classes, skills, creatures and expedition definitions. `src/engine.ts`: DOM-free simulation. `src/renderer.ts`: bounded-DPR Canvas arena and short effects. `src/main.ts`: English screens and controls. `src/saves.ts`: validation and persistence. `src/audio.ts`: music and sound management. `src/pwa.ts`: installation and safe updates. Art and music provenance: ART.md and AUDIO.md.
+`src/content.ts`: classes, skills, creatures and expedition definitions. `src/engine.ts`: DOM-free simulation. `src/renderer.ts`: bounded-DPR Canvas arena, five-pose creature animation and short effects. `src/main.ts`: English screens and controls. `src/saves.ts`: validation and persistence. `src/audio.ts`: music and sound management. `src/pwa.ts`: installation and safe updates. Art and music provenance: ART.md and AUDIO.md.
+
+## Creature animation update (1.1)
+
+All 28 creature identities/forms use five distinct transparent drawings, 140 frames in total. Idle poses alternate with a subtle breathing movement; normal strikes have anticipation before their resolved impact. Prepared attacks hold anticipation until they resolve or are interrupted. A hit triggers a 190 ms recoil pose, and death uses that same drawing during a 550 ms fade. Animation follows combat time, so a tactical pause freezes the pose. Reduced-motion mode keeps readable attack/hurt drawings while removing idle motion and positional recoil. A bounded image cache and per-group preloading limit decoded image memory on mobile. Save format and battle statistics are unchanged.

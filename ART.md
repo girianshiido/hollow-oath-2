@@ -4,7 +4,7 @@ Original imagegen artwork, created for this game. The visual reference is the ap
 
 ## Regular families
 
-Every family has two original drawings: `foe-N.webp` (idle) and `foe-N-attack.webp` (attack). They share a 448 × 448 transparent canvas so changing pose does not change the image element's geometry.
+Every family now has five original drawings: `foe-N.webp` (idle A), `foe-N-idle2.webp` (idle B), `foe-N-windup.webp` (anticipation), `foe-N-attack.webp` (strike) and `foe-N-hurt.webp` (hit/death). They share a 448 × 448 transparent canvas and a common scale and ground anchor within each sequence.
 
 | ID | Creature | Visual identity |
 | --- | --- | --- |
@@ -23,7 +23,7 @@ Every family has two original drawings: `foe-N.webp` (idle) and `foe-N-attack.we
 
 ## Chapter bosses
 
-Every boss has two original forms: `boss-N.webp` and `boss-N-form2.webp`. Form changes are intended to accompany gameplay changes, not merely a health increase.
+Every boss has two original forms, with stems `boss-N` and `boss-N-form2`. Each stem has all five poses using the same suffixes as regular monsters. Form changes accompany gameplay changes, not merely a health increase.
 
 | ID | Boss | Transformation |
 | --- | --- | --- |
@@ -47,3 +47,7 @@ No external copyrighted game assets are included in these creature sheets.
 ## Approved hero direction and interface art
 
 The four selection portraits are cropped from the user-approved clean manga sheet, with the original faces, vivid limited colors and themed backgrounds retained. The title gateway, four arena backgrounds and dedicated crossed-blade crown icon were generated specifically for Hollow Oath II. Their source images are retained in the originating image-generation conversation. Game assets are encoded in WebP; app icons are PNG at 192 and 512 px with a separate maskable declaration. No external image URLs are required at runtime.
+
+## Five-drawing animation revision
+
+The original five atlases remain for provenance. The current frame sequences were redrawn with imagegen from those approved creature identities. New source sheets and per-batch prompts, cell mappings, normalization details and alpha checks are retained under `art-sources/animation-*`. Slicing and WebP encoding do not paint or synthesize creature content. All 140 delivered frames are 448 × 448 RGBA. There is no separate death artwork: the hurt drawing is deliberately reused.

@@ -21,7 +21,7 @@ export interface Run {
   transition:number;trip:Trip|null;relics:string[];relic:string|null;sanctuaries:string[];abyssBest:number;
   contracts:string[];interrupts:number;totalGold:number;log:string[];
 }
-export interface CombatEvent {kind:'damage'|'heal'|'shield'|'cast'|'death'|'transform'|'reward'|'interrupt'|'hero-hit';target:number;amount?:number;hero?:number;skill?:SkillId;critical?:boolean;}
+export interface CombatEvent {kind:'damage'|'heal'|'shield'|'cast'|'death'|'transform'|'reward'|'interrupt'|'hero-hit'|'enemy-strike';target:number;amount?:number;hero?:number;skill?:SkillId;critical?:boolean;}
 export interface Stats {hp:number;mp:number;atk:number;armor:number;speed:number;regen:number;}
 export const xpGoal=(level:number)=>Math.round(45+level*19+level**1.5*6);
 export function stats(h:Hero):Stats {
@@ -198,6 +198,7 @@ function endSeries(r:Run){
   if((r.wave-1)%4===0)r.phase='camp';else spawnGroup(r);
 }
 function enemyAttack(r:Run,e:Enemy,events:CombatEvent[]){
+  events.push({kind:'enemy-strike',target:e.id});
   if(e.intent==='heal'){
     const other=alive(r).sort((a,b)=>a.hp/a.maxHp-b.hp/b.maxHp)[0]!;
     const amount=Math.min(other.maxHp*.14,other.maxHp-other.hp,e.maxHp*.3-e.healSpent);

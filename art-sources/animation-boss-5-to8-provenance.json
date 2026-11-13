@@ -1,0 +1,11 @@
+{
+  "sourceFiles": {
+    "5": "exec-47bc0eb5-f070-43b8-8555-1004fa9eca74.png",
+    "6": "exec-fcc0fee2-9f08-4fcf-810a-a06c17267214.png",
+    "7": "exec-47a1b379-a025-46bd-87eb-d594b97334fb.png",
+    "8": "exec-73976cf7-74b3-4a00-a0c5-dd27d7912f43.png"
+  },
+  "generation": "Imagegen edits with existing boss and form2 image references, 5x2 equal grid: top row first form, bottom second; across five actual drawings idleA, idleB subtle breath, windup drawing limb back, strike followthrough extension, hurt flinch reused death.",
+  "cleanup": "Imagegen retained all drawings, reduced to78% within each owncell and removed atmospheric alpha haze.",
+  "style": "Clean colored manga ink and simplified cel shading, vivid limited palettes, true transparent alpha."
+}

@@ -1,0 +1,688 @@
+{
+  "method": "Imagegen five original pose drawings per identity. Slicing only, one common bounding rectangle, scale and canvas placement for every frame in each creature row. Visible bounds measured at alpha >=32; no per-frame fitting or scaling.",
+  "canvas": [
+    448,
+    448
+  ],
+  "quality": 90,
+  "creatures": {
+    "7": {
+      "source": "art-sources/animation-foes-d.png",
+      "generationSource": "exec-6cab433c-c9ff-404d-ac55-fb1fd7946ca3.png",
+      "row": 0,
+      "commonCrop": [
+        53,
+        94,
+        337,
+        318
+      ],
+      "commonScale": 1.408450704225352,
+      "commonOffset": [
+        24,
+        109
+      ],
+      "frames": [
+        {
+          "file": "public/art/foe-7.webp",
+          "pose": "idleA",
+          "sourceColumn": 0,
+          "sourceVisibleBounds": [
+            106,
+            104,
+            332,
+            313
+          ],
+          "visibleBounds": [
+            99,
+            123,
+            417,
+            417
+          ],
+          "sizeBytes": 34164,
+          "sha256": "67d956e1bdff1910945f72ad50b66af3f11db22a8c5d7cd41ad1a5fc2ae94548"
+        },
+        {
+          "file": "public/art/foe-7-idle2.webp",
+          "pose": "idleB",
+          "sourceColumn": 1,
+          "sourceVisibleBounds": [
+            94,
+            98,
+            319,
+            311
+          ],
+          "visibleBounds": [
+            82,
+            114,
+            398,
+            414
+          ],
+          "sizeBytes": 34696,
+          "sha256": "86f2f238b94565651d11942d3c739c38e42249a50bc2bfbac1bc19306e7f19c3"
+        },
+        {
+          "file": "public/art/foe-7-windup.webp",
+          "pose": "windup",
+          "sourceColumn": 2,
+          "sourceVisibleBounds": [
+            72,
+            123,
+            317,
+            314
+          ],
+          "visibleBounds": [
+            51,
+            150,
+            396,
+            418
+          ],
+          "sizeBytes": 32180,
+          "sha256": "a7a0407fd82222e2b8f1df959654070ce400d1270830d637ed985fcdfa512fe9"
+        },
+        {
+          "file": "public/art/foe-7-attack.webp",
+          "pose": "strike",
+          "sourceColumn": 3,
+          "sourceVisibleBounds": [
+            57,
+            100,
+            333,
+            304
+          ],
+          "visibleBounds": [
+            30,
+            117,
+            419,
+            404
+          ],
+          "sizeBytes": 38086,
+          "sha256": "9f37d3f2848e9fd5bc10b51fc0ec2e5c8985b83d0017ff2eed758f8a22c51e08"
+        },
+        {
+          "file": "public/art/foe-7-hurt.webp",
+          "pose": "hurt",
+          "sourceColumn": 4,
+          "sourceVisibleBounds": [
+            69,
+            124,
+            308,
+            313
+          ],
+          "visibleBounds": [
+            46,
+            151,
+            383,
+            417
+          ],
+          "sizeBytes": 31430,
+          "sha256": "381a727653e0ed133716c3ff0e66e2ae4d54c52bb73ba5ff1054c4a74e1f7e07"
+        }
+      ]
+    },
+    "8": {
+      "source": "art-sources/animation-foes-d.png",
+      "generationSource": "exec-6cab433c-c9ff-404d-ac55-fb1fd7946ca3.png",
+      "row": 1,
+      "commonCrop": [
+        44,
+        68,
+        352,
+        318
+      ],
+      "commonScale": 1.2987012987012987,
+      "commonOffset": [
+        24,
+        99
+      ],
+      "frames": [
+        {
+          "file": "public/art/foe-8.webp",
+          "pose": "idleA",
+          "sourceColumn": 0,
+          "sourceVisibleBounds": [
+            97,
+            78,
+            306,
+            312
+          ],
+          "visibleBounds": [
+            92,
+            112,
+            364,
+            416
+          ],
+          "sizeBytes": 41386,
+          "sha256": "d3149c828ba893d279b46f01aef82da8af83dbf393f45eb0f8cbdeaf4d41e6ab"
+        },
+        {
+          "file": "public/art/foe-8-idle2.webp",
+          "pose": "idleB",
+          "sourceColumn": 1,
+          "sourceVisibleBounds": [
+            79,
+            76,
+            299,
+            314
+          ],
+          "visibleBounds": [
+            70,
+            109,
+            356,
+            418
+          ],
+          "sizeBytes": 42096,
+          "sha256": "b84cda3793766d4a15c4a792f7d53efb256451ff5396490f336ca3b75f366215"
+        },
+        {
+          "file": "public/art/foe-8-windup.webp",
+          "pose": "windup",
+          "sourceColumn": 2,
+          "sourceVisibleBounds": [
+            68,
+            72,
+            309,
+            313
+          ],
+          "visibleBounds": [
+            55,
+            105,
+            368,
+            418
+          ],
+          "sizeBytes": 41138,
+          "sha256": "a4f2d1e52e098c7bdbfe769173030d77b4a73a6f578fdfd832ad05d2a56f21c8"
+        },
+        {
+          "file": "public/art/foe-8-attack.webp",
+          "pose": "strike",
+          "sourceColumn": 3,
+          "sourceVisibleBounds": [
+            48,
+            93,
+            348,
+            314
+          ],
+          "visibleBounds": [
+            29,
+            131,
+            419,
+            418
+          ],
+          "sizeBytes": 43328,
+          "sha256": "682fa7bc6f0ce7f0f8c6f31f0d3af832306450e84ba6928b7b2a05ad10dcc8b6"
+        },
+        {
+          "file": "public/art/foe-8-hurt.webp",
+          "pose": "hurt",
+          "sourceColumn": 4,
+          "sourceVisibleBounds": [
+            78,
+            93,
+            313,
+            313
+          ],
+          "visibleBounds": [
+            69,
+            132,
+            373,
+            418
+          ],
+          "sizeBytes": 34550,
+          "sha256": "00c6a2cdbb13661c286cd83b4a9f966b8f340e060392b865c18deef3a740c97c"
+        }
+      ]
+    },
+    "9": {
+      "source": "art-sources/animation-foes-e.png",
+      "generationSource": "exec-baf79384-b2ec-4c47-8583-3af73f1f0357.png",
+      "row": 0,
+      "commonCrop": [
+        27,
+        32,
+        383,
+        351
+      ],
+      "commonScale": 1.1235955056179776,
+      "commonOffset": [
+        24,
+        66
+      ],
+      "frames": [
+        {
+          "file": "public/art/foe-9.webp",
+          "pose": "idleA",
+          "sourceColumn": 0,
+          "sourceVisibleBounds": [
+            57,
+            67,
+            350,
+            347
+          ],
+          "visibleBounds": [
+            58,
+            105,
+            387,
+            420
+          ],
+          "sizeBytes": 45226,
+          "sha256": "132de4fb2f15b9c508e1ce7748b10956b8ce8be9e90a6f8455667715337f9c35"
+        },
+        {
+          "file": "public/art/foe-9-idle2.webp",
+          "pose": "idleB",
+          "sourceColumn": 1,
+          "sourceVisibleBounds": [
+            60,
+            60,
+            344,
+            347
+          ],
+          "visibleBounds": [
+            61,
+            98,
+            380,
+            420
+          ],
+          "sizeBytes": 46010,
+          "sha256": "cb4a4dbab3017a82280bd5b099958beaa9b3fad8140aaf39f2d74d2ec71585b0"
+        },
+        {
+          "file": "public/art/foe-9-windup.webp",
+          "pose": "windup",
+          "sourceColumn": 2,
+          "sourceVisibleBounds": [
+            31,
+            81,
+            379,
+            346
+          ],
+          "visibleBounds": [
+            28,
+            122,
+            420,
+            418
+          ],
+          "sizeBytes": 45224,
+          "sha256": "1d845efd758199b0c946276eeeee9740a1165851359a51242d605f92ff3e724b"
+        },
+        {
+          "file": "public/art/foe-9-attack.webp",
+          "pose": "strike",
+          "sourceColumn": 3,
+          "sourceVisibleBounds": [
+            36,
+            36,
+            377,
+            345
+          ],
+          "visibleBounds": [
+            34,
+            70,
+            417,
+            418
+          ],
+          "sizeBytes": 48360,
+          "sha256": "06da9d7fda065bd9c93af0f876bd7e5c60998ee033109d5c1966c102cb616a81"
+        },
+        {
+          "file": "public/art/foe-9-hurt.webp",
+          "pose": "hurt",
+          "sourceColumn": 4,
+          "sourceVisibleBounds": [
+            43,
+            114,
+            349,
+            347
+          ],
+          "visibleBounds": [
+            42,
+            158,
+            386,
+            420
+          ],
+          "sizeBytes": 37672,
+          "sha256": "e58fa789f6115ca26b24db8815944c16af82594ef1aa8a9275658f92a073d0e3"
+        }
+      ]
+    },
+    "10": {
+      "source": "art-sources/animation-foes-e.png",
+      "generationSource": "exec-baf79384-b2ec-4c47-8583-3af73f1f0357.png",
+      "row": 1,
+      "commonCrop": [
+        16,
+        10,
+        378,
+        357
+      ],
+      "commonScale": 1.1049723756906078,
+      "commonOffset": [
+        24,
+        41
+      ],
+      "frames": [
+        {
+          "file": "public/art/foe-10.webp",
+          "pose": "idleA",
+          "sourceColumn": 0,
+          "sourceVisibleBounds": [
+            31,
+            14,
+            374,
+            348
+          ],
+          "visibleBounds": [
+            41,
+            46,
+            420,
+            415
+          ],
+          "sizeBytes": 53598,
+          "sha256": "bea3d39fc5d526b001dc6144d52d7f7aa268bbbd0266bb7ac87168b506dc1a04"
+        },
+        {
+          "file": "public/art/foe-10-idle2.webp",
+          "pose": "idleB",
+          "sourceColumn": 1,
+          "sourceVisibleBounds": [
+            41,
+            21,
+            358,
+            348
+          ],
+          "visibleBounds": [
+            51,
+            53,
+            402,
+            414
+          ],
+          "sizeBytes": 46862,
+          "sha256": "f232725e7880615e9542a13951389c770c0e89fd05d3728da8214f3d26faeacc"
+        },
+        {
+          "file": "public/art/foe-10-windup.webp",
+          "pose": "windup",
+          "sourceColumn": 2,
+          "sourceVisibleBounds": [
+            26,
+            32,
+            351,
+            349
+          ],
+          "visibleBounds": [
+            36,
+            66,
+            394,
+            415
+          ],
+          "sizeBytes": 47250,
+          "sha256": "e81f73cfde65e587005bc260c5a61ab29a13c8b6c9814981585c0f7ca06e588d"
+        },
+        {
+          "file": "public/art/foe-10-attack.webp",
+          "pose": "strike",
+          "sourceColumn": 3,
+          "sourceVisibleBounds": [
+            24,
+            28,
+            361,
+            353
+          ],
+          "visibleBounds": [
+            33,
+            60,
+            405,
+            419
+          ],
+          "sizeBytes": 43420,
+          "sha256": "415d45483be6561fe3ced137b4d7b447a6b8d5913b5770945019462ec7e19d93"
+        },
+        {
+          "file": "public/art/foe-10-hurt.webp",
+          "pose": "hurt",
+          "sourceColumn": 4,
+          "sourceVisibleBounds": [
+            20,
+            60,
+            372,
+            348
+          ],
+          "visibleBounds": [
+            28,
+            96,
+            418,
+            414
+          ],
+          "sizeBytes": 42934,
+          "sha256": "79a6340b9d6e6dc87a496e97179ea8428f7516ff8ab98e3b8aedeab3d4c4c150"
+        }
+      ]
+    },
+    "11": {
+      "source": "art-sources/animation-foes-f.png",
+      "generationSource": "exec-0673e117-83f9-4ce9-b9ec-544773893a71.png",
+      "row": 0,
+      "commonCrop": [
+        33,
+        78,
+        335,
+        337
+      ],
+      "commonScale": 1.3245033112582782,
+      "commonOffset": [
+        24,
+        81
+      ],
+      "frames": [
+        {
+          "file": "public/art/foe-11.webp",
+          "pose": "idleA",
+          "sourceColumn": 0,
+          "sourceVisibleBounds": [
+            113,
+            87,
+            322,
+            333
+          ],
+          "visibleBounds": [
+            130,
+            92,
+            406,
+            419
+          ],
+          "sizeBytes": 41658,
+          "sha256": "43c698c928e7b5665be3df6582fc737793f5e6adbfba61b04df8526727dab054"
+        },
+        {
+          "file": "public/art/foe-11-idle2.webp",
+          "pose": "idleB",
+          "sourceColumn": 1,
+          "sourceVisibleBounds": [
+            94,
+            82,
+            298,
+            333
+          ],
+          "visibleBounds": [
+            105,
+            87,
+            375,
+            419
+          ],
+          "sizeBytes": 41352,
+          "sha256": "d456ca90c1b1b98faf369498e94dc82af2492de25ff3bdafbf1604a15298763d"
+        },
+        {
+          "file": "public/art/foe-11-windup.webp",
+          "pose": "windup",
+          "sourceColumn": 2,
+          "sourceVisibleBounds": [
+            64,
+            113,
+            282,
+            333
+          ],
+          "visibleBounds": [
+            65,
+            127,
+            354,
+            419
+          ],
+          "sizeBytes": 41014,
+          "sha256": "18d8d0154d41b7d1bca31724659bb5e10a4958f309861a79cdd5e6859ebb16a2"
+        },
+        {
+          "file": "public/art/foe-11-attack.webp",
+          "pose": "strike",
+          "sourceColumn": 3,
+          "sourceVisibleBounds": [
+            37,
+            113,
+            331,
+            329
+          ],
+          "visibleBounds": [
+            30,
+            127,
+            419,
+            414
+          ],
+          "sizeBytes": 43884,
+          "sha256": "6db7fe545ebe360c8382bf0576d1f910bfb7f3b46c52d10779c3327113a09691"
+        },
+        {
+          "file": "public/art/foe-11-hurt.webp",
+          "pose": "hurt",
+          "sourceColumn": 4,
+          "sourceVisibleBounds": [
+            73,
+            165,
+            293,
+            332
+          ],
+          "visibleBounds": [
+            77,
+            196,
+            368,
+            417
+          ],
+          "sizeBytes": 33384,
+          "sha256": "21722381584cb7c6db1cc4bacc8d09cc2c54386182214608031fff8292bd1258"
+        }
+      ]
+    },
+    "12": {
+      "source": "art-sources/animation-foes-f.png",
+      "generationSource": "exec-0673e117-83f9-4ce9-b9ec-544773893a71.png",
+      "row": 1,
+      "commonCrop": [
+        53,
+        57,
+        336,
+        321
+      ],
+      "commonScale": 1.4134275618374559,
+      "commonOffset": [
+        24,
+        51
+      ],
+      "frames": [
+        {
+          "file": "public/art/foe-12.webp",
+          "pose": "idleA",
+          "sourceColumn": 0,
+          "sourceVisibleBounds": [
+            112,
+            67,
+            309,
+            317
+          ],
+          "visibleBounds": [
+            107,
+            65,
+            386,
+            419
+          ],
+          "sizeBytes": 48806,
+          "sha256": "82454423fbb9cc59b03c58f0abf54686cec69959e8975eb00e044aa1dd160586"
+        },
+        {
+          "file": "public/art/foe-12-idle2.webp",
+          "pose": "idleB",
+          "sourceColumn": 1,
+          "sourceVisibleBounds": [
+            83,
+            79,
+            295,
+            315
+          ],
+          "visibleBounds": [
+            66,
+            82,
+            366,
+            416
+          ],
+          "sizeBytes": 47448,
+          "sha256": "bba59af5d36d92696900a5c37a9c5b0f19d4e0f7f0d047c59b776844958dcd4e"
+        },
+        {
+          "file": "public/art/foe-12-windup.webp",
+          "pose": "windup",
+          "sourceColumn": 2,
+          "sourceVisibleBounds": [
+            68,
+            102,
+            276,
+            269
+          ],
+          "visibleBounds": [
+            45,
+            115,
+            340,
+            351
+          ],
+          "sizeBytes": 32424,
+          "sha256": "b973486c3ece08ca5186e98867552090919970a920e84ac1ceedfeb9dbd7546b"
+        },
+        {
+          "file": "public/art/foe-12-attack.webp",
+          "pose": "strike",
+          "sourceColumn": 3,
+          "sourceVisibleBounds": [
+            57,
+            61,
+            332,
+            306
+          ],
+          "visibleBounds": [
+            29,
+            57,
+            418,
+            403
+          ],
+          "sizeBytes": 54996,
+          "sha256": "1791db5b58a3cb2e6ce8e333f1cb60aad9c1fa6e1d7f0801ac3d833c75306463"
+        },
+        {
+          "file": "public/art/foe-12-hurt.webp",
+          "pose": "hurt",
+          "sourceColumn": 4,
+          "sourceVisibleBounds": [
+            72,
+            99,
+            302,
+            312
+          ],
+          "visibleBounds": [
+            51,
+            110,
+            376,
+            411
+          ],
+          "sizeBytes": 43560,
+          "sha256": "eb648bd63f2dc8fa1cc6529a5fadc7dcb9c3f31e1c1e72408a5ed6b17d33fd16"
+        }
+      ]
+    }
+  }
+}

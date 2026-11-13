@@ -1,0 +1,972 @@
+{
+  "description": "Imagegen redrawn five-frame animation for boss1\u20134, both forms. Common scale across the five frames within each form; cropped transparent padding only; bottom aligned at418px. No character content painted or transformed programmatically.",
+  "poses": [
+    "idle",
+    "idle2",
+    "windup",
+    "attack",
+    "hurt"
+  ],
+  "assets": [
+    {
+      "file": "boss-1.webp",
+      "source": "animation-boss-1.png",
+      "source_generation": "exec-a290baa9-3508-44a4-8928-c40c887da0b4.png",
+      "cell": [
+        0,
+        0
+      ],
+      "source_bounds": [
+        103,
+        85,
+        291,
+        326
+      ],
+      "common_scale": 1.3020134228187918,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        101,
+        105,
+        346,
+        418
+      ],
+      "bytes": 46970
+    },
+    {
+      "file": "boss-1-idle2.webp",
+      "source": "animation-boss-1.png",
+      "source_generation": "exec-a290baa9-3508-44a4-8928-c40c887da0b4.png",
+      "cell": [
+        0,
+        1
+      ],
+      "source_bounds": [
+        82,
+        82,
+        288,
+        325
+      ],
+      "common_scale": 1.3020134228187918,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        91,
+        103,
+        358,
+        417
+      ],
+      "bytes": 48478
+    },
+    {
+      "file": "boss-1-windup.webp",
+      "source": "animation-boss-1.png",
+      "source_generation": "exec-a290baa9-3508-44a4-8928-c40c887da0b4.png",
+      "cell": [
+        0,
+        2
+      ],
+      "source_bounds": [
+        81,
+        117,
+        312,
+        323
+      ],
+      "common_scale": 1.3020134228187918,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        73,
+        150,
+        373,
+        417
+      ],
+      "bytes": 43948
+    },
+    {
+      "file": "boss-1-attack.webp",
+      "source": "animation-boss-1.png",
+      "source_generation": "exec-a290baa9-3508-44a4-8928-c40c887da0b4.png",
+      "cell": [
+        0,
+        3
+      ],
+      "source_bounds": [
+        53,
+        138,
+        351,
+        320
+      ],
+      "common_scale": 1.3020134228187918,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        30,
+        182,
+        418,
+        418
+      ],
+      "bytes": 46074
+    },
+    {
+      "file": "boss-1-hurt.webp",
+      "source": "animation-boss-1.png",
+      "source_generation": "exec-a290baa9-3508-44a4-8928-c40c887da0b4.png",
+      "cell": [
+        0,
+        4
+      ],
+      "source_bounds": [
+        113,
+        91,
+        296,
+        324
+      ],
+      "common_scale": 1.3020134228187918,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        106,
+        115,
+        342,
+        418
+      ],
+      "bytes": 40732
+    },
+    {
+      "file": "boss-1-form2.webp",
+      "source": "animation-boss-1.png",
+      "source_generation": "exec-a290baa9-3508-44a4-8928-c40c887da0b4.png",
+      "cell": [
+        1,
+        0
+      ],
+      "source_bounds": [
+        102,
+        79,
+        310,
+        313
+      ],
+      "common_scale": 1.3379310344827586,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        86,
+        106,
+        363,
+        418
+      ],
+      "bytes": 54866
+    },
+    {
+      "file": "boss-1-form2-idle2.webp",
+      "source": "animation-boss-1.png",
+      "source_generation": "exec-a290baa9-3508-44a4-8928-c40c887da0b4.png",
+      "cell": [
+        1,
+        1
+      ],
+      "source_bounds": [
+        81,
+        81,
+        296,
+        312
+      ],
+      "common_scale": 1.3379310344827586,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        80,
+        109,
+        367,
+        417
+      ],
+      "bytes": 55842
+    },
+    {
+      "file": "boss-1-form2-windup.webp",
+      "source": "animation-boss-1.png",
+      "source_generation": "exec-a290baa9-3508-44a4-8928-c40c887da0b4.png",
+      "cell": [
+        1,
+        2
+      ],
+      "source_bounds": [
+        68,
+        112,
+        310,
+        311
+      ],
+      "common_scale": 1.3379310344827586,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        62,
+        153,
+        386,
+        418
+      ],
+      "bytes": 50214
+    },
+    {
+      "file": "boss-1-form2-attack.webp",
+      "source": "animation-boss-1.png",
+      "source_generation": "exec-a290baa9-3508-44a4-8928-c40c887da0b4.png",
+      "cell": [
+        1,
+        3
+      ],
+      "source_bounds": [
+        51,
+        124,
+        341,
+        310
+      ],
+      "common_scale": 1.3379310344827586,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        31,
+        169,
+        417,
+        417
+      ],
+      "bytes": 52648
+    },
+    {
+      "file": "boss-1-form2-hurt.webp",
+      "source": "animation-boss-1.png",
+      "source_generation": "exec-a290baa9-3508-44a4-8928-c40c887da0b4.png",
+      "cell": [
+        1,
+        4
+      ],
+      "source_bounds": [
+        114,
+        76,
+        296,
+        314
+      ],
+      "common_scale": 1.3379310344827586,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        102,
+        100,
+        346,
+        417
+      ],
+      "bytes": 47504
+    },
+    {
+      "file": "boss-2.webp",
+      "source": "animation-boss-2.png",
+      "source_generation": "exec-76ecdeab-fcf0-4929-a4c5-2fbf33863274.png",
+      "cell": [
+        0,
+        0
+      ],
+      "source_bounds": [
+        77,
+        128,
+        297,
+        340
+      ],
+      "common_scale": 1.583673469387755,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        50,
+        83,
+        398,
+        418
+      ],
+      "bytes": 38858
+    },
+    {
+      "file": "boss-2-idle2.webp",
+      "source": "animation-boss-2.png",
+      "source_generation": "exec-76ecdeab-fcf0-4929-a4c5-2fbf33863274.png",
+      "cell": [
+        0,
+        1
+      ],
+      "source_bounds": [
+        76,
+        122,
+        293,
+        340
+      ],
+      "common_scale": 1.583673469387755,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        52,
+        73,
+        396,
+        418
+      ],
+      "bytes": 39850
+    },
+    {
+      "file": "boss-2-windup.webp",
+      "source": "animation-boss-2.png",
+      "source_generation": "exec-76ecdeab-fcf0-4929-a4c5-2fbf33863274.png",
+      "cell": [
+        0,
+        2
+      ],
+      "source_bounds": [
+        56,
+        129,
+        294,
+        340
+      ],
+      "common_scale": 1.583673469387755,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        35,
+        84,
+        412,
+        417
+      ],
+      "bytes": 44512
+    },
+    {
+      "file": "boss-2-attack.webp",
+      "source": "animation-boss-2.png",
+      "source_generation": "exec-76ecdeab-fcf0-4929-a4c5-2fbf33863274.png",
+      "cell": [
+        0,
+        3
+      ],
+      "source_bounds": [
+        47,
+        142,
+        261,
+        346
+      ],
+      "common_scale": 1.583673469387755,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        54,
+        96,
+        392,
+        418
+      ],
+      "bytes": 35602
+    },
+    {
+      "file": "boss-2-hurt.webp",
+      "source": "animation-boss-2.png",
+      "source_generation": "exec-76ecdeab-fcf0-4929-a4c5-2fbf33863274.png",
+      "cell": [
+        0,
+        4
+      ],
+      "source_bounds": [
+        46,
+        135,
+        291,
+        340
+      ],
+      "common_scale": 1.583673469387755,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        30,
+        93,
+        417,
+        418
+      ],
+      "bytes": 42716
+    },
+    {
+      "file": "boss-2-form2.webp",
+      "source": "animation-boss-2.png",
+      "source_generation": "exec-76ecdeab-fcf0-4929-a4c5-2fbf33863274.png",
+      "cell": [
+        1,
+        0
+      ],
+      "source_bounds": [
+        91,
+        99,
+        283,
+        325
+      ],
+      "common_scale": 1.6581196581196582,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        65,
+        44,
+        383,
+        418
+      ],
+      "bytes": 70950
+    },
+    {
+      "file": "boss-2-form2-idle2.webp",
+      "source": "animation-boss-2.png",
+      "source_generation": "exec-76ecdeab-fcf0-4929-a4c5-2fbf33863274.png",
+      "cell": [
+        1,
+        1
+      ],
+      "source_bounds": [
+        82,
+        95,
+        283,
+        327
+      ],
+      "common_scale": 1.6581196581196582,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        57,
+        34,
+        390,
+        417
+      ],
+      "bytes": 73174
+    },
+    {
+      "file": "boss-2-form2-windup.webp",
+      "source": "animation-boss-2.png",
+      "source_generation": "exec-76ecdeab-fcf0-4929-a4c5-2fbf33863274.png",
+      "cell": [
+        1,
+        2
+      ],
+      "source_bounds": [
+        65,
+        93,
+        272,
+        327
+      ],
+      "common_scale": 1.6581196581196582,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        52,
+        30,
+        395,
+        417
+      ],
+      "bytes": 68890
+    },
+    {
+      "file": "boss-2-form2-attack.webp",
+      "source": "animation-boss-2.png",
+      "source_generation": "exec-76ecdeab-fcf0-4929-a4c5-2fbf33863274.png",
+      "cell": [
+        1,
+        3
+      ],
+      "source_bounds": [
+        72,
+        109,
+        276,
+        333
+      ],
+      "common_scale": 1.6581196581196582,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        55,
+        47,
+        393,
+        417
+      ],
+      "bytes": 68424
+    },
+    {
+      "file": "boss-2-form2-hurt.webp",
+      "source": "animation-boss-2.png",
+      "source_generation": "exec-76ecdeab-fcf0-4929-a4c5-2fbf33863274.png",
+      "cell": [
+        1,
+        4
+      ],
+      "source_bounds": [
+        64,
+        105,
+        292,
+        327
+      ],
+      "common_scale": 1.6581196581196582,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        36,
+        50,
+        412,
+        417
+      ],
+      "bytes": 71586
+    },
+    {
+      "file": "boss-3.webp",
+      "source": "animation-boss-3.png",
+      "source_generation": "exec-b7b292f1-ec1d-42ee-88c1-d8988baa6293.png",
+      "cell": [
+        0,
+        0
+      ],
+      "source_bounds": [
+        82,
+        88,
+        341,
+        320
+      ],
+      "common_scale": 1.4865900383141764,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        31,
+        74,
+        416,
+        418
+      ],
+      "bytes": 53874
+    },
+    {
+      "file": "boss-3-idle2.webp",
+      "source": "animation-boss-3.png",
+      "source_generation": "exec-b7b292f1-ec1d-42ee-88c1-d8988baa6293.png",
+      "cell": [
+        0,
+        1
+      ],
+      "source_bounds": [
+        81,
+        91,
+        327,
+        317
+      ],
+      "common_scale": 1.4865900383141764,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        41,
+        83,
+        407,
+        418
+      ],
+      "bytes": 52524
+    },
+    {
+      "file": "boss-3-windup.webp",
+      "source": "animation-boss-3.png",
+      "source_generation": "exec-b7b292f1-ec1d-42ee-88c1-d8988baa6293.png",
+      "cell": [
+        0,
+        2
+      ],
+      "source_bounds": [
+        60,
+        82,
+        321,
+        315
+      ],
+      "common_scale": 1.4865900383141764,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        31,
+        72,
+        417,
+        416
+      ],
+      "bytes": 59414
+    },
+    {
+      "file": "boss-3-attack.webp",
+      "source": "animation-boss-3.png",
+      "source_generation": "exec-b7b292f1-ec1d-42ee-88c1-d8988baa6293.png",
+      "cell": [
+        0,
+        3
+      ],
+      "source_bounds": [
+        63,
+        130,
+        322,
+        333
+      ],
+      "common_scale": 1.4865900383141764,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        32,
+        116,
+        415,
+        417
+      ],
+      "bytes": 55592
+    },
+    {
+      "file": "boss-3-hurt.webp",
+      "source": "animation-boss-3.png",
+      "source_generation": "exec-b7b292f1-ec1d-42ee-88c1-d8988baa6293.png",
+      "cell": [
+        0,
+        4
+      ],
+      "source_bounds": [
+        80,
+        113,
+        314,
+        316
+      ],
+      "common_scale": 1.4865900383141764,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        50,
+        117,
+        397,
+        417
+      ],
+      "bytes": 51332
+    },
+    {
+      "file": "boss-3-form2.webp",
+      "source": "animation-boss-3.png",
+      "source_generation": "exec-b7b292f1-ec1d-42ee-88c1-d8988baa6293.png",
+      "cell": [
+        1,
+        0
+      ],
+      "source_bounds": [
+        72,
+        82,
+        329,
+        323
+      ],
+      "common_scale": 1.3906810035842294,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        45,
+        83,
+        401,
+        417
+      ],
+      "bytes": 72350
+    },
+    {
+      "file": "boss-3-form2-idle2.webp",
+      "source": "animation-boss-3.png",
+      "source_generation": "exec-b7b292f1-ec1d-42ee-88c1-d8988baa6293.png",
+      "cell": [
+        1,
+        1
+      ],
+      "source_bounds": [
+        69,
+        84,
+        324,
+        324
+      ],
+      "common_scale": 1.3906810035842294,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        47,
+        85,
+        401,
+        418
+      ],
+      "bytes": 72222
+    },
+    {
+      "file": "boss-3-form2-windup.webp",
+      "source": "animation-boss-3.png",
+      "source_generation": "exec-b7b292f1-ec1d-42ee-88c1-d8988baa6293.png",
+      "cell": [
+        1,
+        2
+      ],
+      "source_bounds": [
+        65,
+        66,
+        319,
+        317
+      ],
+      "common_scale": 1.3906810035842294,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        48,
+        69,
+        399,
+        417
+      ],
+      "bytes": 70654
+    },
+    {
+      "file": "boss-3-form2-attack.webp",
+      "source": "animation-boss-3.png",
+      "source_generation": "exec-b7b292f1-ec1d-42ee-88c1-d8988baa6293.png",
+      "cell": [
+        1,
+        3
+      ],
+      "source_bounds": [
+        46,
+        106,
+        325,
+        334
+      ],
+      "common_scale": 1.3906810035842294,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        30,
+        101,
+        418,
+        417
+      ],
+      "bytes": 66074
+    },
+    {
+      "file": "boss-3-form2-hurt.webp",
+      "source": "animation-boss-3.png",
+      "source_generation": "exec-b7b292f1-ec1d-42ee-88c1-d8988baa6293.png",
+      "cell": [
+        1,
+        4
+      ],
+      "source_bounds": [
+        77,
+        110,
+        310,
+        316
+      ],
+      "common_scale": 1.3906810035842294,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        63,
+        132,
+        385,
+        418
+      ],
+      "bytes": 51234
+    },
+    {
+      "file": "boss-4.webp",
+      "source": "animation-boss-4.png",
+      "source_generation": "exec-fe38f4b9-b7dd-4a4d-b7d4-b5f86eb4b207.png",
+      "cell": [
+        0,
+        0
+      ],
+      "source_bounds": [
+        99,
+        91,
+        329,
+        325
+      ],
+      "common_scale": 1.453183520599251,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        59,
+        78,
+        390,
+        417
+      ],
+      "bytes": 48666
+    },
+    {
+      "file": "boss-4-idle2.webp",
+      "source": "animation-boss-4.png",
+      "source_generation": "exec-fe38f4b9-b7dd-4a4d-b7d4-b5f86eb4b207.png",
+      "cell": [
+        0,
+        1
+      ],
+      "source_bounds": [
+        85,
+        88,
+        313,
+        325
+      ],
+      "common_scale": 1.453183520599251,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        59,
+        74,
+        389,
+        418
+      ],
+      "bytes": 49880
+    },
+    {
+      "file": "boss-4-windup.webp",
+      "source": "animation-boss-4.png",
+      "source_generation": "exec-fe38f4b9-b7dd-4a4d-b7d4-b5f86eb4b207.png",
+      "cell": [
+        0,
+        2
+      ],
+      "source_bounds": [
+        78,
+        81,
+        316,
+        326
+      ],
+      "common_scale": 1.453183520599251,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        52,
+        62,
+        397,
+        417
+      ],
+      "bytes": 50486
+    },
+    {
+      "file": "boss-4-attack.webp",
+      "source": "animation-boss-4.png",
+      "source_generation": "exec-fe38f4b9-b7dd-4a4d-b7d4-b5f86eb4b207.png",
+      "cell": [
+        0,
+        3
+      ],
+      "source_bounds": [
+        44,
+        116,
+        311,
+        318
+      ],
+      "common_scale": 1.453183520599251,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        31,
+        125,
+        417,
+        416
+      ],
+      "bytes": 50832
+    },
+    {
+      "file": "boss-4-hurt.webp",
+      "source": "animation-boss-4.png",
+      "source_generation": "exec-fe38f4b9-b7dd-4a4d-b7d4-b5f86eb4b207.png",
+      "cell": [
+        0,
+        4
+      ],
+      "source_bounds": [
+        63,
+        108,
+        298,
+        325
+      ],
+      "common_scale": 1.453183520599251,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        54,
+        104,
+        393,
+        417
+      ],
+      "bytes": 46352
+    },
+    {
+      "file": "boss-4-form2.webp",
+      "source": "animation-boss-4.png",
+      "source_generation": "exec-fe38f4b9-b7dd-4a4d-b7d4-b5f86eb4b207.png",
+      "cell": [
+        1,
+        0
+      ],
+      "source_bounds": [
+        99,
+        77,
+        327,
+        308
+      ],
+      "common_scale": 1.4264705882352942,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        62,
+        89,
+        386,
+        418
+      ],
+      "bytes": 69220
+    },
+    {
+      "file": "boss-4-form2-idle2.webp",
+      "source": "animation-boss-4.png",
+      "source_generation": "exec-fe38f4b9-b7dd-4a4d-b7d4-b5f86eb4b207.png",
+      "cell": [
+        1,
+        1
+      ],
+      "source_bounds": [
+        86,
+        78,
+        305,
+        310
+      ],
+      "common_scale": 1.4264705882352942,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        69,
+        87,
+        379,
+        417
+      ],
+      "bytes": 68372
+    },
+    {
+      "file": "boss-4-form2-windup.webp",
+      "source": "animation-boss-4.png",
+      "source_generation": "exec-fe38f4b9-b7dd-4a4d-b7d4-b5f86eb4b207.png",
+      "cell": [
+        1,
+        2
+      ],
+      "source_bounds": [
+        63,
+        73,
+        299,
+        313
+      ],
+      "common_scale": 1.4264705882352942,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        56,
+        76,
+        392,
+        417
+      ],
+      "bytes": 67510
+    },
+    {
+      "file": "boss-4-form2-attack.webp",
+      "source": "animation-boss-4.png",
+      "source_generation": "exec-fe38f4b9-b7dd-4a4d-b7d4-b5f86eb4b207.png",
+      "cell": [
+        1,
+        3
+      ],
+      "source_bounds": [
+        37,
+        101,
+        309,
+        311
+      ],
+      "common_scale": 1.4264705882352942,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        31,
+        118,
+        418,
+        418
+      ],
+      "bytes": 70290
+    },
+    {
+      "file": "boss-4-form2-hurt.webp",
+      "source": "animation-boss-4.png",
+      "source_generation": "exec-fe38f4b9-b7dd-4a4d-b7d4-b5f86eb4b207.png",
+      "cell": [
+        1,
+        4
+      ],
+      "source_bounds": [
+        74,
+        94,
+        295,
+        311
+      ],
+      "common_scale": 1.4264705882352942,
+      "ground_anchor": 418,
+      "opaque_bounds": [
+        66,
+        108,
+        381,
+        418
+      ],
+      "bytes": 58476
+    }
+  ]
+}

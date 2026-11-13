@@ -1,0 +1,694 @@
+{
+  "status": "complete",
+  "generation": [
+    {
+      "key": "animation-foes-a",
+      "ids": [
+        1,
+        2
+      ],
+      "prompt": "Redraw these TWO referenced monster identities as a professional GAME ANIMATION SPRITE SHEET. Exactly TEN separate full-body drawings in EXACTLY 5 COLUMNS \u00d7 2 ROWS; overall image aspect ratio 5:2 (very wide). Five equal SQUARE cells per row. TOP ROW is the FIRST reference creature repeated through FIVE DISTINCT POSES. BOTTOM ROW is the SECOND reference creature repeated through the SAME FIVE pose stages. STRICT LEFT-TO-RIGHT COLUMN ORDER: 1 IDLE A, 2 IDLE B (subtle breathing motion, a distinct drawing), 3 ATTACK WIND-UP (clearly drawn back), 4 ATTACK STRIKE (clearly extended forward), 5 HURT (unmistakable recoiling/flinching pose, used for death). Preserve exact recognizable creature design, anatomy, costume, colors, number of limbs and same crisp black ink vivid cel-shaded fantasy manga aesthetic. Redraw all poses; do NOT provide only two poses. Uniform character scale and facing angle across its five frames; keep the same resting floor baseline at 86% of each cell height, same torso center. At least 10% FULLY TRANSPARENT EMPTY MARGINS on all sides of every cell, all limbs/weapons fit. Dynamic poses must fit the same box: do not crop wings, tails, spear tips or ears. No background, fog, glow, shadow, floor, divider lines, frames, labels or lettering. TRUE CLEAN transparent alpha=0 outside creatures including between limbs. Five coherent hand-drawn animation frames per creature suitable for quick swapping in game. Preserve identity, no redesigns, no extra accessories. Attack wind-up and strike must be visibly DIFFERENT poses, hurt visibly different from both idle frames. Preserve shape proportions so frames don't pop in size.\nTOP ROW BRIAR WOLF: dark moss-green wolf with large ivory branch thorns, amber eyes, clawed feet and bushy tail. Idle A crouched alert. Idle B inhales with head slightly raised and tail gently curved differently, claws still planted. Wind-up lowers chest and draws head back on bent rear legs, jaws beginning to open. Strike lunges forward with jaws wide and forepaw thrust out. Hurt arches sideways backward, eyes squeezed shut, ears folded, front leg bent inward, head recoiling. BOTTOM ROW BONE GUARD: ivory skeleton sentinel, blue-gray breastplate, small round shield and long spear. Idle A upright shield at side and spear upright. Idle B shoulders rise subtly and shield shifts inward while skull tilts slightly. Wind-up crouches behind shield and draws spear back diagonally. Strike lunges and thrusts spear forward diagonally downward, tip entirely inside cell. Hurt reels backward with knees buckled, skull tilted away and shield knocked sideways; retain spear."
+    },
+    {
+      "key": "animation-foes-b",
+      "ids": [
+        3,
+        4
+      ],
+      "prompt": "Redraw these TWO referenced monster identities as a professional GAME ANIMATION SPRITE SHEET. Exactly TEN separate full-body drawings in EXACTLY 5 COLUMNS \u00d7 2 ROWS; overall image aspect ratio 5:2 (very wide). Five equal SQUARE cells per row. TOP ROW is the FIRST reference creature repeated through FIVE DISTINCT POSES. BOTTOM ROW is the SECOND reference creature repeated through the SAME FIVE pose stages. STRICT LEFT-TO-RIGHT COLUMN ORDER: 1 IDLE A, 2 IDLE B (subtle breathing motion, a distinct drawing), 3 ATTACK WIND-UP (clearly drawn back), 4 ATTACK STRIKE (clearly extended forward), 5 HURT (unmistakable recoiling/flinching pose, used for death). Preserve exact recognizable creature design, anatomy, costume, colors, number of limbs and same crisp black ink vivid cel-shaded fantasy manga aesthetic. Redraw all poses; do NOT provide only two poses. Uniform character scale and facing angle across its five frames; keep the same resting floor baseline at 86% of each cell height, same torso center. At least 10% FULLY TRANSPARENT EMPTY MARGINS on all sides of every cell, all limbs/weapons fit. Dynamic poses must fit the same box: do not crop wings, tails, spear tips or ears. No background, fog, glow, shadow, floor, divider lines, frames, labels or lettering. TRUE CLEAN transparent alpha=0 outside creatures including between limbs. Five coherent hand-drawn animation frames per creature suitable for quick swapping in game. Preserve identity, no redesigns, no extra accessories. Attack wind-up and strike must be visibly DIFFERENT poses, hurt visibly different from both idle frames. Preserve shape proportions so frames don't pop in size.\nTOP ROW EMBER SCARAB: charcoal-black squat armored beetle, three large orange-red back plates, six angular clawed legs, amber eyes, large black mandibles. Idle A squat. Idle B back plates lift subtly with breathing, antennae tilt and forelegs bend slightly. Wind-up crouches lower, mandibles drawn back and forelegs raised close. Strike surges forward with jaws open and both forelegs extended. Hurt tips sideways, mandibles squeezed together, eyes narrowed, legs curling inward with carapace tilted. BOTTOM ROW SPORE APOTHECARY: small ivory mushroom humanoid with broad burgundy cap, dark oval eyes, purple cloak with brass clasp, little pouch and one round magenta potion vial. Idle A holds vial at hip. Idle B cap lifts slightly and cloak opens slightly with breathing, other arm changes gently. Wind-up draws potion arm far behind head, stance braced. Strike flings potion arm forward with vial still grasped, cloak follows through. Hurt recoils away clutching vial to chest, cap crooked, eyes squeezed shut and root feet buckling."
+    },
+    {
+      "key": "animation-foes-c",
+      "ids": [
+        5,
+        6
+      ],
+      "prompt": "Redraw these TWO referenced monster identities as a professional GAME ANIMATION SPRITE SHEET. Exactly TEN separate full-body drawings in EXACTLY 5 COLUMNS \u00d7 2 ROWS; overall image aspect ratio 5:2 (very wide). Five equal SQUARE cells per row. TOP ROW is the FIRST reference creature repeated through FIVE DISTINCT POSES. BOTTOM ROW is the SECOND reference creature repeated through the SAME FIVE pose stages. STRICT LEFT-TO-RIGHT COLUMN ORDER: 1 IDLE A, 2 IDLE B (subtle breathing motion, a distinct drawing), 3 ATTACK WIND-UP (clearly drawn back), 4 ATTACK STRIKE (clearly extended forward), 5 HURT (unmistakable recoiling/flinching pose, used for death). Preserve exact recognizable creature design, anatomy, costume, colors, number of limbs and same crisp black ink vivid cel-shaded fantasy manga aesthetic. Redraw all poses; do NOT provide only two poses. Uniform character scale and facing angle across its five frames; keep the same resting floor baseline at 86% of each cell height, same torso center. At least 10% FULLY TRANSPARENT EMPTY MARGINS on all sides of every cell, all limbs/weapons fit. Dynamic poses must fit the same box: do not crop wings, tails, spear tips or ears. No background, fog, glow, shadow, floor, divider lines, frames, labels or lettering. TRUE CLEAN transparent alpha=0 outside creatures including between limbs. Five coherent hand-drawn animation frames per creature suitable for quick swapping in game. Preserve identity, no redesigns, no extra accessories. Attack wind-up and strike must be visibly DIFFERENT poses, hurt visibly different from both idle frames. Preserve shape proportions so frames don't pop in size.\nTOP ROW RIME BAT: pale ice-blue fur, angular big ears, navy blue wing membranes, ivory clawed feet and amber eyes. Idle A hovering with wings partly folded. Idle B hovering at same body center with wings gently lifted outward, head a little higher and different feet curl. Wind-up folds wings back sharply and pulls claws toward body. Strike spreads wings and lunges claws forward with snarling mouth. Hurt recoils with wings folded unevenly inward, head turned away and eyes squeezed shut. BOTTOM ROW LANTERN PUPPET: crooked brass lantern head glowing warm amber INSIDE, hook ring on top, thin iron-and-brass jointed limbs, torn burgundy cloth and birdlike feet. Idle A lurching with head tilted. Idle B head tilts other way, torso slightly lifts, cloth and free hand move subtly while feet remain planted. Wind-up draws clawed arm high back, crouches and turns lantern away. Strike sweeps both sharp claws forward and leans into attack, lantern faces forward. Hurt reels backward, lantern tilts sharply sideways, knees buckle and arms fold protectively across torso. No spilled flame, all parts retained."
+    }
+  ],
+  "layoutEdit": "Retain all 10 drawings, reduce each uniformly to68%, preserve exactly 5columns x2rows, same baseline and scale, fully transparent with14% empty margins.",
+  "normalization": "Each five-frame row uses one alpha-union crop, one scale factor and one paste offset for all frames. No per-frame independent resizing or recentring. Source poses remain distinct original imagegen drawings. Layout was corrected by imagegen to avoid clipping.",
+  "creatures": [
+    {
+      "id": 1,
+      "atlas": "animation-foes-a.png",
+      "source_generation": "exec-2e7ea6bb-305a-47dc-b4b9-79807119bb9d.png",
+      "row": 0,
+      "source_bounds": [
+        [
+          79,
+          98,
+          326,
+          323
+        ],
+        [
+          60,
+          92,
+          318,
+          325
+        ],
+        [
+          58,
+          140,
+          329,
+          325
+        ],
+        [
+          47,
+          147,
+          339,
+          321
+        ],
+        [
+          72,
+          112,
+          307,
+          322
+        ]
+      ],
+      "common_crop": [
+        39,
+        84,
+        347,
+        333
+      ],
+      "common_scale": 1.2597402597402598,
+      "common_paste_offset": [
+        30,
+        108
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-1.webp",
+          "state": "idle",
+          "size_bytes": 48598,
+          "opaque_bounds": [
+            80,
+            126,
+            391,
+            410
+          ]
+        },
+        {
+          "file": "foe-1-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 48034,
+          "opaque_bounds": [
+            57,
+            118,
+            381,
+            412
+          ]
+        },
+        {
+          "file": "foe-1-windup.webp",
+          "state": "windup",
+          "size_bytes": 40902,
+          "opaque_bounds": [
+            53,
+            178,
+            395,
+            412
+          ]
+        },
+        {
+          "file": "foe-1-attack.webp",
+          "state": "attack",
+          "size_bytes": 41326,
+          "opaque_bounds": [
+            40,
+            188,
+            408,
+            407
+          ]
+        },
+        {
+          "file": "foe-1-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 44848,
+          "opaque_bounds": [
+            72,
+            143,
+            368,
+            408
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "atlas": "animation-foes-a.png",
+      "source_generation": "exec-2e7ea6bb-305a-47dc-b4b9-79807119bb9d.png",
+      "row": 1,
+      "source_bounds": [
+        [
+          128,
+          72,
+          301,
+          324
+        ],
+        [
+          119,
+          75,
+          290,
+          323
+        ],
+        [
+          62,
+          91,
+          298,
+          323
+        ],
+        [
+          47,
+          131,
+          320,
+          324
+        ],
+        [
+          94,
+          93,
+          302,
+          324
+        ]
+      ],
+      "common_crop": [
+        39,
+        64,
+        328,
+        332
+      ],
+      "common_scale": 1.342560553633218,
+      "common_paste_offset": [
+        30,
+        62
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-2.webp",
+          "state": "idle",
+          "size_bytes": 41826,
+          "opaque_bounds": [
+            150,
+            72,
+            382,
+            412
+          ]
+        },
+        {
+          "file": "foe-2-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 41096,
+          "opaque_bounds": [
+            137,
+            77,
+            368,
+            409
+          ]
+        },
+        {
+          "file": "foe-2-windup.webp",
+          "state": "windup",
+          "size_bytes": 44982,
+          "opaque_bounds": [
+            61,
+            99,
+            378,
+            410
+          ]
+        },
+        {
+          "file": "foe-2-attack.webp",
+          "state": "attack",
+          "size_bytes": 37178,
+          "opaque_bounds": [
+            41,
+            152,
+            408,
+            411
+          ]
+        },
+        {
+          "file": "foe-2-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 46216,
+          "opaque_bounds": [
+            104,
+            100,
+            383,
+            412
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "atlas": "animation-foes-b.png",
+      "source_generation": "exec-d42c2068-6bd2-43d9-a670-89744092738a.png",
+      "row": 0,
+      "source_bounds": [
+        [
+          68,
+          95,
+          339,
+          320
+        ],
+        [
+          69,
+          89,
+          336,
+          319
+        ],
+        [
+          66,
+          119,
+          324,
+          317
+        ],
+        [
+          32,
+          100,
+          340,
+          316
+        ],
+        [
+          63,
+          109,
+          316,
+          319
+        ]
+      ],
+      "common_crop": [
+        24,
+        81,
+        348,
+        328
+      ],
+      "common_scale": 1.1975308641975309,
+      "common_paste_offset": [
+        30,
+        126
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-3.webp",
+          "state": "idle",
+          "size_bytes": 36470,
+          "opaque_bounds": [
+            82,
+            143,
+            407,
+            412
+          ]
+        },
+        {
+          "file": "foe-3-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 35972,
+          "opaque_bounds": [
+            84,
+            135,
+            403,
+            411
+          ]
+        },
+        {
+          "file": "foe-3-windup.webp",
+          "state": "windup",
+          "size_bytes": 29568,
+          "opaque_bounds": [
+            80,
+            172,
+            390,
+            409
+          ]
+        },
+        {
+          "file": "foe-3-attack.webp",
+          "state": "attack",
+          "size_bytes": 38078,
+          "opaque_bounds": [
+            40,
+            149,
+            409,
+            407
+          ]
+        },
+        {
+          "file": "foe-3-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 32550,
+          "opaque_bounds": [
+            77,
+            159,
+            380,
+            412
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "atlas": "animation-foes-b.png",
+      "source_generation": "exec-d42c2068-6bd2-43d9-a670-89744092738a.png",
+      "row": 1,
+      "source_bounds": [
+        [
+          111,
+          70,
+          303,
+          336
+        ],
+        [
+          97,
+          68,
+          303,
+          336
+        ],
+        [
+          81,
+          75,
+          309,
+          334
+        ],
+        [
+          62,
+          78,
+          313,
+          334
+        ],
+        [
+          81,
+          76,
+          301,
+          335
+        ]
+      ],
+      "common_crop": [
+        54,
+        60,
+        321,
+        344
+      ],
+      "common_scale": 1.3661971830985915,
+      "common_paste_offset": [
+        41,
+        34
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-4.webp",
+          "state": "idle",
+          "size_bytes": 44022,
+          "opaque_bounds": [
+            118,
+            48,
+            381,
+            411
+          ]
+        },
+        {
+          "file": "foe-4-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 45404,
+          "opaque_bounds": [
+            100,
+            45,
+            382,
+            411
+          ]
+        },
+        {
+          "file": "foe-4-windup.webp",
+          "state": "windup",
+          "size_bytes": 48244,
+          "opaque_bounds": [
+            78,
+            55,
+            390,
+            408
+          ]
+        },
+        {
+          "file": "foe-4-attack.webp",
+          "state": "attack",
+          "size_bytes": 49640,
+          "opaque_bounds": [
+            52,
+            59,
+            395,
+            409
+          ]
+        },
+        {
+          "file": "foe-4-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 39928,
+          "opaque_bounds": [
+            77,
+            56,
+            379,
+            409
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "atlas": "animation-foes-c.png",
+      "source_generation": "exec-d7fb3ee1-e92b-474a-9e3f-c2dce4d39e7e.png",
+      "row": 0,
+      "source_bounds": [
+        [
+          91,
+          87,
+          305,
+          332
+        ],
+        [
+          75,
+          78,
+          330,
+          326
+        ],
+        [
+          76,
+          90,
+          286,
+          326
+        ],
+        [
+          32,
+          92,
+          327,
+          310
+        ],
+        [
+          68,
+          91,
+          296,
+          326
+        ]
+      ],
+      "common_crop": [
+        24,
+        70,
+        338,
+        340
+      ],
+      "common_scale": 1.2356687898089171,
+      "common_paste_offset": [
+        30,
+        88
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-5.webp",
+          "state": "idle",
+          "size_bytes": 44780,
+          "opaque_bounds": [
+            113,
+            109,
+            377,
+            413
+          ]
+        },
+        {
+          "file": "foe-5-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 47924,
+          "opaque_bounds": [
+            93,
+            98,
+            408,
+            405
+          ]
+        },
+        {
+          "file": "foe-5-windup.webp",
+          "state": "windup",
+          "size_bytes": 38814,
+          "opaque_bounds": [
+            95,
+            113,
+            354,
+            405
+          ]
+        },
+        {
+          "file": "foe-5-attack.webp",
+          "state": "attack",
+          "size_bytes": 47188,
+          "opaque_bounds": [
+            39,
+            115,
+            405,
+            385
+          ]
+        },
+        {
+          "file": "foe-5-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 36874,
+          "opaque_bounds": [
+            84,
+            114,
+            367,
+            405
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "atlas": "animation-foes-c.png",
+      "source_generation": "exec-d7fb3ee1-e92b-474a-9e3f-c2dce4d39e7e.png",
+      "row": 1,
+      "source_bounds": [
+        [
+          109,
+          80,
+          306,
+          324
+        ],
+        [
+          95,
+          75,
+          302,
+          323
+        ],
+        [
+          72,
+          88,
+          303,
+          324
+        ],
+        [
+          32,
+          100,
+          320,
+          324
+        ],
+        [
+          87,
+          93,
+          276,
+          325
+        ]
+      ],
+      "common_crop": [
+        24,
+        67,
+        328,
+        333
+      ],
+      "common_scale": 1.2763157894736843,
+      "common_paste_offset": [
+        30,
+        82
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-6.webp",
+          "state": "idle",
+          "size_bytes": 50810,
+          "opaque_bounds": [
+            138,
+            98,
+            390,
+            411
+          ]
+        },
+        {
+          "file": "foe-6-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 52118,
+          "opaque_bounds": [
+            121,
+            92,
+            385,
+            410
+          ]
+        },
+        {
+          "file": "foe-6-windup.webp",
+          "state": "windup",
+          "size_bytes": 56548,
+          "opaque_bounds": [
+            91,
+            109,
+            386,
+            410
+          ]
+        },
+        {
+          "file": "foe-6-attack.webp",
+          "state": "attack",
+          "size_bytes": 55970,
+          "opaque_bounds": [
+            40,
+            124,
+            408,
+            410
+          ]
+        },
+        {
+          "file": "foe-6-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 45480,
+          "opaque_bounds": [
+            110,
+            115,
+            351,
+            412
+          ]
+        }
+      ]
+    }
+  ],
+  "total_bytes": 1311388
+}
