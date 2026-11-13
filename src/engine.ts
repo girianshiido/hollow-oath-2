@@ -1,16 +1,16 @@
-import {CLASSES,CLASS_IDS,SKILLS,FOES,CHAPTERS,SANCTUARIES,ABYSS_RULES,chapterIndex} from './content.ts';
-import type {ClassId,SkillId,EnemyRole} from './content.ts';
+import {CLASSES,CLASS_IDS,SKILLS,FOES,CHAPTERS,SANCTUARIES,ABYSS_RULES,chapterIndex,COMBAT_MODES,MODE_INFO,foeUnlockWave} from './content.ts';
+import type {ClassId,SkillId,EnemyRole,CombatMode} from './content.ts';
 
 export interface Hero {
   classId:ClassId; name:string; level:number; xp:number; hp:number; mp:number;
   weapon:number; armor:number; focus:number; skills:[number,number]; cooldowns:[number,number];
-  clock:number; shield:number; shieldUntil:number; tauntUntil:number;
+  clock:number; shield:number; shieldUntil:number; tauntUntil:number;mode?:CombatMode;
 }
 export interface Enemy {
   id:number; family:number; name:string; role:EnemyRole; hp:number; maxHp:number; atk:number; armor:number; speed:number;
   clock:number; attacks:number; preparation:number; intent:'strike'|'heavy'|'heal'|'curse';
   exposedUntil:number; markedUntil:number; slowUntil:number; burnUntil:number; healSpent:number;
-  boss:boolean; chapterBoss:boolean; form:1|2; formName:string; art:string;
+  boss:boolean; chapterBoss:boolean; form:1|2; formName:string; art:string;ward?:Exclude<CombatMode,'mend'>;
 }
 export type Phase='fight'|'transition'|'camp'|'recruit'|'complete'|'expedition-clear'|'defeat';
 export type Mode='campaign'|'sanctuary'|'abyss'|'contract';
@@ -21,7 +21,7 @@ export interface Run {
   transition:number;trip:Trip|null;relics:string[];relic:string|null;sanctuaries:string[];abyssBest:number;
   contracts:string[];interrupts:number;totalGold:number;log:string[];
 }
-export interface CombatEvent {kind:'damage'|'heal'|'shield'|'cast'|'death'|'transform'|'reward'|'interrupt'|'hero-hit'|'enemy-strike';target:number;amount?:number;hero?:number;skill?:SkillId;critical?:boolean;}
+export interface CombatEvent {kind:'damage'|'heal'|'shield'|'cast'|'death'|'transform'|'reward'|'interrupt'|'hero-hit'|'enemy-strike'|'ward-break';target:number;amount?:number;hero?:number;skill?:SkillId;critical?:boolean;action?:CombatMode;}
 export interface Stats {hp:number;mp:number;atk:number;armor:number;speed:number;regen:number;}
 export const xpGoal=(level:number)=>Math.round(45+level*19+level**1.5*6);
 export function stats(h:Hero):Stats {
@@ -31,7 +31,7 @@ export function stats(h:Hero):Stats {
     armor:c.armor+l*.72+(h.armor-1)*2.4,speed:c.speed+Math.min(.35,l*.008),regen:(.85+l*.022+(h.focus-1)*.045)*(h.classId==='hexweaver'?1.15:1)};
 }
 export function newHero(classId:ClassId,level=1):Hero {
-  const h:Hero={classId,name:CLASSES[classId].person,level,xp:0,hp:0,mp:0,weapon:1,armor:1,focus:1,skills:[1,1],cooldowns:[0,0],clock:0,shield:0,shieldUntil:0,tauntUntil:0};
+  const h:Hero={classId,name:CLASSES[classId].person,level,xp:0,hp:0,mp:0,weapon:1,armor:1,focus:1,skills:[1,1],cooldowns:[0,0],clock:0,shield:0,shieldUntil:0,tauntUntil:0,mode:'steel'};
   const s=stats(h);h.hp=s.hp;h.mp=s.mp;return h;
 }
 export function newRun(classId:ClassId,name?:string):Run {
@@ -51,9 +51,10 @@ function enemyAt(wave:number,family:number,id:number,boss=false,chapter=false,fl
   const f=FOES[family%FOES.length]!,scale=(1+.30*Math.max(0,wave-1)**1.22)*(1+floor*.055);
   const guard=f.role==='guard',swift=f.role==='swift';
   const chapterId=chapterIndex(wave),c=CHAPTERS[chapterId]!;
-  const hp=Math.round((boss?(chapter?380:190):(guard?49:swift?29:38))*scale);
+  const pressure=1+Math.min(.50,Math.max(0,wave-1)*.025);
+  const hp=Math.round((boss?(chapter?465:230):(guard?58:swift?39:49))*scale*pressure);
   return {id,family:family%FOES.length,name:boss?(chapter?c.boss:`${CHAPTERS[chapterId]!.short} Warden`):f.name,role:boss?'striker':f.role,
-    hp,maxHp:hp,atk:(boss?(chapter?27:22):swift?9:guard?13:12)*scale**.87,armor:(boss?6:guard?9:3)*scale**.65,
+    hp,maxHp:hp,atk:(boss?(chapter?31:25):swift?11:guard?15:14)*scale**.87,armor:(boss?6:guard?9:3)*scale**.65,
     speed:boss?.85:swift?1.12:guard?.57:.73,clock:0,attacks:0,preparation:0,intent:'strike',exposedUntil:0,markedUntil:0,slowUntil:0,burnUntil:0,healSpent:0,
     boss,chapterBoss:chapter,form:1,formName:chapter?c.form:'Unbound',art:boss?`boss-${chapterId+1}`:`foe-${family%FOES.length+1}`};
 }
@@ -62,9 +63,12 @@ export function spawnGroup(r:Run){
   const group=boss?1:Math.min(31-n,r.trip?.rule==='swarm'?3:wave===1?(n<10?1:2):wave<5?(n%5===0?2:1):1+(Math.floor(n/3)+wave)%3);
   r.enemies=Array.from({length:group},(_,i)=>{
     // Early fights introduce roles individually. Later groups deliberately mix them.
-    const family=wave===1?(n<3?0:n<6?2:n<10?4:(n+i)%6):((wave-1)*3+n+i*3)%12;
+    const available=FOES.map((_,index)=>index).filter(index=>foeUnlockWave(index)<=wave);
+    const arrival=wave%2===0&&wave<=32?31+wave/2:undefined;
+    const family=arrival!==undefined&&n===0&&i===0?arrival:wave===1&&n<5?[0,2,4,1,3][n]!:available[((n+i)*7+(wave-1)*11)%available.length]!;
     const e=enemyAt(wave,family,n+i,boss,boss&&(r.trip!==null||wave%4===0),r.trip?.mode==='abyss'?r.trip.floor:0);
     if(r.trip?.rule==='fury')e.atk*=1.12;
+    if(wave>=2&&(e.chapterBoss||!boss&&[7,15,23].includes(n+i)))e.ward=(['steel','ember','rime','storm'] as const)[(wave+n+i)%4];
     return e;
   });
   r.target=r.enemies[0]!.id;r.phase='fight';r.transition=0;
@@ -122,10 +126,15 @@ export function contractNumber(day:string){let n=2166136261;for(const char of da
 export const contractRule=(day:string)=>ABYSS_RULES[contractNumber(day)%3]!;
 function alive(r:Run){return r.enemies.filter(e=>e.hp>0);}
 function target(r:Run){return r.enemies.find(e=>e.hp>0&&e.id===r.target)??alive(r)[0];}
+export function setMode(r:Run,index:number,mode:CombatMode):boolean{
+  const h=r.heroes[index];if(!h||h.hp<=0||!COMBAT_MODES.includes(mode)||!['fight','transition'].includes(r.phase))return false;
+  h.mode=mode;return true;
+}
 function hurtEnemy(r:Run,e:Enemy,raw:number,element:'physical'|'fire'|'ice'|'light',events:CombatEvent[],hero?:number){
   if(e.hp<=0)return;
   const weakness=FOES[e.family]!.weakness;
   let power=raw;
+  if(e.ward){const action=element==='physical'?'steel':element==='fire'?'ember':element==='ice'?'rime':'storm';if(action===e.ward){delete e.ward;events.push({kind:'ward-break',target:e.id,hero});}else power*=.18;}
   if(!e.boss){if(weakness===element)power*=1.4;if(e.family===2&&element==='fire')power*=.45;}
   else if(e.chapterBoss){const ch=chapterIndex(effectiveWave(r));if(ch===1&&element==='fire')power*=.45;if(ch===1&&element==='ice'||ch===3&&element==='fire')power*=1.4;}
   if(r.time<e.exposedUntil)power*=1.35;if(r.time<e.markedUntil)power*=1.30;
@@ -137,11 +146,12 @@ function hurtEnemy(r:Run,e:Enemy,raw:number,element:'physical'|'fire'|'ice'|'lig
     events.push({kind:'death',target:e.id});r.kills++;
     const wave=effectiveWave(r),xp=Math.round((e.boss?75:8)*(1+wave*.22)),gold=Math.round((e.boss?55:8)*(1+wave*.18));
     reward(r,gold,e.boss?3:(e.id%9===7?1:0));
-    for(const h of r.heroes){h.xp+=xp;while(h.level<99&&h.xp>=xpGoal(h.level)){h.xp-=xpGoal(h.level);h.level++;const s=stats(h);if(h.hp>0)h.hp=Math.min(s.hp,h.hp+10);h.mp=Math.min(s.mp,h.mp+2);}}
+    for(const h of r.heroes){h.xp+=xp;while(h.level<99&&h.xp>=xpGoal(h.level)){h.xp-=xpGoal(h.level);h.level++;const s=stats(h);if(h.hp>0)h.hp=Math.min(s.hp,h.hp+4);h.mp=Math.min(s.mp,h.mp+2);}}
     if(r.relic==='lantern')for(const h of r.heroes)if(h.hp>0)h.mp=Math.min(stats(h).mp,h.mp+2);
     if(r.trip?.rule==='swarm')for(const other of alive(r)){other.atk*=1.12;other.speed*=1.04;}
   }else if(e.chapterBoss&&e.form===1&&e.hp<=e.maxHp*.5){
     e.form=2;e.name=e.formName;e.preparation=0;e.clock=0;e.speed*=1.22;e.atk*=1.15;e.armor*=.7;
+    e.ward=(['steel','ember','rime','storm'] as const)[(chapterIndex(effectiveWave(r))+1)%4];
     events.push({kind:'transform',target:e.id});note(r,`${e.name} has awakened.`);
   }
 }
@@ -212,7 +222,7 @@ function enemyAttack(r:Run,e:Enemy,events:CombatEvent[]){
   for(const {h,i}of victims){
     const s=stats(h),raw=Math.max(1,e.atk*(e.intent==='heavy'?1.85:e.intent==='curse'?1.3:1)-s.armor*(e.intent==='curse'?.35:1));
     let damage=Math.round(raw);const absorbed=Math.min(h.shield,damage);h.shield-=absorbed;damage-=absorbed;
-    h.hp=Math.max(0,h.hp-damage);events.push({kind:'hero-hit',target:i,amount:damage});
+    h.hp=Math.max(0,h.hp-damage);if(e.intent==='curse')h.mp=Math.max(0,h.mp-Math.max(2,Math.floor(s.mp*.07)));events.push({kind:'hero-hit',target:i,amount:damage});
   }
 }
 /** Advance active combat only. The UI owns pause/background policy. Fixed substeps keep clocks deterministic. */
@@ -230,7 +240,20 @@ export function tick(r:Run,seconds:number):CombatEvent[]{
       if(h.shieldUntil<=r.time)h.shield=0;
       h.cooldowns=[Math.max(0,h.cooldowns[0]-dt),Math.max(0,h.cooldowns[1]-dt)];
       h.clock+=dt*s.speed;
-      if(h.clock>=1){h.clock-=1;const e=target(r);if(e)hurtEnemy(r,e,s.atk,CLASSES[h.classId].magic?'light':'physical',events,r.heroes.indexOf(h));}
+      if(h.clock>=1){
+        h.clock-=1;const e=target(r),index=r.heroes.indexOf(h);let action=h.mode??'steel';
+        if(action==='mend'&&h.hp>=s.hp-.01||h.mp<MODE_INFO[action].cost){h.mode='steel';action='steel';}
+        if(action==='mend'){
+          h.mp-=MODE_INFO.mend.cost;const amount=Math.min(s.hp-h.hp,Math.round(s.hp*.09+s.atk*.65));h.hp+=amount;
+          events.push({kind:'heal',target:index,hero:index,amount,action:'mend'});if(h.hp>=s.hp-.01)h.mode='steel';
+        }else if(e){
+          h.mp-=MODE_INFO[action].cost;
+          const element=action==='steel'?'physical':action==='ember'?'fire':action==='rime'?'ice':'light';
+          const before=events.length;hurtEnemy(r,e,s.atk*(action==='steel'?1:CLASSES[h.classId].magic?1.8:1.6),element,events,index);
+          for(let j=before;j<events.length;j++)if(events[j]!.kind==='damage')events[j]!.action=action;
+          if(action==='rime')e.slowUntil=Math.max(e.slowUntil,r.time+1.1);
+        }
+      }
     }
     afterActions(r,events);if(r.phase!=='fight')continue;
     for(const e of alive(r)){

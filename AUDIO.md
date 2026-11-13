@@ -73,3 +73,56 @@ crête/RMS et écarts de jonction de boucle pour chaque thème.
 Crédits : compositions, arrangement, partitions et synthèse des bruitages
 créés pour Hollow Oath 2 pendant son développement. Rendu instrumental
 local : FluidSynth et banque General MIDI ; encodage : ffmpeg.
+
+## Mobile playback revision — Web Audio
+
+All playback now uses a single `AudioContext` with master, music and effects
+`GainNode` buses. Music and sound-effect sliders affect already-playing
+sources immediately; global mute sets the master gain to zero and cancels
+queued effects. No `HTMLAudioElement.volume` setting is relied upon on iOS.
+
+An explicit user gesture calls `unlock(scene)`. The scene is selected before
+context resume or any asynchronous load, so starting a new adventure cannot
+briefly launch the title track. Repeated unlock/play calls coalesce. A
+zero-gain one-sample warm-up supports older iOS activation paths. Title and
+selection music remain gesture-gated; character selection has its own theme,
+**Four Roads, One Promise**, 108 BPM, 71.111179 seconds, reproduced with
+`python3 scripts/compose-selection.py`. Existing main music masters are intact.
+
+Music is decoded once and played by looping `AudioBufferSourceNode` sources.
+Loop endpoints use the source-master length rounded to the decoded sample
+rate, excluding possible AAC packet-padding silence. During a scene switch,
+the current track stays audible until the next buffer is ready, then a short
+160 ms crossfade replaces it. Stale decodes cannot revive an obsolete scene.
+Victory and defeat are non-looping stingers and do not restart on repeated
+renders of the same scene.
+
+The loader tries actual OGG decoding, falls back to AAC if fetching or decoding
+fails, and forgets failed requests so they can be retried. The decoded LRU cache
+targets 72 MiB and at most two music buffers. The current and predictable next
+scene are preloaded after activation; short effects are warmed sequentially.
+Backgrounding immediately mutes the master and suspends the context. Returning
+attempts a resume; a later user tap can replace a context left stalled by an
+OS interruption. Audio remains best-effort if the operating system refuses
+to resume it.
+
+The new `sfx-steel-1/2/3` recordings combine moving air, a short impact,
+inharmonic metallic resonances and a quiet stereo reflection. Sword playback
+cycles these three actual recordings, with restrained speed variation. The
+other effects now use layered noise, resonant partials and controlled attack
+and decay envelopes rather than a single oscillator. Reproduce only these
+effects with `python3 scripts/compose-sfx.py`; music masters are not rewritten.
+Their measured durations and levels are in `public/audio/sfx-manifest.json`.
+
+Automated fake-context tests cover live gain changes/mute, obsolete-decode
+races, atomic/double unlock, keeping the old track while decoding, sample
+loop boundaries, OGG-to-AAC fallback, retry after network failure, stingers,
+background resume, stalled-context recovery, cache bounds and sword variants.
+These tests do **not** constitute a physical iPhone SE/Safari/PWA audio test.
+Device verification must still include initial activation, sliders/mute while
+audio plays, at least two complete loops, scene switches, app backgrounding,
+screen lock and return from an interruption.
+
+Primary references: [Web Audio specification](https://webaudio.github.io/web-audio-api/),
+[WebKit interrupted-context report](https://bugs.webkit.org/show_bug.cgi?id=273511),
+and [WebKit PWA background-resume report](https://bugs.webkit.org/show_bug.cgi?id=291892).

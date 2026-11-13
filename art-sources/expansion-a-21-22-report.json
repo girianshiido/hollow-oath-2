@@ -1,0 +1,162 @@
+{
+  "atlas": "expansion-a-21-22.png",
+  "source_generation": "exec-7907d553-4141-43c3-8151-ea2cd3653861.png",
+  "creatures": [
+    {
+      "id": 21,
+      "row": 0,
+      "source_bounds": [
+        [
+          64,
+          122,
+          339,
+          339
+        ],
+        [
+          66,
+          108,
+          333,
+          339
+        ],
+        [
+          52,
+          140,
+          344,
+          339
+        ],
+        [
+          34,
+          112,
+          352,
+          339
+        ],
+        [
+          48,
+          119,
+          329,
+          326
+        ]
+      ],
+      "common_crop": [
+        28,
+        102,
+        358,
+        345
+      ],
+      "common_scale": 1.1515151515151516,
+      "common_paste_offset": [
+        34,
+        142
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-21.webp",
+          "state": "idle",
+          "size_bytes": 44380
+        },
+        {
+          "file": "foe-21-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 44082
+        },
+        {
+          "file": "foe-21-windup.webp",
+          "state": "windup",
+          "size_bytes": 46396
+        },
+        {
+          "file": "foe-21-attack.webp",
+          "state": "attack",
+          "size_bytes": 46254
+        },
+        {
+          "file": "foe-21-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 42984
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "row": 1,
+      "source_bounds": [
+        [
+          118,
+          62,
+          290,
+          334
+        ],
+        [
+          111,
+          55,
+          280,
+          334
+        ],
+        [
+          87,
+          81,
+          303,
+          333
+        ],
+        [
+          79,
+          81,
+          347,
+          331
+        ],
+        [
+          105,
+          90,
+          295,
+          330
+        ]
+      ],
+      "common_crop": [
+        73,
+        49,
+        353,
+        340
+      ],
+      "common_scale": 1.3058419243986255,
+      "common_paste_offset": [
+        41,
+        42
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-22.webp",
+          "state": "idle",
+          "size_bytes": 47408
+        },
+        {
+          "file": "foe-22-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 48662
+        },
+        {
+          "file": "foe-22-windup.webp",
+          "state": "windup",
+          "size_bytes": 57882
+        },
+        {
+          "file": "foe-22-attack.webp",
+          "state": "attack",
+          "size_bytes": 58370
+        },
+        {
+          "file": "foe-22-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 44456
+        }
+      ]
+    }
+  ]
+}

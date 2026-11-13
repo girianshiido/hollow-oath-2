@@ -1,4 +1,4 @@
-import {CLASS_IDS,CLASSES,SKILLS,SANCTUARIES} from './content.ts';
+import {CLASS_IDS,CLASSES,SKILLS,SANCTUARIES,FOES,COMBAT_MODES} from './content.ts';
 import type {ClassId} from './content.ts';
 import {stats} from './engine.ts';
 import type {Hero,Run,Enemy,Trip} from './engine.ts';
@@ -11,7 +11,7 @@ const number=(v:unknown,min=0,max=1e15):v is number=>typeof v==='number'&&Number
 const text=(v:unknown,max=100):v is string=>typeof v==='string'&&v.length>0&&v.length<=max&&!/[\u0000-\u001f]/.test(v);
 const list=(v:unknown,max:number):v is string[]=>Array.isArray(v)&&v.length<=max&&v.every(s=>text(s,100));
 function hero(v:unknown):v is Hero {
-  if(!object(v)||!CLASS_IDS.includes(v.classId as ClassId)||!text(v.name,24))return false;
+  if(!object(v)||!CLASS_IDS.includes(v.classId as ClassId)||!text(v.name,24)||v.mode!==undefined&&!COMBAT_MODES.includes(v.mode as never))return false;
   if(!['level','xp','hp','mp','weapon','armor','focus','clock','shield','shieldUntil','tauntUntil'].every(k=>number(v[k])))return false;
   if(!number(v.level,1,99)||!Number.isInteger(v.level)||!['weapon','armor','focus'].every(k=>number(v[k],1,32)&&Number.isInteger(v[k])))return false;
   if(!Array.isArray(v.skills)||v.skills.length!==2||!v.skills.every(s=>number(s,1,6)&&Number.isInteger(s)))return false;
@@ -21,8 +21,9 @@ function hero(v:unknown):v is Hero {
 }
 function enemy(v:unknown):v is Enemy {
   if(!object(v)||!text(v.name)||!text(v.formName)||!text(v.art,50)||!/^((foe|boss)-\d+)$/.test(v.art))return false;
+  if(v.ward!==undefined&&!['steel','ember','rime','storm'].includes(String(v.ward)))return false;
   if(!['id','family','hp','maxHp','atk','armor','speed','clock','attacks','preparation','exposedUntil','markedUntil','slowUntil','burnUntil','healSpent'].every(k=>number(v[k])))return false;
-  return number(v.id,0,31)&&Number.isInteger(v.id)&&number(v.family,0,11)&&Number.isInteger(v.family)&&number(v.maxHp,1,1e12)&&(v.hp as number)<=(v.maxHp as number)&&['striker','guard','caster','healer','swift'].includes(String(v.role))&&['strike','heavy','heal','curse'].includes(String(v.intent))&&typeof v.boss==='boolean'&&typeof v.chapterBoss==='boolean'&&(v.form===1||v.form===2);
+  return number(v.id,0,31)&&Number.isInteger(v.id)&&number(v.family,0,FOES.length-1)&&Number.isInteger(v.family)&&number(v.maxHp,1,1e12)&&(v.hp as number)<=(v.maxHp as number)&&['striker','guard','caster','healer','swift'].includes(String(v.role))&&['strike','heavy','heal','curse'].includes(String(v.intent))&&typeof v.boss==='boolean'&&typeof v.chapterBoss==='boolean'&&(v.form===1||v.form===2);
 }
 function trip(v:unknown):v is Trip|null {
   if(v===null)return true;

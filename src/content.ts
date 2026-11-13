@@ -44,7 +44,43 @@ export const FOES: {name:string; role:EnemyRole; weakness:'fire'|'ice'|'physical
   {name:'Crystal Mimic',role:'striker',weakness:'light',description:'A heavy bite gives away its disguise.'},
   {name:'Bell Golem',role:'guard',weakness:'light',description:'A walking wall with a crushing toll.'},
   {name:'Obsidian Mantis',role:'swift',weakness:'ice',description:'Fast blades. An exposed mantis falls quickly.'},
-  {name:'Astral Jelly',role:'caster',weakness:'physical',description:'Its light is beautiful. Its spell is not.'}
+  {name:'Astral Jelly',role:'caster',weakness:'physical',description:'Its light is beautiful. Its spell is not.'},
+  {name:'Gravehound',role:'swift',weakness:'fire',description:'Two jaws. One dangerous pounce.'},
+  {name:'Iron Bowman',role:'striker',weakness:'light',description:'Break its aim before the piercing shot.'},
+  {name:'Gargoyle',role:'guard',weakness:'ice',description:'A stone sentinel shielding its group.'},
+  {name:'Thorn Widow',role:'swift',weakness:'fire',description:'Fast fangs punish an unguarded hero.'},
+  {name:'Eel Wyrm',role:'caster',weakness:'ice',description:'Its electric curse drains mana.'},
+  {name:'Carrion Acolyte',role:'healer',weakness:'light',description:'Interrupt the ritual before its allies recover.'},
+  {name:'Moss Golem',role:'guard',weakness:'fire',description:'Living stone protects the creatures behind it.'},
+  {name:'Bone Heron',role:'swift',weakness:'light',description:'A swift beak and a long reach.'},
+  {name:'Siege Crawler',role:'striker',weakness:'ice',description:'Its ballista prepares a crushing shot.'},
+  {name:'Censer Effigy',role:'caster',weakness:'physical',description:'Its incense gathers into a draining curse.'},
+  {name:'Bladefin Koi',role:'swift',weakness:'ice',description:'A flash of fins, then a cutting strike.'},
+  {name:'Veilmoth Oracle',role:'healer',weakness:'fire',description:'Its dust restores weakened enemies.'},
+  {name:'Suncrest Raptor',role:'swift',weakness:'ice',description:'Golden claws move faster than armor.'},
+  {name:'Sepulcher Tortoise',role:'guard',weakness:'light',description:'A chapel shell shelters its companions.'},
+  {name:'Bellmaw',role:'striker',weakness:'light',description:'Silence the toll before the jaw closes.'},
+  {name:'Glaivehorn Sentinel',role:'guard',weakness:'fire',description:'A jade bulwark with a bladed counterattack.'},
+  {name:'Wickstalker',role:'swift',weakness:'ice',description:'Its lantern hides a sudden leap.'},
+  {name:'Blood Scorpion',role:'striker',weakness:'ice',description:'Its raised sting signals a heavy blow.'},
+  {name:'Crag Fiend',role:'striker',weakness:'light',description:'A ram of basalt with a crushing charge.'},
+  {name:'Ivory Revenant',role:'guard',weakness:'fire',description:'Old armor still knows how to hold a line.'},
+  {name:'Sporeguard',role:'guard',weakness:'fire',description:'A living shield beneath a broad cap.'},
+  {name:'Astral Cuttle',role:'caster',weakness:'physical',description:'Its starry mantle prepares a mana-draining hex.'},
+  {name:'Dune Scarab',role:'striker',weakness:'ice',description:'A hard shell and powerful mandibles.'},
+  {name:'Chainbound Jackal',role:'swift',weakness:'light',description:'Chains tighten before its hunting lunge.'},
+  {name:'Ash Salamander',role:'caster',weakness:'ice',description:'Flame gathers beneath its armored skin.'},
+  {name:'Moon Hare',role:'swift',weakness:'fire',description:'A crescent horn turns speed into danger.'},
+  {name:'Glass Basilisk',role:'caster',weakness:'physical',description:'Interrupt the gaze before the curse lands.'},
+  {name:'Saltbound Crab',role:'guard',weakness:'fire',description:'Salt-crystal armor guards the group.'},
+  {name:'Briar Duelist',role:'swift',weakness:'ice',description:'A poised blade gives away the next thrust.'},
+  {name:'Clockwork Wasp',role:'swift',weakness:'ice',description:'A fragile machine with a rapid sting.'},
+  {name:'Candle Wraith',role:'caster',weakness:'ice',description:'The candle feeds a draining spell.'},
+  {name:'Mire Crocodile',role:'guard',weakness:'light',description:'A swamp wall with an armored back.'},
+  {name:'Porcelain Doll',role:'healer',weakness:'fire',description:'Its delicate hands restore broken allies.'},
+  {name:'Storm Roc',role:'caster',weakness:'physical',description:'Its stormcall threatens your mana reserves.'},
+  {name:'Rootbound Boar',role:'striker',weakness:'fire',description:'Brace for the root-armored charge.'},
+  {name:'Starless Knight',role:'guard',weakness:'light',description:'The final watcher protects its companions.'}
 ];
 export interface Expedition {id:string;name:string;subtitle:string;text:string;unlock:number;wave:number;rule:'swarm'|'silence'|'fury';reward:string;arena:number;}
 export const SANCTUARIES: Expedition[] = [
@@ -61,3 +97,14 @@ export const RELICS: Record<string,{name:string;text:string}> = {
 };
 export const ABYSS_RULES = ['swarm','silence','fury'] as const;
 export const fmt = (n:number) => Math.floor(n).toLocaleString('en-US');
+
+export type CombatMode='steel'|'ember'|'rime'|'storm'|'mend';
+export const COMBAT_MODES:CombatMode[]=['steel','ember','rime','storm','mend'];
+export const MODE_INFO:Record<CombatMode,{name:string;icon:string;cost:number;color:string;text:string}>={
+ steel:{name:'Steel',icon:'sword',cost:0,color:'#f2d4a2',text:'Free sword attacks. Breaks steel seals and preserves mana.'},
+ ember:{name:'Fire',icon:'flame',cost:4,color:'#ffaa67',text:'Repeats a fire spell. Strong against frost and plants. Breaks fire seals.'},
+ rime:{name:'Ice',icon:'snow',cost:5,color:'#94e7ff',text:'Repeats an ice spell. Slows the target. Breaks ice seals.'},
+ storm:{name:'Storm',icon:'bolt',cost:6,color:'#ccabff',text:'Repeats a piercing storm spell. Breaks storm seals.'},
+ mend:{name:'Heal',icon:'heart',cost:8,color:'#8ff0bf',text:'Heals this hero on each action until full HP or insufficient mana, then returns to steel.'}
+};
+export const foeUnlockWave=(family:number)=>family<32?1:(family-31)*2;

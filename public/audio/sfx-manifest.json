@@ -1,0 +1,68 @@
+{
+  "steel-1": {
+    "duration": 0.39,
+    "peakDb": -7.330630888408268,
+    "rmsDb": -26.93749644159614,
+    "channels": 2
+  },
+  "steel-2": {
+    "duration": 0.52,
+    "peakDb": -7.330630888408269,
+    "rmsDb": -27.139264497361527,
+    "channels": 2
+  },
+  "steel-3": {
+    "duration": 0.34,
+    "peakDb": -7.330630888408269,
+    "rmsDb": -27.430198432290908,
+    "channels": 2
+  },
+  "fire": {
+    "duration": 0.76,
+    "peakDb": -8.873949984654255,
+    "rmsDb": -22.561429293666144,
+    "channels": 2
+  },
+  "ice": {
+    "duration": 0.69,
+    "peakDb": -8.873949984654255,
+    "rmsDb": -27.39110452688683,
+    "channels": 2
+  },
+  "heal": {
+    "duration": 0.92,
+    "peakDb": -8.873949984654255,
+    "rmsDb": -23.279916347052747,
+    "channels": 2
+  },
+  "guard": {
+    "duration": 0.71,
+    "peakDb": -8.873949984654255,
+    "rmsDb": -30.096593696999555,
+    "channels": 2
+  },
+  "reward": {
+    "duration": 0.95,
+    "peakDb": -8.873949984654253,
+    "rmsDb": -23.019064772088107,
+    "channels": 2
+  },
+  "select": {
+    "duration": 0.1,
+    "peakDb": -8.873949984654255,
+    "rmsDb": -29.015996263879682,
+    "channels": 2
+  },
+  "hit": {
+    "duration": 0.25,
+    "peakDb": -8.873949984654255,
+    "rmsDb": -28.149936180268554,
+    "channels": 2
+  },
+  "storm": {
+    "duration": 0.85,
+    "peakDb": -8.873949984654255,
+    "rmsDb": -27.631413773051854,
+    "channels": 2
+  }
+}

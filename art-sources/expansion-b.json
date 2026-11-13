@@ -1,0 +1,1646 @@
+{
+  "poses": [
+    "idle",
+    "idle2",
+    "windup",
+    "attack",
+    "hurt"
+  ],
+  "creature_ids": [
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "processing": "Pillow cropping, uniform row scale and bottom alignment only; all character content imagegen; no procedural pose warps or erasure.",
+  "assets": [
+    {
+      "file": "foe-25.webp",
+      "creature_id": 25,
+      "name": "Suncrest Raptor",
+      "pose": "idle",
+      "atlas": "expansion-b1.png",
+      "source_generation": "exec-e0ef66a7-b4a8-455d-975d-f399e4d15215.png",
+      "cell": [
+        0,
+        0
+      ],
+      "source_bounds": [
+        157,
+        128,
+        319,
+        331
+      ],
+      "opaque_bounds": [
+        104,
+        117,
+        344,
+        417
+      ],
+      "common_scale": 1.4809160305343512,
+      "ground_anchor": 418,
+      "bytes": 39778
+    },
+    {
+      "file": "foe-25-idle2.webp",
+      "creature_id": 25,
+      "name": "Suncrest Raptor",
+      "pose": "-idle2",
+      "atlas": "expansion-b1.png",
+      "source_generation": "exec-e0ef66a7-b4a8-455d-975d-f399e4d15215.png",
+      "cell": [
+        0,
+        1
+      ],
+      "source_bounds": [
+        127,
+        125,
+        289,
+        331
+      ],
+      "opaque_bounds": [
+        104,
+        114,
+        344,
+        418
+      ],
+      "common_scale": 1.4809160305343512,
+      "ground_anchor": 418,
+      "bytes": 39322
+    },
+    {
+      "file": "foe-25-windup.webp",
+      "creature_id": 25,
+      "name": "Suncrest Raptor",
+      "pose": "-windup",
+      "atlas": "expansion-b1.png",
+      "source_generation": "exec-e0ef66a7-b4a8-455d-975d-f399e4d15215.png",
+      "cell": [
+        0,
+        2
+      ],
+      "source_bounds": [
+        70,
+        162,
+        295,
+        331
+      ],
+      "opaque_bounds": [
+        57,
+        168,
+        390,
+        417
+      ],
+      "common_scale": 1.4809160305343512,
+      "ground_anchor": 418,
+      "bytes": 41676
+    },
+    {
+      "file": "foe-25-attack.webp",
+      "creature_id": 25,
+      "name": "Suncrest Raptor",
+      "pose": "-attack",
+      "atlas": "expansion-b1.png",
+      "source_generation": "exec-e0ef66a7-b4a8-455d-975d-f399e4d15215.png",
+      "cell": [
+        0,
+        3
+      ],
+      "source_bounds": [
+        49,
+        144,
+        311,
+        322
+      ],
+      "opaque_bounds": [
+        31,
+        155,
+        417,
+        417
+      ],
+      "common_scale": 1.4809160305343512,
+      "ground_anchor": 418,
+      "bytes": 53192
+    },
+    {
+      "file": "foe-25-hurt.webp",
+      "creature_id": 25,
+      "name": "Suncrest Raptor",
+      "pose": "-hurt",
+      "atlas": "expansion-b1.png",
+      "source_generation": "exec-e0ef66a7-b4a8-455d-975d-f399e4d15215.png",
+      "cell": [
+        0,
+        4
+      ],
+      "source_bounds": [
+        74,
+        160,
+        263,
+        334
+      ],
+      "opaque_bounds": [
+        85,
+        160,
+        364,
+        418
+      ],
+      "common_scale": 1.4809160305343512,
+      "ground_anchor": 418,
+      "bytes": 38048
+    },
+    {
+      "file": "foe-26.webp",
+      "creature_id": 26,
+      "name": "Sepulcher Tortoise",
+      "pose": "idle",
+      "atlas": "expansion-b1.png",
+      "source_generation": "exec-e0ef66a7-b4a8-455d-975d-f399e4d15215.png",
+      "cell": [
+        1,
+        0
+      ],
+      "source_bounds": [
+        145,
+        83,
+        338,
+        283
+      ],
+      "opaque_bounds": [
+        64,
+        85,
+        382,
+        417
+      ],
+      "common_scale": 1.6652360515021458,
+      "ground_anchor": 418,
+      "bytes": 41684
+    },
+    {
+      "file": "foe-26-idle2.webp",
+      "creature_id": 26,
+      "name": "Sepulcher Tortoise",
+      "pose": "-idle2",
+      "atlas": "expansion-b1.png",
+      "source_generation": "exec-e0ef66a7-b4a8-455d-975d-f399e4d15215.png",
+      "cell": [
+        1,
+        1
+      ],
+      "source_bounds": [
+        116,
+        83,
+        309,
+        284
+      ],
+      "opaque_bounds": [
+        63,
+        84,
+        383,
+        418
+      ],
+      "common_scale": 1.6652360515021458,
+      "ground_anchor": 418,
+      "bytes": 41584
+    },
+    {
+      "file": "foe-26-windup.webp",
+      "creature_id": 26,
+      "name": "Sepulcher Tortoise",
+      "pose": "-windup",
+      "atlas": "expansion-b1.png",
+      "source_generation": "exec-e0ef66a7-b4a8-455d-975d-f399e4d15215.png",
+      "cell": [
+        1,
+        2
+      ],
+      "source_bounds": [
+        87,
+        100,
+        299,
+        278
+      ],
+      "opaque_bounds": [
+        48,
+        123,
+        399,
+        418
+      ],
+      "common_scale": 1.6652360515021458,
+      "ground_anchor": 418,
+      "bytes": 40528
+    },
+    {
+      "file": "foe-26-attack.webp",
+      "creature_id": 26,
+      "name": "Sepulcher Tortoise",
+      "pose": "-attack",
+      "atlas": "expansion-b1.png",
+      "source_generation": "exec-e0ef66a7-b4a8-455d-975d-f399e4d15215.png",
+      "cell": [
+        1,
+        3
+      ],
+      "source_bounds": [
+        58,
+        89,
+        291,
+        287
+      ],
+      "opaque_bounds": [
+        30,
+        89,
+        418,
+        418
+      ],
+      "common_scale": 1.6652360515021458,
+      "ground_anchor": 418,
+      "bytes": 46340
+    },
+    {
+      "file": "foe-26-hurt.webp",
+      "creature_id": 26,
+      "name": "Sepulcher Tortoise",
+      "pose": "-hurt",
+      "atlas": "expansion-b1.png",
+      "source_generation": "exec-e0ef66a7-b4a8-455d-975d-f399e4d15215.png",
+      "cell": [
+        1,
+        4
+      ],
+      "source_bounds": [
+        68,
+        100,
+        270,
+        286
+      ],
+      "opaque_bounds": [
+        56,
+        109,
+        391,
+        418
+      ],
+      "common_scale": 1.6652360515021458,
+      "ground_anchor": 418,
+      "bytes": 42244
+    },
+    {
+      "file": "foe-27.webp",
+      "creature_id": 27,
+      "name": "Bellmaw",
+      "pose": "idle",
+      "atlas": "expansion-b2.png",
+      "source_generation": "exec-7d3094ed-c21d-4169-b8a7-190afd48577a.png",
+      "cell": [
+        0,
+        0
+      ],
+      "source_bounds": [
+        101,
+        139,
+        318,
+        295
+      ],
+      "opaque_bounds": [
+        53,
+        172,
+        394,
+        417
+      ],
+      "common_scale": 1.5772357723577235,
+      "ground_anchor": 418,
+      "bytes": 29772
+    },
+    {
+      "file": "foe-27-idle2.webp",
+      "creature_id": 27,
+      "name": "Bellmaw",
+      "pose": "-idle2",
+      "atlas": "expansion-b2.png",
+      "source_generation": "exec-7d3094ed-c21d-4169-b8a7-190afd48577a.png",
+      "cell": [
+        0,
+        1
+      ],
+      "source_bounds": [
+        96,
+        132,
+        318,
+        296
+      ],
+      "opaque_bounds": [
+        49,
+        159,
+        398,
+        416
+      ],
+      "common_scale": 1.5772357723577235,
+      "ground_anchor": 418,
+      "bytes": 33332
+    },
+    {
+      "file": "foe-27-windup.webp",
+      "creature_id": 27,
+      "name": "Bellmaw",
+      "pose": "-windup",
+      "atlas": "expansion-b2.png",
+      "source_generation": "exec-7d3094ed-c21d-4169-b8a7-190afd48577a.png",
+      "cell": [
+        0,
+        2
+      ],
+      "source_bounds": [
+        85,
+        114,
+        310,
+        298
+      ],
+      "opaque_bounds": [
+        47,
+        128,
+        401,
+        418
+      ],
+      "common_scale": 1.5772357723577235,
+      "ground_anchor": 418,
+      "bytes": 34266
+    },
+    {
+      "file": "foe-27-attack.webp",
+      "creature_id": 27,
+      "name": "Bellmaw",
+      "pose": "-attack",
+      "atlas": "expansion-b2.png",
+      "source_generation": "exec-7d3094ed-c21d-4169-b8a7-190afd48577a.png",
+      "cell": [
+        0,
+        3
+      ],
+      "source_bounds": [
+        70,
+        130,
+        316,
+        306
+      ],
+      "opaque_bounds": [
+        30,
+        141,
+        418,
+        416
+      ],
+      "common_scale": 1.5772357723577235,
+      "ground_anchor": 418,
+      "bytes": 37032
+    },
+    {
+      "file": "foe-27-hurt.webp",
+      "creature_id": 27,
+      "name": "Bellmaw",
+      "pose": "-hurt",
+      "atlas": "expansion-b2.png",
+      "source_generation": "exec-7d3094ed-c21d-4169-b8a7-190afd48577a.png",
+      "cell": [
+        0,
+        4
+      ],
+      "source_bounds": [
+        81,
+        148,
+        308,
+        300
+      ],
+      "opaque_bounds": [
+        45,
+        178,
+        402,
+        418
+      ],
+      "common_scale": 1.5772357723577235,
+      "ground_anchor": 418,
+      "bytes": 30374
+    },
+    {
+      "file": "foe-28.webp",
+      "creature_id": 28,
+      "name": "Glaivehorn Sentinel",
+      "pose": "idle",
+      "atlas": "expansion-b2.png",
+      "source_generation": "exec-7d3094ed-c21d-4169-b8a7-190afd48577a.png",
+      "cell": [
+        1,
+        0
+      ],
+      "source_bounds": [
+        101,
+        106,
+        313,
+        283
+      ],
+      "opaque_bounds": [
+        60,
+        145,
+        388,
+        417
+      ],
+      "common_scale": 1.545816733067729,
+      "ground_anchor": 418,
+      "bytes": 42634
+    },
+    {
+      "file": "foe-28-idle2.webp",
+      "creature_id": 28,
+      "name": "Glaivehorn Sentinel",
+      "pose": "-idle2",
+      "atlas": "expansion-b2.png",
+      "source_generation": "exec-7d3094ed-c21d-4169-b8a7-190afd48577a.png",
+      "cell": [
+        1,
+        1
+      ],
+      "source_bounds": [
+        105,
+        96,
+        306,
+        282
+      ],
+      "opaque_bounds": [
+        68,
+        131,
+        378,
+        418
+      ],
+      "common_scale": 1.545816733067729,
+      "ground_anchor": 418,
+      "bytes": 45872
+    },
+    {
+      "file": "foe-28-windup.webp",
+      "creature_id": 28,
+      "name": "Glaivehorn Sentinel",
+      "pose": "-windup",
+      "atlas": "expansion-b2.png",
+      "source_generation": "exec-7d3094ed-c21d-4169-b8a7-190afd48577a.png",
+      "cell": [
+        1,
+        2
+      ],
+      "source_bounds": [
+        92,
+        78,
+        306,
+        282
+      ],
+      "opaque_bounds": [
+        58,
+        103,
+        388,
+        417
+      ],
+      "common_scale": 1.545816733067729,
+      "ground_anchor": 418,
+      "bytes": 47534
+    },
+    {
+      "file": "foe-28-attack.webp",
+      "creature_id": 28,
+      "name": "Glaivehorn Sentinel",
+      "pose": "-attack",
+      "atlas": "expansion-b2.png",
+      "source_generation": "exec-7d3094ed-c21d-4169-b8a7-190afd48577a.png",
+      "cell": [
+        1,
+        3
+      ],
+      "source_bounds": [
+        65,
+        128,
+        316,
+        280
+      ],
+      "opaque_bounds": [
+        31,
+        183,
+        417,
+        418
+      ],
+      "common_scale": 1.545816733067729,
+      "ground_anchor": 418,
+      "bytes": 43772
+    },
+    {
+      "file": "foe-28-hurt.webp",
+      "creature_id": 28,
+      "name": "Glaivehorn Sentinel",
+      "pose": "-hurt",
+      "atlas": "expansion-b2.png",
+      "source_generation": "exec-7d3094ed-c21d-4169-b8a7-190afd48577a.png",
+      "cell": [
+        1,
+        4
+      ],
+      "source_bounds": [
+        89,
+        123,
+        298,
+        282
+      ],
+      "opaque_bounds": [
+        63,
+        172,
+        385,
+        418
+      ],
+      "common_scale": 1.545816733067729,
+      "ground_anchor": 418,
+      "bytes": 37802
+    },
+    {
+      "file": "foe-29.webp",
+      "creature_id": 29,
+      "name": "Wickstalker",
+      "pose": "idle",
+      "atlas": "expansion-b3.png",
+      "source_generation": "exec-90cc7511-e3d7-4644-9e7c-8eb1d0f513f1.png",
+      "cell": [
+        0,
+        0
+      ],
+      "source_bounds": [
+        109,
+        122,
+        330,
+        322
+      ],
+      "opaque_bounds": [
+        73,
+        143,
+        376,
+        418
+      ],
+      "common_scale": 1.375886524822695,
+      "ground_anchor": 418,
+      "bytes": 40864
+    },
+    {
+      "file": "foe-29-idle2.webp",
+      "creature_id": 29,
+      "name": "Wickstalker",
+      "pose": "-idle2",
+      "atlas": "expansion-b3.png",
+      "source_generation": "exec-90cc7511-e3d7-4644-9e7c-8eb1d0f513f1.png",
+      "cell": [
+        0,
+        1
+      ],
+      "source_bounds": [
+        100,
+        121,
+        319,
+        323
+      ],
+      "opaque_bounds": [
+        74,
+        140,
+        374,
+        417
+      ],
+      "common_scale": 1.375886524822695,
+      "ground_anchor": 418,
+      "bytes": 41142
+    },
+    {
+      "file": "foe-29-windup.webp",
+      "creature_id": 29,
+      "name": "Wickstalker",
+      "pose": "-windup",
+      "atlas": "expansion-b3.png",
+      "source_generation": "exec-90cc7511-e3d7-4644-9e7c-8eb1d0f513f1.png",
+      "cell": [
+        0,
+        2
+      ],
+      "source_bounds": [
+        82,
+        133,
+        303,
+        326
+      ],
+      "opaque_bounds": [
+        72,
+        154,
+        375,
+        418
+      ],
+      "common_scale": 1.375886524822695,
+      "ground_anchor": 418,
+      "bytes": 36830
+    },
+    {
+      "file": "foe-29-attack.webp",
+      "creature_id": 29,
+      "name": "Wickstalker",
+      "pose": "-attack",
+      "atlas": "expansion-b3.png",
+      "source_generation": "exec-90cc7511-e3d7-4644-9e7c-8eb1d0f513f1.png",
+      "cell": [
+        0,
+        3
+      ],
+      "source_bounds": [
+        49,
+        135,
+        331,
+        304
+      ],
+      "opaque_bounds": [
+        30,
+        185,
+        417,
+        418
+      ],
+      "common_scale": 1.375886524822695,
+      "ground_anchor": 418,
+      "bytes": 36802
+    },
+    {
+      "file": "foe-29-hurt.webp",
+      "creature_id": 29,
+      "name": "Wickstalker",
+      "pose": "-hurt",
+      "atlas": "expansion-b3.png",
+      "source_generation": "exec-90cc7511-e3d7-4644-9e7c-8eb1d0f513f1.png",
+      "cell": [
+        0,
+        4
+      ],
+      "source_bounds": [
+        74,
+        165,
+        304,
+        324
+      ],
+      "opaque_bounds": [
+        67,
+        200,
+        381,
+        417
+      ],
+      "common_scale": 1.375886524822695,
+      "ground_anchor": 418,
+      "bytes": 34602
+    },
+    {
+      "file": "foe-30.webp",
+      "creature_id": 30,
+      "name": "Blood Scorpion",
+      "pose": "idle",
+      "atlas": "expansion-b3.png",
+      "source_generation": "exec-90cc7511-e3d7-4644-9e7c-8eb1d0f513f1.png",
+      "cell": [
+        1,
+        0
+      ],
+      "source_bounds": [
+        105,
+        101,
+        324,
+        283
+      ],
+      "opaque_bounds": [
+        62,
+        149,
+        385,
+        418
+      ],
+      "common_scale": 1.4752851711026616,
+      "ground_anchor": 418,
+      "bytes": 35382
+    },
+    {
+      "file": "foe-30-idle2.webp",
+      "creature_id": 30,
+      "name": "Blood Scorpion",
+      "pose": "-idle2",
+      "atlas": "expansion-b3.png",
+      "source_generation": "exec-90cc7511-e3d7-4644-9e7c-8eb1d0f513f1.png",
+      "cell": [
+        1,
+        1
+      ],
+      "source_bounds": [
+        95,
+        100,
+        314,
+        280
+      ],
+      "opaque_bounds": [
+        62,
+        153,
+        384,
+        418
+      ],
+      "common_scale": 1.4752851711026616,
+      "ground_anchor": 418,
+      "bytes": 35060
+    },
+    {
+      "file": "foe-30-windup.webp",
+      "creature_id": 30,
+      "name": "Blood Scorpion",
+      "pose": "-windup",
+      "atlas": "expansion-b3.png",
+      "source_generation": "exec-90cc7511-e3d7-4644-9e7c-8eb1d0f513f1.png",
+      "cell": [
+        1,
+        2
+      ],
+      "source_bounds": [
+        65,
+        80,
+        303,
+        283
+      ],
+      "opaque_bounds": [
+        48,
+        120,
+        399,
+        418
+      ],
+      "common_scale": 1.4752851711026616,
+      "ground_anchor": 418,
+      "bytes": 38728
+    },
+    {
+      "file": "foe-30-attack.webp",
+      "creature_id": 30,
+      "name": "Blood Scorpion",
+      "pose": "-attack",
+      "atlas": "expansion-b3.png",
+      "source_generation": "exec-90cc7511-e3d7-4644-9e7c-8eb1d0f513f1.png",
+      "cell": [
+        1,
+        3
+      ],
+      "source_bounds": [
+        52,
+        109,
+        315,
+        281
+      ],
+      "opaque_bounds": [
+        31,
+        164,
+        418,
+        417
+      ],
+      "common_scale": 1.4752851711026616,
+      "ground_anchor": 418,
+      "bytes": 37090
+    },
+    {
+      "file": "foe-30-hurt.webp",
+      "creature_id": 30,
+      "name": "Blood Scorpion",
+      "pose": "-hurt",
+      "atlas": "expansion-b3.png",
+      "source_generation": "exec-90cc7511-e3d7-4644-9e7c-8eb1d0f513f1.png",
+      "cell": [
+        1,
+        4
+      ],
+      "source_bounds": [
+        69,
+        147,
+        309,
+        282
+      ],
+      "opaque_bounds": [
+        47,
+        219,
+        400,
+        418
+      ],
+      "common_scale": 1.4752851711026616,
+      "ground_anchor": 418,
+      "bytes": 29440
+    },
+    {
+      "file": "foe-31.webp",
+      "creature_id": 31,
+      "name": "Crag Fiend",
+      "pose": "idle",
+      "atlas": "expansion-b4.png",
+      "source_generation": "exec-cc1945b9-7e82-4bfe-befd-bb69ac0beab0.png",
+      "cell": [
+        0,
+        0
+      ],
+      "source_bounds": [
+        108,
+        125,
+        305,
+        322
+      ],
+      "opaque_bounds": [
+        72,
+        116,
+        374,
+        417
+      ],
+      "common_scale": 1.5396825396825398,
+      "ground_anchor": 418,
+      "bytes": 36498
+    },
+    {
+      "file": "foe-31-idle2.webp",
+      "creature_id": 31,
+      "name": "Crag Fiend",
+      "pose": "-idle2",
+      "atlas": "expansion-b4.png",
+      "source_generation": "exec-cc1945b9-7e82-4bfe-befd-bb69ac0beab0.png",
+      "cell": [
+        0,
+        1
+      ],
+      "source_bounds": [
+        102,
+        120,
+        309,
+        322
+      ],
+      "opaque_bounds": [
+        65,
+        107,
+        382,
+        417
+      ],
+      "common_scale": 1.5396825396825398,
+      "ground_anchor": 418,
+      "bytes": 38714
+    },
+    {
+      "file": "foe-31-windup.webp",
+      "creature_id": 31,
+      "name": "Crag Fiend",
+      "pose": "-windup",
+      "atlas": "expansion-b4.png",
+      "source_generation": "exec-cc1945b9-7e82-4bfe-befd-bb69ac0beab0.png",
+      "cell": [
+        0,
+        2
+      ],
+      "source_bounds": [
+        93,
+        109,
+        307,
+        322
+      ],
+      "opaque_bounds": [
+        59,
+        90,
+        387,
+        418
+      ],
+      "common_scale": 1.5396825396825398,
+      "ground_anchor": 418,
+      "bytes": 38008
+    },
+    {
+      "file": "foe-31-attack.webp",
+      "creature_id": 31,
+      "name": "Crag Fiend",
+      "pose": "-attack",
+      "atlas": "expansion-b4.png",
+      "source_generation": "exec-cc1945b9-7e82-4bfe-befd-bb69ac0beab0.png",
+      "cell": [
+        0,
+        3
+      ],
+      "source_bounds": [
+        85,
+        129,
+        337,
+        322
+      ],
+      "opaque_bounds": [
+        30,
+        121,
+        417,
+        417
+      ],
+      "common_scale": 1.5396825396825398,
+      "ground_anchor": 418,
+      "bytes": 37610
+    },
+    {
+      "file": "foe-31-hurt.webp",
+      "creature_id": 31,
+      "name": "Crag Fiend",
+      "pose": "-hurt",
+      "atlas": "expansion-b4.png",
+      "source_generation": "exec-cc1945b9-7e82-4bfe-befd-bb69ac0beab0.png",
+      "cell": [
+        0,
+        4
+      ],
+      "source_bounds": [
+        102,
+        137,
+        288,
+        322
+      ],
+      "opaque_bounds": [
+        82,
+        134,
+        366,
+        418
+      ],
+      "common_scale": 1.5396825396825398,
+      "ground_anchor": 418,
+      "bytes": 31256
+    },
+    {
+      "file": "foe-32.webp",
+      "creature_id": 32,
+      "name": "Ivory Revenant",
+      "pose": "idle",
+      "atlas": "expansion-b4.png",
+      "source_generation": "exec-cc1945b9-7e82-4bfe-befd-bb69ac0beab0.png",
+      "cell": [
+        1,
+        0
+      ],
+      "source_bounds": [
+        101,
+        115,
+        318,
+        294
+      ],
+      "opaque_bounds": [
+        37,
+        110,
+        410,
+        418
+      ],
+      "common_scale": 1.7244444444444444,
+      "ground_anchor": 418,
+      "bytes": 44458
+    },
+    {
+      "file": "foe-32-idle2.webp",
+      "creature_id": 32,
+      "name": "Ivory Revenant",
+      "pose": "-idle2",
+      "atlas": "expansion-b4.png",
+      "source_generation": "exec-cc1945b9-7e82-4bfe-befd-bb69ac0beab0.png",
+      "cell": [
+        1,
+        1
+      ],
+      "source_bounds": [
+        107,
+        111,
+        314,
+        295
+      ],
+      "opaque_bounds": [
+        45,
+        102,
+        401,
+        417
+      ],
+      "common_scale": 1.7244444444444444,
+      "ground_anchor": 418,
+      "bytes": 44064
+    },
+    {
+      "file": "foe-32-windup.webp",
+      "creature_id": 32,
+      "name": "Ivory Revenant",
+      "pose": "-windup",
+      "atlas": "expansion-b4.png",
+      "source_generation": "exec-cc1945b9-7e82-4bfe-befd-bb69ac0beab0.png",
+      "cell": [
+        1,
+        2
+      ],
+      "source_bounds": [
+        103,
+        78,
+        267,
+        296
+      ],
+      "opaque_bounds": [
+        82,
+        42,
+        363,
+        417
+      ],
+      "common_scale": 1.7244444444444444,
+      "ground_anchor": 418,
+      "bytes": 47048
+    },
+    {
+      "file": "foe-32-attack.webp",
+      "creature_id": 32,
+      "name": "Ivory Revenant",
+      "pose": "-attack",
+      "atlas": "expansion-b4.png",
+      "source_generation": "exec-cc1945b9-7e82-4bfe-befd-bb69ac0beab0.png",
+      "cell": [
+        1,
+        3
+      ],
+      "source_bounds": [
+        91,
+        125,
+        316,
+        297
+      ],
+      "opaque_bounds": [
+        31,
+        121,
+        417,
+        418
+      ],
+      "common_scale": 1.7244444444444444,
+      "ground_anchor": 418,
+      "bytes": 48178
+    },
+    {
+      "file": "foe-32-hurt.webp",
+      "creature_id": 32,
+      "name": "Ivory Revenant",
+      "pose": "-hurt",
+      "atlas": "expansion-b4.png",
+      "source_generation": "exec-cc1945b9-7e82-4bfe-befd-bb69ac0beab0.png",
+      "cell": [
+        1,
+        4
+      ],
+      "source_bounds": [
+        109,
+        135,
+        304,
+        298
+      ],
+      "opaque_bounds": [
+        56,
+        137,
+        390,
+        417
+      ],
+      "common_scale": 1.7244444444444444,
+      "ground_anchor": 418,
+      "bytes": 36266
+    },
+    {
+      "file": "foe-33.webp",
+      "creature_id": 33,
+      "name": "Sporeguard",
+      "pose": "idle",
+      "atlas": "expansion-b5.png",
+      "source_generation": "exec-bb3fb5e6-bedc-44ce-a4ba-e949ea85edf9.png",
+      "cell": [
+        0,
+        0
+      ],
+      "source_bounds": [
+        101,
+        119,
+        295,
+        305
+      ],
+      "opaque_bounds": [
+        61,
+        105,
+        387,
+        417
+      ],
+      "common_scale": 1.6869565217391305,
+      "ground_anchor": 418,
+      "bytes": 49956
+    },
+    {
+      "file": "foe-33-idle2.webp",
+      "creature_id": 33,
+      "name": "Sporeguard",
+      "pose": "-idle2",
+      "atlas": "expansion-b5.png",
+      "source_generation": "exec-bb3fb5e6-bedc-44ce-a4ba-e949ea85edf9.png",
+      "cell": [
+        0,
+        1
+      ],
+      "source_bounds": [
+        98,
+        108,
+        292,
+        306
+      ],
+      "opaque_bounds": [
+        60,
+        85,
+        386,
+        417
+      ],
+      "common_scale": 1.6869565217391305,
+      "ground_anchor": 418,
+      "bytes": 51596
+    },
+    {
+      "file": "foe-33-windup.webp",
+      "creature_id": 33,
+      "name": "Sporeguard",
+      "pose": "-windup",
+      "atlas": "expansion-b5.png",
+      "source_generation": "exec-bb3fb5e6-bedc-44ce-a4ba-e949ea85edf9.png",
+      "cell": [
+        0,
+        2
+      ],
+      "source_bounds": [
+        85,
+        128,
+        303,
+        307
+      ],
+      "opaque_bounds": [
+        41,
+        116,
+        407,
+        417
+      ],
+      "common_scale": 1.6869565217391305,
+      "ground_anchor": 418,
+      "bytes": 52398
+    },
+    {
+      "file": "foe-33-attack.webp",
+      "creature_id": 33,
+      "name": "Sporeguard",
+      "pose": "-attack",
+      "atlas": "expansion-b5.png",
+      "source_generation": "exec-bb3fb5e6-bedc-44ce-a4ba-e949ea85edf9.png",
+      "cell": [
+        0,
+        3
+      ],
+      "source_bounds": [
+        81,
+        127,
+        311,
+        306
+      ],
+      "opaque_bounds": [
+        30,
+        117,
+        417,
+        418
+      ],
+      "common_scale": 1.6869565217391305,
+      "ground_anchor": 418,
+      "bytes": 54396
+    },
+    {
+      "file": "foe-33-hurt.webp",
+      "creature_id": 33,
+      "name": "Sporeguard",
+      "pose": "-hurt",
+      "atlas": "expansion-b5.png",
+      "source_generation": "exec-bb3fb5e6-bedc-44ce-a4ba-e949ea85edf9.png",
+      "cell": [
+        0,
+        4
+      ],
+      "source_bounds": [
+        89,
+        138,
+        297,
+        309
+      ],
+      "opaque_bounds": [
+        48,
+        130,
+        399,
+        418
+      ],
+      "common_scale": 1.6869565217391305,
+      "ground_anchor": 418,
+      "bytes": 44428
+    },
+    {
+      "file": "foe-34.webp",
+      "creature_id": 34,
+      "name": "Astral Cuttle",
+      "pose": "idle",
+      "atlas": "expansion-b5.png",
+      "source_generation": "exec-bb3fb5e6-bedc-44ce-a4ba-e949ea85edf9.png",
+      "cell": [
+        1,
+        0
+      ],
+      "source_bounds": [
+        110,
+        103,
+        306,
+        281
+      ],
+      "opaque_bounds": [
+        58,
+        118,
+        388,
+        418
+      ],
+      "common_scale": 1.6869565217391305,
+      "ground_anchor": 418,
+      "bytes": 43674
+    },
+    {
+      "file": "foe-34-idle2.webp",
+      "creature_id": 34,
+      "name": "Astral Cuttle",
+      "pose": "-idle2",
+      "atlas": "expansion-b5.png",
+      "source_generation": "exec-bb3fb5e6-bedc-44ce-a4ba-e949ea85edf9.png",
+      "cell": [
+        1,
+        1
+      ],
+      "source_bounds": [
+        103,
+        101,
+        302,
+        282
+      ],
+      "opaque_bounds": [
+        56,
+        114,
+        391,
+        417
+      ],
+      "common_scale": 1.6869565217391305,
+      "ground_anchor": 418,
+      "bytes": 43320
+    },
+    {
+      "file": "foe-34-windup.webp",
+      "creature_id": 34,
+      "name": "Astral Cuttle",
+      "pose": "-windup",
+      "atlas": "expansion-b5.png",
+      "source_generation": "exec-bb3fb5e6-bedc-44ce-a4ba-e949ea85edf9.png",
+      "cell": [
+        1,
+        2
+      ],
+      "source_bounds": [
+        107,
+        100,
+        269,
+        257
+      ],
+      "opaque_bounds": [
+        88,
+        154,
+        359,
+        418
+      ],
+      "common_scale": 1.6869565217391305,
+      "ground_anchor": 418,
+      "bytes": 28806
+    },
+    {
+      "file": "foe-34-attack.webp",
+      "creature_id": 34,
+      "name": "Astral Cuttle",
+      "pose": "-attack",
+      "atlas": "expansion-b5.png",
+      "source_generation": "exec-bb3fb5e6-bedc-44ce-a4ba-e949ea85edf9.png",
+      "cell": [
+        1,
+        3
+      ],
+      "source_bounds": [
+        84,
+        108,
+        314,
+        290
+      ],
+      "opaque_bounds": [
+        30,
+        111,
+        418,
+        418
+      ],
+      "common_scale": 1.6869565217391305,
+      "ground_anchor": 418,
+      "bytes": 42112
+    },
+    {
+      "file": "foe-34-hurt.webp",
+      "creature_id": 34,
+      "name": "Astral Cuttle",
+      "pose": "-hurt",
+      "atlas": "expansion-b5.png",
+      "source_generation": "exec-bb3fb5e6-bedc-44ce-a4ba-e949ea85edf9.png",
+      "cell": [
+        1,
+        4
+      ],
+      "source_bounds": [
+        105,
+        109,
+        274,
+        289
+      ],
+      "opaque_bounds": [
+        81,
+        114,
+        366,
+        418
+      ],
+      "common_scale": 1.6869565217391305,
+      "ground_anchor": 418,
+      "bytes": 35388
+    },
+    {
+      "file": "foe-35.webp",
+      "creature_id": 35,
+      "name": "Dune Scarab",
+      "pose": "idle",
+      "atlas": "expansion-b6.png",
+      "source_generation": "exec-325be12a-ae8b-4d12-8c67-9c93b803c783.png",
+      "cell": [
+        0,
+        0
+      ],
+      "source_bounds": [
+        102,
+        147,
+        304,
+        285
+      ],
+      "opaque_bounds": [
+        73,
+        212,
+        374,
+        418
+      ],
+      "common_scale": 1.498069498069498,
+      "ground_anchor": 418,
+      "bytes": 33634
+    },
+    {
+      "file": "foe-35-idle2.webp",
+      "creature_id": 35,
+      "name": "Dune Scarab",
+      "pose": "-idle2",
+      "atlas": "expansion-b6.png",
+      "source_generation": "exec-325be12a-ae8b-4d12-8c67-9c93b803c783.png",
+      "cell": [
+        0,
+        1
+      ],
+      "source_bounds": [
+        103,
+        147,
+        307,
+        286
+      ],
+      "opaque_bounds": [
+        71,
+        210,
+        376,
+        418
+      ],
+      "common_scale": 1.498069498069498,
+      "ground_anchor": 418,
+      "bytes": 34484
+    },
+    {
+      "file": "foe-35-windup.webp",
+      "creature_id": 35,
+      "name": "Dune Scarab",
+      "pose": "-windup",
+      "atlas": "expansion-b6.png",
+      "source_generation": "exec-325be12a-ae8b-4d12-8c67-9c93b803c783.png",
+      "cell": [
+        0,
+        2
+      ],
+      "source_bounds": [
+        93,
+        126,
+        302,
+        287
+      ],
+      "opaque_bounds": [
+        68,
+        178,
+        379,
+        417
+      ],
+      "common_scale": 1.498069498069498,
+      "ground_anchor": 418,
+      "bytes": 38402
+    },
+    {
+      "file": "foe-35-attack.webp",
+      "creature_id": 35,
+      "name": "Dune Scarab",
+      "pose": "-attack",
+      "atlas": "expansion-b6.png",
+      "source_generation": "exec-325be12a-ae8b-4d12-8c67-9c93b803c783.png",
+      "cell": [
+        0,
+        3
+      ],
+      "source_bounds": [
+        75,
+        151,
+        334,
+        286
+      ],
+      "opaque_bounds": [
+        31,
+        217,
+        417,
+        418
+      ],
+      "common_scale": 1.498069498069498,
+      "ground_anchor": 418,
+      "bytes": 37976
+    },
+    {
+      "file": "foe-35-hurt.webp",
+      "creature_id": 35,
+      "name": "Dune Scarab",
+      "pose": "-hurt",
+      "atlas": "expansion-b6.png",
+      "source_generation": "exec-325be12a-ae8b-4d12-8c67-9c93b803c783.png",
+      "cell": [
+        0,
+        4
+      ],
+      "source_bounds": [
+        101,
+        166,
+        304,
+        289
+      ],
+      "opaque_bounds": [
+        72,
+        235,
+        375,
+        418
+      ],
+      "common_scale": 1.498069498069498,
+      "ground_anchor": 418,
+      "bytes": 29800
+    },
+    {
+      "file": "foe-36.webp",
+      "creature_id": 36,
+      "name": "Chainbound Jackal",
+      "pose": "idle",
+      "atlas": "expansion-b6.png",
+      "source_generation": "exec-325be12a-ae8b-4d12-8c67-9c93b803c783.png",
+      "cell": [
+        1,
+        0
+      ],
+      "source_bounds": [
+        96,
+        83,
+        296,
+        280
+      ],
+      "opaque_bounds": [
+        60,
+        95,
+        387,
+        418
+      ],
+      "common_scale": 1.6371308016877637,
+      "ground_anchor": 418,
+      "bytes": 43444
+    },
+    {
+      "file": "foe-36-idle2.webp",
+      "creature_id": 36,
+      "name": "Chainbound Jackal",
+      "pose": "-idle2",
+      "atlas": "expansion-b6.png",
+      "source_generation": "exec-325be12a-ae8b-4d12-8c67-9c93b803c783.png",
+      "cell": [
+        1,
+        1
+      ],
+      "source_bounds": [
+        97,
+        95,
+        305,
+        280
+      ],
+      "opaque_bounds": [
+        54,
+        116,
+        393,
+        418
+      ],
+      "common_scale": 1.6371308016877637,
+      "ground_anchor": 418,
+      "bytes": 47680
+    },
+    {
+      "file": "foe-36-windup.webp",
+      "creature_id": 36,
+      "name": "Chainbound Jackal",
+      "pose": "-windup",
+      "atlas": "expansion-b6.png",
+      "source_generation": "exec-325be12a-ae8b-4d12-8c67-9c93b803c783.png",
+      "cell": [
+        1,
+        2
+      ],
+      "source_bounds": [
+        91,
+        120,
+        304,
+        282
+      ],
+      "opaque_bounds": [
+        49,
+        153,
+        397,
+        416
+      ],
+      "common_scale": 1.6371308016877637,
+      "ground_anchor": 418,
+      "bytes": 46418
+    },
+    {
+      "file": "foe-36-attack.webp",
+      "creature_id": 36,
+      "name": "Chainbound Jackal",
+      "pose": "-attack",
+      "atlas": "expansion-b6.png",
+      "source_generation": "exec-325be12a-ae8b-4d12-8c67-9c93b803c783.png",
+      "cell": [
+        1,
+        3
+      ],
+      "source_bounds": [
+        81,
+        109,
+        318,
+        277
+      ],
+      "opaque_bounds": [
+        31,
+        145,
+        418,
+        417
+      ],
+      "common_scale": 1.6371308016877637,
+      "ground_anchor": 418,
+      "bytes": 48512
+    },
+    {
+      "file": "foe-36-hurt.webp",
+      "creature_id": 36,
+      "name": "Chainbound Jackal",
+      "pose": "-hurt",
+      "atlas": "expansion-b6.png",
+      "source_generation": "exec-325be12a-ae8b-4d12-8c67-9c93b803c783.png",
+      "cell": [
+        1,
+        4
+      ],
+      "source_bounds": [
+        99,
+        131,
+        305,
+        281
+      ],
+      "opaque_bounds": [
+        55,
+        173,
+        392,
+        418
+      ],
+      "common_scale": 1.6371308016877637,
+      "ground_anchor": 418,
+      "bytes": 38322
+    }
+  ]
+}

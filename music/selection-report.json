@@ -1,0 +1,19 @@
+{
+  "title": "Four Roads, One Promise",
+  "bpm": 108,
+  "bars": 32,
+  "duration": 71.111179138322,
+  "loop": true,
+  "loopStart": 0,
+  "loopEnd": 71.111168,
+  "notes": 521,
+  "instruments": 9,
+  "samePitchOverlaps": 0,
+  "peakDb": -1.5144142787623671,
+  "rmsDb": -16.348162675746895,
+  "loopSeamJump": 0.03265473145780051,
+  "files": {
+    "ogg": "audio/music-selection.ogg",
+    "m4a": "audio/music-selection.m4a"
+  }
+}

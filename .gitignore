@@ -5,3 +5,5 @@ dist/
 .openai/
 art-sources/
 qa/
+
+__pycache__/

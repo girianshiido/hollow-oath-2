@@ -51,3 +51,9 @@ The four selection portraits are cropped from the user-approved clean manga shee
 ## Five-drawing animation revision
 
 The original five atlases remain for provenance. The current frame sequences were redrawn with imagegen from those approved creature identities. New source sheets and per-batch prompts, cell mappings, normalization details and alpha checks are retained under `art-sources/animation-*`. Slicing and WebP encoding do not paint or synthesize creature content. All 140 delivered frames are 448 × 448 RGBA. There is no separate death artwork: the hurt drawing is deliberately reused.
+
+## Expansion and effect revision (1.2)
+
+Regular families now extend through `foe-48`: 32 base families and 16 progressively introduced designs. All 64 creature identities/forms contain five drawings, **320 production frames**. Expansion originals, generation prompts, slice mappings and sequence normalization are retained in `art-sources/expansion-{a,b,c}*`. These are distinct creature designs, not recolors. Each five-pose row uses a shared crop and scale; imagegen spacing passes removed clipping and adjacent-cell spill before transparent WebP encoding.
+
+`build-animation-anchors.py` measures idle alpha bounds for all 64 identities and generates ground anchors and visible-body effect bounds. Three sword directions for every hero and distinct fire, ice, lightning, shield and healing effects are drawn on Canvas. Their impact positions are based on visible creature bodies, rather than transparent canvas centers. The title uses 30 floating motes, three subtle moving rays and intermittent glints; motion is bounded and optional.

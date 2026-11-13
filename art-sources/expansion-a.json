@@ -1,0 +1,1164 @@
+{
+  "status": "complete",
+  "generation": [
+    {
+      "key": "expansion-a-13-14",
+      "ids": [
+        13,
+        14
+      ],
+      "prompt": "NEW fantasy enemy animation atlas for HOLLOW OATH 2, matching attached reference's clean inked colored MANGA style: bold legible silhouettes, crisp black outlines, simplified two-tone cel shadows, vivid but restrained colors, no photorealism, painterly texture, 3D, text or user interface. Reference provides STYLE ONLY: draw the TWO NEW creature designs described below, not the reference creature. Exactly TEN individual FULLBODY drawings in STRICT 5 COLUMNS \u00d7 2 ROWS, aspect ratio5:2, ten equal square cells. TOP ROW is creature A in five poses; BOTTOM ROW is creature B in five poses. COLUMN ORDER: IDLE A; IDLE B (a distinct but subtly breathing/wing-shifting drawing); ATTACK WIND-UP (coiled/drawn back anticipation); ATTACK STRIKE (clear extended forward impact); HURT (unmistakable recoiling/flinching, used also for death). Each creature's5frames share consistent anatomy, colors, proportions, scale and facing. ALL ten drawings SMALL ENOUGH TO FIT THE CENTRAL60% OF THEIR CELL, AT LEAST18% EMPTY SPACE on ALL sides of EVERY cell. Do not enlarge sprites to fill the sheet. Wings, tails, weapons and horns entirely fit well within their cells, no crossing or clipping. Use same ground baseline at80% of cellheight. Prefer three-quarter front orientation toward viewer/right. NO drawn floor, shadow, aura, fog or backdrop: fully transparent clean alpha0 everywhere outside actual creature silhouettes including between appendages. No lettering, numbering, gridlines, frames or labels. Every pose genuinely redrawn, five unique drawings per row; very subtle idle2 then strong anticipation, strike and recoil acting. Powerful, eccentric fantasy adversaries, not cute chibi.\nCREATURE A GRAVEHOUND: TWO-HEADED lean quadruped ash-gray hunting hound, two distinct canine heads sharing one body and four legs, dark charcoal mane, compact ivory jawbone collar around shoulders, thin whip tail, red-brown eyes. Keep exactly two heads everyframe. Idle both heads alert, idle2 one head slightly inclines and chest lifts. Windup crouches with both jaws drawn back. Strike lunges with two mouths open and one foreleg forward. Hurt both heads flinch sideways with ears down and bent front legs. CREATURE B IRON BOWMAN: ivory skeletal archer in short dark forest-green hood and rust-brown light breastplate, simple BRONZE longbow, short quiver, no sword or shield. Idle relaxed bow down; idle2 hood and shoulders rise subtly. Windup draws arrow back to cheek with bent bow. Strike releases bowstring and extends bow arm, retain a small arrow near bow rather than floating large projectile. Hurt leans back, knees bent, skull tilted away, bow lowered sideways. All bow tips fit cell."
+    },
+    {
+      "key": "expansion-a-15-16",
+      "ids": [
+        15,
+        16
+      ],
+      "prompt": "NEW fantasy enemy animation atlas for HOLLOW OATH 2, matching attached reference's clean inked colored MANGA style: bold legible silhouettes, crisp black outlines, simplified two-tone cel shadows, vivid but restrained colors, no photorealism, painterly texture, 3D, text or user interface. Reference provides STYLE ONLY: draw the TWO NEW creature designs described below, not the reference creature. Exactly TEN individual FULLBODY drawings in STRICT 5 COLUMNS \u00d7 2 ROWS, aspect ratio5:2, ten equal square cells. TOP ROW is creature A in five poses; BOTTOM ROW is creature B in five poses. COLUMN ORDER: IDLE A; IDLE B (a distinct but subtly breathing/wing-shifting drawing); ATTACK WIND-UP (coiled/drawn back anticipation); ATTACK STRIKE (clear extended forward impact); HURT (unmistakable recoiling/flinching, used also for death). Each creature's5frames share consistent anatomy, colors, proportions, scale and facing. ALL ten drawings SMALL ENOUGH TO FIT THE CENTRAL60% OF THEIR CELL, AT LEAST18% EMPTY SPACE on ALL sides of EVERY cell. Do not enlarge sprites to fill the sheet. Wings, tails, weapons and horns entirely fit well within their cells, no crossing or clipping. Use same ground baseline at80% of cellheight. Prefer three-quarter front orientation toward viewer/right. NO drawn floor, shadow, aura, fog or backdrop: fully transparent clean alpha0 everywhere outside actual creature silhouettes including between appendages. No lettering, numbering, gridlines, frames or labels. Every pose genuinely redrawn, five unique drawings per row; very subtle idle2 then strong anticipation, strike and recoil acting. Powerful, eccentric fantasy adversaries, not cute chibi.\nCREATURE A GARGOYLE: compact BLUE-GRAY STONE QUADRUPED gargoyle, broad stony catlike head with small horns, TWO batlike stone wings folded at shoulders, four lionlike clawed legs, chipped stone texture limited to a few big cracks, small amber eyes. Idle crouched, idle2 wings slightly lift and head tilts. Windup lowers head and draws wings back. Strike pounces forward with wings open and foreclaws extended. Hurt crouches sideways and folds one wing inward, eyes shut and head recoiling. CREATURE B THORN WIDOW: eight-legged spider with a large VIOLET abdomen, glossy black thorax, short CRIMSON thorn spines on abdomen and legs, four small red eyes and prominent ivory fangs. Idle eight legs planted, idle2 abdomen rises gently and front legs shift. Windup raises front two legs and tilts abdomen low. Strike thrusts fangs and front legs forward. Hurt abdomen tilts sideways, legs curl inward, head recoils. Keep spider entirely within cell, no web backgrounds."
+    },
+    {
+      "key": "expansion-a-17-18",
+      "ids": [
+        17,
+        18
+      ],
+      "prompt": "NEW fantasy enemy animation atlas for HOLLOW OATH 2, matching attached reference's clean inked colored MANGA style: bold legible silhouettes, crisp black outlines, simplified two-tone cel shadows, vivid but restrained colors, no photorealism, painterly texture, 3D, text or user interface. Reference provides STYLE ONLY: draw the TWO NEW creature designs described below, not the reference creature. Exactly TEN individual FULLBODY drawings in STRICT 5 COLUMNS \u00d7 2 ROWS, aspect ratio5:2, ten equal square cells. TOP ROW is creature A in five poses; BOTTOM ROW is creature B in five poses. COLUMN ORDER: IDLE A; IDLE B (a distinct but subtly breathing/wing-shifting drawing); ATTACK WIND-UP (coiled/drawn back anticipation); ATTACK STRIKE (clear extended forward impact); HURT (unmistakable recoiling/flinching, used also for death). Each creature's5frames share consistent anatomy, colors, proportions, scale and facing. ALL ten drawings SMALL ENOUGH TO FIT THE CENTRAL60% OF THEIR CELL, AT LEAST18% EMPTY SPACE on ALL sides of EVERY cell. Do not enlarge sprites to fill the sheet. Wings, tails, weapons and horns entirely fit well within their cells, no crossing or clipping. Use same ground baseline at80% of cellheight. Prefer three-quarter front orientation toward viewer/right. NO drawn floor, shadow, aura, fog or backdrop: fully transparent clean alpha0 everywhere outside actual creature silhouettes including between appendages. No lettering, numbering, gridlines, frames or labels. Every pose genuinely redrawn, five unique drawings per row; very subtle idle2 then strong anticipation, strike and recoil acting. Powerful, eccentric fantasy adversaries, not cute chibi.\nCREATURE A EEL WYRM: hovering sinuous TEAL serpent eel, dark navy underside, three large IVORY blade-like fins behind head and down its back, narrow fierce face with small yellow eyes and two ivory jaw teeth, no arms or legs. Body coiled in compact Sshape to fit cell. Idle coiled, idle2 neck gently rises and fin angles shift. Windup coils tightly head drawn back. Strike neck extends forward and mouth opens, whole tail retained inside same cell. Hurt recoils into kinked coil with eyes squeezed shut and head bent away. CREATURE B CARRION ACOLYTE: small hunched cultist with a pale RAVEN-BEAK MASK, rust-red hooded robe and short dark cloak, two gloved hands, leather boots; carries one round iron censer on short chain. No visible humanface. Idle censer low; idle2 shoulders lift and free hand shifts. Windup draws censer back behind shoulder. Strike sweeps censer forward within own cell with extended arm. Hurt folds inward clutching torso, beak points away, knees buckle. No incense smoke or background glow."
+    },
+    {
+      "key": "expansion-a-19-20",
+      "ids": [
+        19,
+        20
+      ],
+      "prompt": "NEW fantasy enemy animation atlas for HOLLOW OATH 2, matching attached reference's clean inked colored MANGA style: bold legible silhouettes, crisp black outlines, simplified two-tone cel shadows, vivid but restrained colors, no photorealism, painterly texture, 3D, text or user interface. Reference provides STYLE ONLY: draw the TWO NEW creature designs described below, not the reference creature. Exactly TEN individual FULLBODY drawings in STRICT 5 COLUMNS \u00d7 2 ROWS, aspect ratio5:2, ten equal square cells. TOP ROW is creature A in five poses; BOTTOM ROW is creature B in five poses. COLUMN ORDER: IDLE A; IDLE B (a distinct but subtly breathing/wing-shifting drawing); ATTACK WIND-UP (coiled/drawn back anticipation); ATTACK STRIKE (clear extended forward impact); HURT (unmistakable recoiling/flinching, used also for death). Each creature's5frames share consistent anatomy, colors, proportions, scale and facing. ALL ten drawings SMALL ENOUGH TO FIT THE CENTRAL60% OF THEIR CELL, AT LEAST18% EMPTY SPACE on ALL sides of EVERY cell. Do not enlarge sprites to fill the sheet. Wings, tails, weapons and horns entirely fit well within their cells, no crossing or clipping. Use same ground baseline at80% of cellheight. Prefer three-quarter front orientation toward viewer/right. NO drawn floor, shadow, aura, fog or backdrop: fully transparent clean alpha0 everywhere outside actual creature silhouettes including between appendages. No lettering, numbering, gridlines, frames or labels. Every pose genuinely redrawn, five unique drawings per row; very subtle idle2 then strong anticipation, strike and recoil acting. Powerful, eccentric fantasy adversaries, not cute chibi.\nCREATURE A MOSS GOLEM: massive BLOCKY EMERALD STONE giant with huge square shoulders, two thick fists, short block legs, tiny GOLD EYES in simple horizontal face slit, pale green moss patches on a few large stones. No bell, no armor, no organic face. Idle planted with fists down. Idle2 shoulder stones slightly rise and one hand loosens. Windup twists torso and draws one enormous fist behind shoulder. Strike drives fist forward and down, knees bent. Hurt upperbody tilts backward and arms fold inward with a few stone plates shifted but no detached rubble. CREATURE B BONE HERON: tall skeletal MARSH BIRD with ivory skull and long pointed beak, long thin ivory legs, sparse NAVY FEATHERS along folded wings and neck, amber eye point. No humanarms or weapons. Idle alert tall, idle2 neck bends subtly and one featherwing shifts. Windup neck coils backward and wings partly open. Strike beak stabs forward and one clawed foot steps forward. Hurt neck bends away, wings hunch unevenly and long legs buckle while fullbody remains in frame."
+    },
+    {
+      "key": "expansion-a-21-22",
+      "ids": [
+        21,
+        22
+      ],
+      "prompt": "NEW fantasy enemy animation atlas for HOLLOW OATH 2, matching attached reference's clean inked colored MANGA style: bold legible silhouettes, crisp black outlines, simplified two-tone cel shadows, vivid but restrained colors, no photorealism, painterly texture, 3D, text or user interface. Reference provides STYLE ONLY: draw the TWO NEW creature designs described below, not the reference creature. Exactly TEN individual FULLBODY drawings in STRICT 5 COLUMNS \u00d7 2 ROWS, aspect ratio5:2, ten equal square cells. TOP ROW is creature A in five poses; BOTTOM ROW is creature B in five poses. COLUMN ORDER: IDLE A; IDLE B (a distinct but subtly breathing/wing-shifting drawing); ATTACK WIND-UP (coiled/drawn back anticipation); ATTACK STRIKE (clear extended forward impact); HURT (unmistakable recoiling/flinching, used also for death). Each creature's5frames share consistent anatomy, colors, proportions, scale and facing. ALL ten drawings SMALL ENOUGH TO FIT THE CENTRAL60% OF THEIR CELL, AT LEAST18% EMPTY SPACE on ALL sides of EVERY cell. Do not enlarge sprites to fill the sheet. Wings, tails, weapons and horns entirely fit well within their cells, no crossing or clipping. Use same ground baseline at80% of cellheight. Prefer three-quarter front orientation toward viewer/right. NO drawn floor, shadow, aura, fog or backdrop: fully transparent clean alpha0 everywhere outside actual creature silhouettes including between appendages. No lettering, numbering, gridlines, frames or labels. Every pose genuinely redrawn, five unique drawings per row; very subtle idle2 then strong anticipation, strike and recoil acting. Powerful, eccentric fantasy adversaries, not cute chibi.\nCREATURE A SIEGE CRAWLER: six-legged armored mechanical spider, dark slate body with broad COPPER back armor and a compact functional WOOD-AND-BRONZE BALLISTA mounted on its back, four small amber front eye slits. Sturdy readable simple silhouette, ballista no wider than torso. Idle braced. Idle2 body subtly lifts on articulated legs and ballista tilts slightly. Windup crouches and pulls ballista string back, forelegs braced. Strike ballista arms snap forward as front legs spread with recoil, no detached giant projectile. Hurt tips diagonally, legs curl and back bow tilts downward. CREATURE B CENSER EFFIGY: narrow IVORY CERAMIC automaton with a long BIRD-BEAK mask, simple hollow eyeholes, two thin BRASS mechanical legs and two short jointed arms, DEEP PURPLE draped cloth around torso and an attached rounded incense vessel at chest. Idle still with head tilt. Idle2 beak lifts gently and cloth shifts. Windup draws both clawhands back beside shoulders. Strike thrusts hooked brass hands forward as beak dips. Hurt folds sideways, beak tilted away, knees bent and arms against chest. No smoke clouds."
+    },
+    {
+      "key": "expansion-a-23-24",
+      "ids": [
+        23,
+        24
+      ],
+      "prompt": "NEW fantasy enemy animation atlas for HOLLOW OATH 2, matching attached reference's clean inked colored MANGA style: bold legible silhouettes, crisp black outlines, simplified two-tone cel shadows, vivid but restrained colors, no photorealism, painterly texture, 3D, text or user interface. Reference provides STYLE ONLY: draw the TWO NEW creature designs described below, not the reference creature. Exactly TEN individual FULLBODY drawings in STRICT 5 COLUMNS \u00d7 2 ROWS, aspect ratio5:2, ten equal square cells. TOP ROW is creature A in five poses; BOTTOM ROW is creature B in five poses. COLUMN ORDER: IDLE A; IDLE B (a distinct but subtly breathing/wing-shifting drawing); ATTACK WIND-UP (coiled/drawn back anticipation); ATTACK STRIKE (clear extended forward impact); HURT (unmistakable recoiling/flinching, used also for death). Each creature's5frames share consistent anatomy, colors, proportions, scale and facing. ALL ten drawings SMALL ENOUGH TO FIT THE CENTRAL60% OF THEIR CELL, AT LEAST18% EMPTY SPACE on ALL sides of EVERY cell. Do not enlarge sprites to fill the sheet. Wings, tails, weapons and horns entirely fit well within their cells, no crossing or clipping. Use same ground baseline at80% of cellheight. Prefer three-quarter front orientation toward viewer/right. NO drawn floor, shadow, aura, fog or backdrop: fully transparent clean alpha0 everywhere outside actual creature silhouettes including between appendages. No lettering, numbering, gridlines, frames or labels. Every pose genuinely redrawn, five unique drawings per row; very subtle idle2 then strong anticipation, strike and recoil acting. Powerful, eccentric fantasy adversaries, not cute chibi.\nCREATURE A BLADEFIN KOI: flying ornamental KOI FISH with bold ORANGE top scales, NAVY belly and patches, broad sharp IVORY swordlike fins and tail edges, fierce simple fish face with short barbels. No legs or wings. Compact curving fullbody silhouette. Idle hovering Scurve. Idle2 tail gently bends opposite and gill fin lifts. Windup curves body tighter with head drawn back. Strike surges forward with bladed fins extended, whole tail still fits. Hurt folds body into recoiling Cshape, eyes squeezed shut, fins partly folded. CREATURE B VEILMOTH ORACLE: large PURPLE MOTH with deep violet broad patterned wings, just TWO simple ivory eye-spot shapes on wings, a SMALL HOODED FACE at center and long IVORY antennae, six small folded insectlegs, no humanbody. Idle wings partly spread. Idle2 wings gently lower and antennae tilt. Windup draws wings sharply back and curls small legs toward body. Strike flares wings forward with clawlegs extended and hoodface aimed toward viewer. Hurt folds wings unevenly inward, hood bowed and antennae bent. No dust, smoke or magical auras."
+    }
+  ],
+  "normalization": "Each five-frame row will share common alpha-union crop, scale and paste offset; no per-frame independent resizing.",
+  "creatures": [
+    {
+      "id": 13,
+      "row": 0,
+      "source_bounds": [
+        [
+          80,
+          90,
+          352,
+          341
+        ],
+        [
+          60,
+          70,
+          328,
+          341
+        ],
+        [
+          30,
+          139,
+          336,
+          341
+        ],
+        [
+          13,
+          130,
+          349,
+          342
+        ],
+        [
+          41,
+          131,
+          319,
+          341
+        ]
+      ],
+      "common_crop": [
+        7,
+        64,
+        358,
+        348
+      ],
+      "common_scale": 1.0826210826210827,
+      "common_paste_offset": [
+        34,
+        115
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-13.webp",
+          "state": "idle",
+          "size_bytes": 42730,
+          "sha256": "2c42dd8901de7aa2bee91bc01c27cbac1c360f6a111c8b1a3e85b9fe37226e71"
+        },
+        {
+          "file": "foe-13-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 44718,
+          "sha256": "48a91696e63d5643cd2289c24f549c54b1ff74daec1f8e14fc5edea4eae9b11b"
+        },
+        {
+          "file": "foe-13-windup.webp",
+          "state": "windup",
+          "size_bytes": 43046,
+          "sha256": "d64aa76b61b4f56d4cf62ff177b4b7c15bcf3ef8a58484909ec3c779ae233b5d"
+        },
+        {
+          "file": "foe-13-attack.webp",
+          "state": "attack",
+          "size_bytes": 47252,
+          "sha256": "fef38e26d6f09dc7f68026ee258d12ecc39366ee80982c27fca6dd98f409f95a"
+        },
+        {
+          "file": "foe-13-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 37854,
+          "sha256": "5b124fd4762943c5525707773744a73d804cb4c1af3360edf86535a74b39e90c"
+        }
+      ],
+      "adjacent_frame_mean_deltas": [
+        19.238,
+        22.201,
+        21.211,
+        21.55
+      ]
+    },
+    {
+      "id": 14,
+      "row": 1,
+      "source_bounds": [
+        [
+          121,
+          53,
+          300,
+          338
+        ],
+        [
+          108,
+          51,
+          295,
+          337
+        ],
+        [
+          73,
+          37,
+          302,
+          338
+        ],
+        [
+          51,
+          43,
+          326,
+          337
+        ],
+        [
+          66,
+          76,
+          339,
+          338
+        ]
+      ],
+      "common_crop": [
+        45,
+        31,
+        345,
+        344
+      ],
+      "common_scale": 1.2140575079872205,
+      "common_paste_offset": [
+        42,
+        42
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-14.webp",
+          "state": "idle",
+          "size_bytes": 49310,
+          "sha256": "9a97a28b744da58f141e67bf11442743bf8f0599f6a2b41028bac7d84f3795a6"
+        },
+        {
+          "file": "foe-14-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 50740,
+          "sha256": "4d25d08bc11e0b6603bb660177b020b1b89a058799ece66e5631a1d9f451ef2d"
+        },
+        {
+          "file": "foe-14-windup.webp",
+          "state": "windup",
+          "size_bytes": 57734,
+          "sha256": "0fe12c97ee97ebdbbd982762b43effbfe8477325519a42d4373622184a80cbb5"
+        },
+        {
+          "file": "foe-14-attack.webp",
+          "state": "attack",
+          "size_bytes": 56988,
+          "sha256": "1ecc62ae2f19928dfb3020a3f13e2ca6542a95ddb8b5e691968b08e0cd156538"
+        },
+        {
+          "file": "foe-14-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 56764,
+          "sha256": "9446c6139fef33651b8f83868fe8eb5ace201471fbfa8aa7460af3d06d763e37"
+        }
+      ],
+      "adjacent_frame_mean_deltas": [
+        18.168,
+        27.51,
+        22.316,
+        29.995
+      ]
+    },
+    {
+      "id": 15,
+      "row": 0,
+      "source_bounds": [
+        [
+          85,
+          130,
+          329,
+          352
+        ],
+        [
+          50,
+          109,
+          318,
+          351
+        ],
+        [
+          46,
+          158,
+          330,
+          351
+        ],
+        [
+          17,
+          72,
+          372,
+          339
+        ],
+        [
+          63,
+          141,
+          314,
+          350
+        ]
+      ],
+      "common_crop": [
+        11,
+        66,
+        378,
+        358
+      ],
+      "common_scale": 1.0354223433242506,
+      "common_paste_offset": [
+        34,
+        120
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-15.webp",
+          "state": "idle",
+          "size_bytes": 43360,
+          "sha256": "90376f1e6c96a3468913398a16bcf06adcb9df1f941a0b637b6aaecec56312b9"
+        },
+        {
+          "file": "foe-15-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 48616,
+          "sha256": "33ca291e4d8501f63bcd68ca26d247f406c2bcc33968a7c7b7ee3b5fa9d34870"
+        },
+        {
+          "file": "foe-15-windup.webp",
+          "state": "windup",
+          "size_bytes": 44190,
+          "sha256": "77eba85fc97266ce237df0f6e64f67c33802e39c7d1a17d8d084cb41cd4720c1"
+        },
+        {
+          "file": "foe-15-attack.webp",
+          "state": "attack",
+          "size_bytes": 56198,
+          "sha256": "374e4f10f8c88e4ee838ec960cc87b403f0f34e0d512d20f71d5d34376dc07ac"
+        },
+        {
+          "file": "foe-15-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 42216,
+          "sha256": "03e450ab011d12ef65ec742cfb30d4ddbc8a88084be7c672aa1d357680c4ee61"
+        }
+      ],
+      "adjacent_frame_mean_deltas": [
+        19.388,
+        21.939,
+        35.02,
+        34.509
+      ]
+    },
+    {
+      "id": 16,
+      "row": 1,
+      "source_bounds": [
+        [
+          75,
+          136,
+          343,
+          331
+        ],
+        [
+          68,
+          119,
+          336,
+          331
+        ],
+        [
+          56,
+          156,
+          333,
+          330
+        ],
+        [
+          35,
+          143,
+          372,
+          332
+        ],
+        [
+          69,
+          136,
+          313,
+          329
+        ]
+      ],
+      "common_crop": [
+        29,
+        113,
+        378,
+        338
+      ],
+      "common_scale": 1.0888252148997135,
+      "common_paste_offset": [
+        34,
+        177
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-16.webp",
+          "state": "idle",
+          "size_bytes": 38832,
+          "sha256": "284ffae5f1f8bf320dd4eeb85e12a0653e2c3a056ce1ffe3ead4f122be2d025a"
+        },
+        {
+          "file": "foe-16-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 38792,
+          "sha256": "11c21a9bf65f2db26407db38939d8f2115389efc2fbc4ff3c0213e4c2be57f27"
+        },
+        {
+          "file": "foe-16-windup.webp",
+          "state": "windup",
+          "size_bytes": 38884,
+          "sha256": "61c9ecd6fc17b888f4ed205a9cef5ad1d07ae0bb8c3b8dd6ffaf0e11c032e09c"
+        },
+        {
+          "file": "foe-16-attack.webp",
+          "state": "attack",
+          "size_bytes": 41606,
+          "sha256": "afbb880653d03d43e97562ee51fd23da06eaa1bb27e27e58a6a98d658861a19d"
+        },
+        {
+          "file": "foe-16-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 37324,
+          "sha256": "563ccedbb54bd013e7be78ab1d24a5306efbf669922e66d070017e18803c169d"
+        }
+      ],
+      "adjacent_frame_mean_deltas": [
+        11.021,
+        13.178,
+        12.698,
+        13.332
+      ]
+    },
+    {
+      "id": 17,
+      "row": 0,
+      "source_bounds": [
+        [
+          98,
+          80,
+          302,
+          323
+        ],
+        [
+          106,
+          58,
+          290,
+          324
+        ],
+        [
+          95,
+          76,
+          297,
+          325
+        ],
+        [
+          59,
+          82,
+          359,
+          323
+        ],
+        [
+          82,
+          72,
+          287,
+          324
+        ]
+      ],
+      "common_crop": [
+        53,
+        52,
+        365,
+        331
+      ],
+      "common_scale": 1.2179487179487178,
+      "common_paste_offset": [
+        34,
+        82
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-17.webp",
+          "state": "idle",
+          "size_bytes": 35756,
+          "sha256": "4939163d444b395504f5c667e14092a999a479b5c45f72b503b0b09725ce84cf"
+        },
+        {
+          "file": "foe-17-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 35208,
+          "sha256": "f5f4b543f2fc000f39ff17eb236c2142e1fd887966527809b4402f5819a0419d"
+        },
+        {
+          "file": "foe-17-windup.webp",
+          "state": "windup",
+          "size_bytes": 39240,
+          "sha256": "53357eb4bfcc4dc990b6672dd90bacb568f7f84ec97dd0607c243d6625d14422"
+        },
+        {
+          "file": "foe-17-attack.webp",
+          "state": "attack",
+          "size_bytes": 35926,
+          "sha256": "a7d0cf51bf509a7c2daae2b218bb77f370f2ac65d3fb65539f9c6661a87251d3"
+        },
+        {
+          "file": "foe-17-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 34940,
+          "sha256": "cea12581560be717cd2a763218345db16b91bb8e8a6967199ad483e7e3062c8e"
+        }
+      ],
+      "adjacent_frame_mean_deltas": [
+        22.058,
+        28.586,
+        36.291,
+        36.259
+      ]
+    },
+    {
+      "id": 18,
+      "row": 1,
+      "source_bounds": [
+        [
+          93,
+          79,
+          299,
+          337
+        ],
+        [
+          90,
+          63,
+          303,
+          337
+        ],
+        [
+          60,
+          82,
+          314,
+          336
+        ],
+        [
+          55,
+          75,
+          368,
+          337
+        ],
+        [
+          76,
+          97,
+          275,
+          337
+        ]
+      ],
+      "common_crop": [
+        49,
+        57,
+        374,
+        343
+      ],
+      "common_scale": 1.1692307692307693,
+      "common_paste_offset": [
+        34,
+        88
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-18.webp",
+          "state": "idle",
+          "size_bytes": 37610,
+          "sha256": "58f631713294a2513657a2100c00378c8d13911a4b904139c80db23bf3e4be9e"
+        },
+        {
+          "file": "foe-18-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 36458,
+          "sha256": "837db02f830903aee843a51e47a034d62427a0e5c7c8a99b33b5ab5829ebaf0a"
+        },
+        {
+          "file": "foe-18-windup.webp",
+          "state": "windup",
+          "size_bytes": 44258,
+          "sha256": "f7d6734223a2d75f68c58f4e1d6d3d915c2d354924434ebe3b4246437e8fbaf1"
+        },
+        {
+          "file": "foe-18-attack.webp",
+          "state": "attack",
+          "size_bytes": 43384,
+          "sha256": "6c85e73b11de0f6c18c3453116392653ed60acd8ecb62b34a7b9645fd088f0dd"
+        },
+        {
+          "file": "foe-18-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 33272,
+          "sha256": "412cf37890d05a87fb35f52fc9bfaf6f7f2e428579974d65151a3fb42a2dbd6c"
+        }
+      ],
+      "adjacent_frame_mean_deltas": [
+        15.38,
+        20.151,
+        24.651,
+        19.227
+      ]
+    },
+    {
+      "id": 19,
+      "row": 0,
+      "source_bounds": [
+        [
+          61,
+          85,
+          342,
+          345
+        ],
+        [
+          53,
+          86,
+          337,
+          342
+        ],
+        [
+          49,
+          56,
+          343,
+          339
+        ],
+        [
+          38,
+          124,
+          340,
+          360
+        ],
+        [
+          40,
+          86,
+          324,
+          341
+        ]
+      ],
+      "common_crop": [
+        32,
+        50,
+        349,
+        366
+      ],
+      "common_scale": 1.1987381703470033,
+      "common_paste_offset": [
+        34,
+        43
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-19.webp",
+          "state": "idle",
+          "size_bytes": 51142,
+          "sha256": "2547c0184db23e0268be90b4696766cb71b683f9d13aaa017bdc0092e58043ef"
+        },
+        {
+          "file": "foe-19-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 52958,
+          "sha256": "2bbc1ef03b6cb7da0e1dc7962b477fce78333717be6a828c03683ae2bfc0d90a"
+        },
+        {
+          "file": "foe-19-windup.webp",
+          "state": "windup",
+          "size_bytes": 50776,
+          "sha256": "c1e452b6271d2af471d9b3b54fabedc5aab23c537b908d2771d971c20409ed5b"
+        },
+        {
+          "file": "foe-19-attack.webp",
+          "state": "attack",
+          "size_bytes": 45138,
+          "sha256": "8c701228cebf076c61b89ae9803da88af5595417c17b72925f50c0807a058cef"
+        },
+        {
+          "file": "foe-19-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 47594,
+          "sha256": "bff17d9276128258a75f3d29d81d001dbde720caef439a8780b4ba8cc2fcf5e2"
+        }
+      ],
+      "adjacent_frame_mean_deltas": [
+        15.593,
+        28.822,
+        32.331,
+        33.355
+      ]
+    },
+    {
+      "id": 20,
+      "row": 1,
+      "source_bounds": [
+        [
+          121,
+          44,
+          306,
+          345
+        ],
+        [
+          92,
+          75,
+          310,
+          345
+        ],
+        [
+          63,
+          44,
+          281,
+          345
+        ],
+        [
+          23,
+          138,
+          378,
+          345
+        ],
+        [
+          72,
+          109,
+          289,
+          345
+        ]
+      ],
+      "common_crop": [
+        17,
+        38,
+        384,
+        351
+      ],
+      "common_scale": 1.0354223433242506,
+      "common_paste_offset": [
+        34,
+        98
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-20.webp",
+          "state": "idle",
+          "size_bytes": 32336,
+          "sha256": "b5baee3eb720bda8c848c2fc716e076b454963bcb068aa3a874c195a0037a496"
+        },
+        {
+          "file": "foe-20-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 31836,
+          "sha256": "79fc128424e2c47b086fb5f80224d9fc33ce749309c7304e27b8dea606c44914"
+        },
+        {
+          "file": "foe-20-windup.webp",
+          "state": "windup",
+          "size_bytes": 42054,
+          "sha256": "e9a3d0e5f463b7cee83a8080f3c9ea968e7e37e4d4b86b57494c1e669fff7ac3"
+        },
+        {
+          "file": "foe-20-attack.webp",
+          "state": "attack",
+          "size_bytes": 40290,
+          "sha256": "d4d74a3fe8b4221c1ae60b7d8b03527bfb31e2e4ade35c57ed12359a63dd8f6f"
+        },
+        {
+          "file": "foe-20-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 36564,
+          "sha256": "21013e6c3808c70d2f5f784960e3ddf087667885a9c858c4ee136a460c460d08"
+        }
+      ],
+      "adjacent_frame_mean_deltas": [
+        13.851,
+        18.104,
+        22.39,
+        17.06
+      ]
+    },
+    {
+      "id": 21,
+      "row": 0,
+      "source_bounds": [
+        [
+          64,
+          122,
+          339,
+          339
+        ],
+        [
+          66,
+          108,
+          333,
+          339
+        ],
+        [
+          52,
+          140,
+          344,
+          339
+        ],
+        [
+          34,
+          112,
+          352,
+          339
+        ],
+        [
+          48,
+          119,
+          329,
+          326
+        ]
+      ],
+      "common_crop": [
+        28,
+        102,
+        358,
+        345
+      ],
+      "common_scale": 1.1515151515151516,
+      "common_paste_offset": [
+        34,
+        142
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-21.webp",
+          "state": "idle",
+          "size_bytes": 44380,
+          "sha256": "ad60094abae5458b01b8a97dcceeee6a26e679a107919aedc400568d35887e6f"
+        },
+        {
+          "file": "foe-21-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 44082,
+          "sha256": "3d0232cb7c699d436d30586d650dcb7461462dd74cbb0ec65f39079d78c242fa"
+        },
+        {
+          "file": "foe-21-windup.webp",
+          "state": "windup",
+          "size_bytes": 46396,
+          "sha256": "343209c94e32ef3b44e8f075225285323a18ca216de0a5690dbccf7a0a673db6"
+        },
+        {
+          "file": "foe-21-attack.webp",
+          "state": "attack",
+          "size_bytes": 46254,
+          "sha256": "ca9f9e429f81db7cc4d74b443145943c13ee8b1f513eb0a94e8dcecd5d7342fb"
+        },
+        {
+          "file": "foe-21-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 42984,
+          "sha256": "11a4500ec328c174c603d7e0d18e30b2fadf2c581bddec238072706ce55a085b"
+        }
+      ],
+      "adjacent_frame_mean_deltas": [
+        12.825,
+        17.435,
+        16.155,
+        16.574
+      ]
+    },
+    {
+      "id": 22,
+      "row": 1,
+      "source_bounds": [
+        [
+          118,
+          62,
+          290,
+          334
+        ],
+        [
+          111,
+          55,
+          280,
+          334
+        ],
+        [
+          87,
+          81,
+          303,
+          333
+        ],
+        [
+          79,
+          81,
+          347,
+          331
+        ],
+        [
+          105,
+          90,
+          295,
+          330
+        ]
+      ],
+      "common_crop": [
+        73,
+        49,
+        353,
+        340
+      ],
+      "common_scale": 1.3058419243986255,
+      "common_paste_offset": [
+        41,
+        42
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-22.webp",
+          "state": "idle",
+          "size_bytes": 47408,
+          "sha256": "a259d6bcbb48d4fd43a4b94cc0e29fe8661ecf11f2d06f2d24f9ccd7b61cc673"
+        },
+        {
+          "file": "foe-22-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 48662,
+          "sha256": "ee668338d790ee65ae9ff54eae5fa230e386f53d113d709dddf24b06b4ab1b4d"
+        },
+        {
+          "file": "foe-22-windup.webp",
+          "state": "windup",
+          "size_bytes": 57882,
+          "sha256": "c6a09e72ee7eb869845280d108fb6797a58a4f01eed16480bdffcde1747cdf25"
+        },
+        {
+          "file": "foe-22-attack.webp",
+          "state": "attack",
+          "size_bytes": 58370,
+          "sha256": "54b561cf72b2c9ba4820017df856e781b20066ddacd43d15f566a561fb6c5995"
+        },
+        {
+          "file": "foe-22-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 44456,
+          "sha256": "f0f304795693c40bbdfbedfe3cd9ea180e9dc2e0502f633153f3f1c3b6795d63"
+        }
+      ],
+      "adjacent_frame_mean_deltas": [
+        15.411,
+        25.978,
+        24.209,
+        23.992
+      ]
+    },
+    {
+      "id": 23,
+      "row": 0,
+      "source_bounds": [
+        [
+          103,
+          61,
+          338,
+          355
+        ],
+        [
+          97,
+          61,
+          359,
+          339
+        ],
+        [
+          75,
+          76,
+          320,
+          329
+        ],
+        [
+          12,
+          89,
+          370,
+          314
+        ],
+        [
+          99,
+          103,
+          308,
+          321
+        ]
+      ],
+      "common_crop": [
+        6,
+        55,
+        376,
+        361
+      ],
+      "common_scale": 1.027027027027027,
+      "common_paste_offset": [
+        34,
+        108
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-23.webp",
+          "state": "idle",
+          "size_bytes": 46104,
+          "sha256": "3d6ef94fd48db7e6d687b48994076c064074aebc89eb6d7c9ea238728819d02b"
+        },
+        {
+          "file": "foe-23-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 47968,
+          "sha256": "86e1f72697df5e07fa788fd04cd0a4d9521093d527673c788ae349579b0f37cc"
+        },
+        {
+          "file": "foe-23-windup.webp",
+          "state": "windup",
+          "size_bytes": 47216,
+          "sha256": "4925240ca6e2923c3e11f5b91671d8df0964c6783e05fa813b4630caa9e732b2"
+        },
+        {
+          "file": "foe-23-attack.webp",
+          "state": "attack",
+          "size_bytes": 53426,
+          "sha256": "f13f50d2b43da416317b91d31ce5ff46c8be9feb5fac752c37c58deed3ca1d96"
+        },
+        {
+          "file": "foe-23-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 39904,
+          "sha256": "e4438baf33179886e2da3809c89797aad5c7a7f3182a6b2dcf1f58207ef34d69"
+        }
+      ],
+      "adjacent_frame_mean_deltas": [
+        18.474,
+        26.344,
+        29.106,
+        28.821
+      ]
+    },
+    {
+      "id": 24,
+      "row": 1,
+      "source_bounds": [
+        [
+          53,
+          79,
+          367,
+          315
+        ],
+        [
+          45,
+          99,
+          366,
+          316
+        ],
+        [
+          53,
+          106,
+          321,
+          304
+        ],
+        [
+          26,
+          74,
+          376,
+          306
+        ],
+        [
+          85,
+          108,
+          315,
+          319
+        ]
+      ],
+      "common_crop": [
+        20,
+        68,
+        382,
+        325
+      ],
+      "common_scale": 1.0497237569060773,
+      "common_paste_offset": [
+        34,
+        152
+      ],
+      "canvas": [
+        448,
+        448
+      ],
+      "frames": [
+        {
+          "file": "foe-24.webp",
+          "state": "idle",
+          "size_bytes": 42910,
+          "sha256": "00400ceccf463ba5f5413537b42a44ea591b0c490be1964a9801a19b3c72ecb2"
+        },
+        {
+          "file": "foe-24-idle2.webp",
+          "state": "idle2",
+          "size_bytes": 40130,
+          "sha256": "577c6daa47dfd93441f56d75ccbb8dc90d866980c5a2776809b2af29efb5b255"
+        },
+        {
+          "file": "foe-24-windup.webp",
+          "state": "windup",
+          "size_bytes": 35190,
+          "sha256": "64e697254665b8c6d18299c2e7d8d4083e6b3baca47c260521d348282a24b774"
+        },
+        {
+          "file": "foe-24-attack.webp",
+          "state": "attack",
+          "size_bytes": 48198,
+          "sha256": "7eafba8022e7d042c30484b677497c42db493fe7766bbdb0b4ccc0e9078f0df9"
+        },
+        {
+          "file": "foe-24-hurt.webp",
+          "state": "hurt",
+          "size_bytes": 30588,
+          "sha256": "d3ec27150abf2228d1800c66fcf0232c40b5a60577d38ffdab9e42807642ec5f"
+        }
+      ],
+      "adjacent_frame_mean_deltas": [
+        21.181,
+        17.698,
+        25.138,
+        25.279
+      ]
+    }
+  ],
+  "atlases": [
+    {
+      "file": "expansion-a-13-14.png",
+      "source_generation": "exec-5a0386d6-b8f9-4d98-a1e6-13758fff98a7.png"
+    },
+    {
+      "file": "expansion-a-15-16.png",
+      "source_generation": "exec-271491db-6e8b-4e46-bb32-07536b1dcd1e.png"
+    },
+    {
+      "file": "expansion-a-17-18.png",
+      "source_generation": "exec-0b1fc21a-ef6a-4253-b4d2-4d515680a8db.png"
+    },
+    {
+      "file": "expansion-a-19-20.png",
+      "source_generation": "exec-224dcbe3-23f6-4920-b268-6771d3f1ff95.png"
+    },
+    {
+      "file": "expansion-a-21-22.png",
+      "source_generation": "exec-7907d553-4141-43c3-8151-ea2cd3653861.png"
+    },
+    {
+      "file": "expansion-a-23-24.png",
+      "source_generation": "exec-8fcf8bd4-4934-43c8-ac3b-13eea87ae959.png"
+    }
+  ],
+  "total_bytes": 2636402,
+  "verification": {
+    "creatures": 12,
+    "frames": 60,
+    "canvas": [
+      448,
+      448
+    ],
+    "unique_frame_hashes": 60,
+    "transparent_corners": true,
+    "all_cell_visible_bounds_have_8px_margin": true,
+    "shared_per_creature_crop_scale_offset": true,
+    "background_correction": "Imagegen removed white backdrop from17/18 before slicing."
+  }
+}

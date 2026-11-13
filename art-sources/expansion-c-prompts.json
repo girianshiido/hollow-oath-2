@@ -1,0 +1,41 @@
+{
+  "reference": [
+    "foe-1.webp",
+    "foe-7.webp"
+  ],
+  "generationPrompt": "Production animated monster SPRITE ATLAS for Hollow Oath II. Exactly TEN full-body creature drawings in a precise FIVE COLUMNS by TWO ROWS equal grid. Each row ONE creature, five DIFFERENT actual poses left-to-right:1 relaxed idleA,2 subtle breathing idleB (small head/limb shift; exactsamegroundanchor),3 WINDUP draw attacking limbs/head BACK,4 STRIKE lunge or extend attack with clear forward followthrough,5 HURT unmistakable recoiling/slumped flinch, reusable death. Same proportions and scale across all5frames of each creature. EXACT straight cell boundaries although no lines are drawn. All appendages wholly within CENTRAL 65% of own cell leaving wide empty alpha gutters, even in attack! Entire charactervisible,no cropped claws/horns/tails/wings/weapons. No overlappingorcrossingcells. Generous top/bottom margins too. True TRANSPARENT alpha, nofloor/background/castshadows/fog/smoke/halos/externalparticles, no labels/text/numbers/gridlines. Clean confident BLACK INK, colored Japanese fantasy MANGA with simplified two-tone cel shading, vivid limitedcolorpalette, readable compact silhouette onphone, original distinct monster designs. NOT realistic,NOT3D,notpainterly,notpixelart,notchibi,nointricatefinefiligree. Face threequarter towardviewer. Noextrafigures. Absolutely preserve anatomicalidentity across5poses,limbsattachedconsistent. ReferenceimagesSTYLEonly, create NEW monsterdesigns described below. Each row should be a coherent filmstrip of FIVE poses with calm breathing, raised anticipation, actualforcefulstrike, expressiveinjury. Outputverywide landscape5:2.",
+  "creatures": [
+    [
+      "a",
+      37,
+      "ROW1 ASH SALAMANDER: orangefire salamander lizard onfour shortlegs, charcoalblack broad backplates andthickcurvedtail, narrowgoldeneyes. Strongpredatory silhouette, jaws windup thenbiteforward, hurtheadback andlegs buckle. Noexternalfireeffects. ROW2 MOON HARE: long-legged agile indigoandsilver jackalope rabbit, oversizedsilverylong ears, one simple crescentivoryhorn, tuftedchest and pointedharefeet. Earschange gentlyidle, crouchwindupthenlongspringpounce, hurtcurlback earsdroop."
+    ],
+    [
+      "b",
+      39,
+      "ROW1 GLASS BASILISK: emerald-glass chunky sixlegged lizard with ivoryspikedcrownroundhead, goldcrest alongneck, broadgeometriccrystalline greenbodyplates and thicktail. Grounded menacing expression, windup neckandforelimbsback thenlungingbite, hurtbuckledneck/forelegs. ROW2 SALTBOUND CRAB: broadnavy armoredcrab withtwohugepincers, sixcompactwalkinglegs, simpleivorysaltcrystals protrudingfromshell, paleeyes onshortstalks. Keepcompactbroad silhouette, windupraisedpincersback, attackonepincersnappingforward, hurtpincersdroop legscrouch."
+    ],
+    [
+      "c",
+      41,
+      "ROW1 BRIAR DUELIST: slimhumanoid insect swordsman, rose-colored smoothcarapacearmor, long narrowmantisface withgoldeneyes, crimsonpetalcloak, two thinivoryrapier forearms and longjointedlegs. Chicmenacing clear silhouette. Windupcrossesbladesnearbody, strikeonebladelungingforward, hurttorso bentback cloakandarmsdroop. ROW2 CLOCKWORK WASP: brassmechanical flyingwasp withlargeblueglass abdomen, sixjointedbrasslegs,two compacttransparentbluewings and narrowblackheadwithbrassmandibles, longcompactstingertail. Hoveridlewingsshiftslightly, windupabdomen curlsback, strikeabdomenstingerforward, hurtwingdroop legscurl."
+    ],
+    [
+      "d",
+      43,
+      "ROW1 CANDLE WRAITH: floatingivorywax ghostfigure, amberflame ashead emergingfrom waxcollar, violetcloak hangingwith raggedbroadhem, two longwaxhands. NOexternalglowcloud, justcompactflamehead. Idle hands movegently, winduphandspulledback, strikehandssweepingforward, hurtslumpedwaxbodyheadflamebent andhandsdroop. ROW2 MIRE CROCODILE: jadegreencrocodile onfour sturdyshortlegs, broadarmoredmossback plates, largesquarejawwithivoryteeth, thickcurvedtail. Predatorynotgoofy. Idlejawslightshift, windupheadback crouch, strikelungingbite, hurtheadrecoil mouthshut legsbuckle."
+    ],
+    [
+      "e",
+      45,
+      "ROW1 PORCELAIN DOLL: unsettlingwhiteceramic marionette withsmoothoval maskface, smallblackeyeholes, cobaltblue shortcloak, goldhingesatjoints, hookedceramichandsandfeet, compacttallbody noexternalpuppetstrings. Windupdrawshookedarmsback, strikesweepsonehookforward, hurtfoldedtorso headslump danglingarms. ROW2 STORM ROC: compactmassiveblackandcobalt thunderbird withgoldbeak, THREE largegoldcrestfeathers, two broadblueblackwings andtwo stoutgoldtalonlegs, navychest. NOexternallightningeffects. Idlepartiallyfoldedwings breath, windupwingsdrawback talonraised, strikewingsforwardtalonlunge, hurtwingfoldandheadrecoil."
+    ],
+    [
+      "f",
+      47,
+      "ROW1 ROOTBOUND BOAR: stockyburgundyboar, largeivorytusks, simpletanrootarmoraroundshouldersandback, fourshortpowerfullegs, shortdarkmaneandcurvedtail. Windupheadlowereddrawnback, strikeforwardtuskcharge, hurtheadback legsbuckle. ROW2 STARLESS KNIGHT: imposinghumanoidcharcoalvoidknight, silverangulararmortrim, narrowemptyblackfacevisor, violetmantle, silverhalberdhelddiagonally closebody, both armoredlegs fullyvisible. Keepweaponentirelyinsidecell withwidealpha. Winduphalberddrawnbackatshoulder, strikehalberdthrustforwardcompactperspective, hurtkneesbent headdroop weaponlowered."
+    ]
+  ],
+  "cleanupPrompt": "Production sprite atlas spacing and alpha cleanup ONLY. Keep same EXACT FIVE COLUMNS and TWO ROWS, same TEN original creatures/poses, same designs/colors/anatomy/proportions. Every creature must be complete and isolated inside its OWN equal cell, at CENTER, with 12% completely empty transparent margins on ALL sides. Reduce all drawings to75% of current size within own cell. Include complete spears/tails/antennae/wings inside cell. Repair any appendage formerly crossing cell boundary to be fully attached to its OWN creature only; REMOVE any isolated fragment from neighboring cell, especially leftedge of hurt frames. Keep all ten original posedrawings otherwise exactly the same: idleA idleB windup strike hurt across eachrow. Remove ALL faint background wisps, aura, colored glow haze, detached particles and cast shadows; ONLY the creature silhouette has alpha. True fully transparent PNG canvas. No floor, no checkerboard, no text, grid lines, labels or frame borders. Coherent constant bodily scale and foot baseline for all5poses of eachrow, no perposezoom. Clean crisp manga outlines and celcolors preserved. Wide 5:2 landscape atlas.",
+  "notes": "Five source atlases use dedicated imagegen spacing edits. Atlas b uses its already clean original, because a cleanup attempt added atmospheric haze; the original has complete well separated silhouettes."
+}

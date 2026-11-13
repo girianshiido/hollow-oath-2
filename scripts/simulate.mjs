@@ -1,4 +1,4 @@
-import {newRun,tick,cast,stats,recruit,resume,buyGear,buySkill,gearCost,upgradeCost} from '../src/engine.ts';
+import {newRun,tick,cast,stats,recruit,resume,buyGear,buySkill,gearCost,upgradeCost,setMode} from '../src/engine.ts';
 import {CLASS_IDS} from '../src/content.ts';
 export function prepare(r){
  let changed=true;
@@ -9,6 +9,9 @@ export function prepare(r){
 }
 export function tactics(r){
  const living=r.enemies.filter(e=>e.hp>0);const priority=living.find(e=>e.role==='healer')??living.find(e=>e.preparation>0)??living.find(e=>e.role!=='guard')??living[0];if(priority)r.target=priority.id;
+ const breaker=priority?.ward?r.heroes.findIndex(h=>h.hp>0&&h.mp>=8):-1;
+ for(let i=0;i<r.heroes.length;i++){const h=r.heroes[i];if(h.hp<=0)continue;const s=stats(h);if(h.hp/s.hp<.55&&h.mp>=8)setMode(r,i,'mend');else if(i===breaker&&priority.ward)setMode(r,i,priority.ward);else if(h.mode==='mend'&&h.hp<s.hp*.92&&h.mp>=8){}else if(h.classId==='hexweaver'&&h.mp>s.mp*.7)setMode(r,i,'ember');else setMode(r,i,'steel');}
+
  for(let i=0;i<r.heroes.length;i++){
   const h=r.heroes[i];if(h.hp<=0)continue;const low=r.heroes.some(a=>a.hp>0&&a.hp/stats(a).hp<.68),prep=priority?.preparation>0;
   if(h.classId==='vanguard'){if(prep||h.mp>stats(h).mp*.6)cast(r,i,0);if(prep&&r.heroes.some(a=>a.hp>0&&a.shield<10))cast(r,i,1);}

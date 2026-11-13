@@ -1,0 +1,32 @@
+{
+  "a": {
+    "first": 37,
+    "atlas": "expansion-c-a.png",
+    "imagegenSource": "exec-a78886cf-d198-4331-88b9-a5fc3ce49723.png"
+  },
+  "b": {
+    "first": 39,
+    "atlas": "expansion-c-b.png",
+    "imagegenSource": "exec-c634d519-b8df-472c-845d-d29cb7275cc9.png"
+  },
+  "c": {
+    "first": 41,
+    "atlas": "expansion-c-c.png",
+    "imagegenSource": "exec-9d7011a1-77f2-49dd-8923-f525140a26c3.png"
+  },
+  "d": {
+    "first": 43,
+    "atlas": "expansion-c-d.png",
+    "imagegenSource": "exec-8715ad1e-1e28-4e24-92cd-ffc71df67c40.png"
+  },
+  "e": {
+    "first": 45,
+    "atlas": "expansion-c-e.png",
+    "imagegenSource": "exec-c433e460-bf9b-42e7-8a6a-46eba890c73c.png"
+  },
+  "f": {
+    "first": 47,
+    "atlas": "expansion-c-f.png",
+    "imagegenSource": "exec-a0c2c5ab-1715-4972-9add-b6595142b8e6.png"
+  }
+}
