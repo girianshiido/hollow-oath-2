@@ -76,3 +76,9 @@ Chapter guardian endurance is 4.5–6 times that of a same-wave warden. Chapters
 Existing in-progress encounters retain their saved HP and do not receive an endurance increase midway through combat. Optional presentation and stage fields preserve version-one save compatibility. The same guardian presentation rules apply to expedition guardians.
 
 Revision 1.3 verification: 47 regression tests pass. All twelve starting orders complete (52.1–76.6 simulation minutes, 3–26 defeats). One tactical Hexweaver/Oathkeeper run cleared individual guardians in 23–56 combat seconds, excluding presentation time; these figures are automated balance checks, not human playtime targets.
+
+## Combat readability patch (1.3.1)
+
+Enemy HP and preparation meters now fit non-overlapping horizontal lanes, with at least 16 px between neighbors on supported phone widths. Long labels are fitted to the same lanes. Incoming attacks connect the attacking creature to the affected hero with a contact streak and burst; the victim portrait, panel outline and floating HP loss make the impact explicit. Heavy attacks and curses have distinct cues, and fully absorbed strikes show a gold shield and BLOCKED instead of HP loss. Contact indicators remain readable with motion disabled; only recoil and moving trails are omitted. Enemy-hit sound effects now play at impact. Combat statistics and save format are unchanged.
+
+Validation: 53 tests pass, including narrow-screen meter spacing, long labels, damage/block classification, attack-source metadata and two-hero sweeping strikes.

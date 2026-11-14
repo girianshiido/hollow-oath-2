@@ -1,5 +1,5 @@
 export interface EffectBox {x:number;y:number;w:number;h:number;}
-export interface CombatFlash {target:number;hero:number;kind:string;start:number;variant:number;targets?:number[];}
+export interface CombatFlash {target:number;hero:number;kind:string;start:number;variant:number;targets?:number[];heavy?:boolean;curse?:boolean;}
 export function impactPoint(box:EffectBox){return{x:box.x+box.w*.5,y:box.y+box.h*.46};}
 export function swordEndpoints(box:EffectBox,variant:number){
  const {x,y}=impactPoint(box),rx=Math.max(14,box.w*.42),ry=Math.max(13,box.h*.24);
@@ -17,7 +17,13 @@ export function drawCombatFlash(c:CanvasRenderingContext2D,f:CombatFlash,box:Eff
  const duration=['steel','mark'].includes(f.kind)?380:720,p=Math.min(1,(now-f.start)/duration),{x,y}=impactPoint(box),r=Math.max(24,Math.min(box.w,box.h)*.42);
  if(p>=1)return;c.save();c.globalAlpha=Math.min(1,(1-p)*1.6);c.lineCap='round';
  const t=motion?p:.55;
- if(['steel','sunder','execute'].includes(f.kind)){
+ if(f.kind==='hero-hit'||f.kind==='hero-block'){
+  const ax=width*(f.hero===0?.25:.75),ay=height-8,blocked=f.kind==='hero-block',color=blocked?'#ffe6a0':f.curse?'#d6a4ff':'#ff9475',radius=f.heavy?39:26;
+  if(motion){const tail=Math.min(1,t*2.5);glow(c,color,f.heavy?7:4,()=>{c.beginPath();c.moveTo(x+(ax-x)*tail,y+(ay-y)*tail);c.quadraticCurveTo((x+ax)/2,Math.min(height-16,(y+ay)/2)+18,ax,ay);});}
+  c.fillStyle=color;c.globalAlpha=(1-p)*.18;c.beginPath();c.ellipse(ax,ay,radius*1.65,radius*.8,0,0,Math.PI*2);c.fill();c.globalAlpha=Math.min(1,(1-p)*1.7);
+  if(blocked){c.strokeStyle=color;c.lineWidth=3;c.beginPath();c.arc(ax,ay,radius*(.65+t*.35),Math.PI,Math.PI*2);c.stroke();}
+  else{glow(c,color,f.heavy?5:3,()=>{c.beginPath();for(let i=0;i<7;i++){const a=Math.PI+i*Math.PI/6,d=radius*(.45+t*.5);c.moveTo(ax+Math.cos(a)*7,ay+Math.sin(a)*7);c.lineTo(ax+Math.cos(a)*d,ay+Math.sin(a)*d);}});}
+ }else if(['steel','sunder','execute'].includes(f.kind)){
   slash(c,box,f.variant,t,f.kind==='execute'?'#81f4bd':f.kind==='sunder'?'#ffbc72':'#e2f2ff');
   if(f.kind==='execute')slash(c,box,(f.variant+1)%3,Math.min(1,t+.12),'#b6fff0');
   if(motion)particles(c,x,y,r,t,'#ffe3a1',f.variant,10);

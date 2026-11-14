@@ -22,7 +22,7 @@ export interface Run {
   transition:number;trip:Trip|null;relics:string[];relic:string|null;sanctuaries:string[];abyssBest:number;
   contracts:string[];interrupts:number;totalGold:number;log:string[];bossScene?:{kind:'entrance'|'shift';remaining:number;duration:number};
 }
-export interface CombatEvent {kind:'damage'|'heal'|'shield'|'cast'|'death'|'transform'|'reward'|'interrupt'|'hero-hit'|'enemy-strike'|'ward-break'|'boss-phase';target:number;amount?:number;hero?:number;skill?:SkillId;critical?:boolean;action?:CombatMode;}
+export interface CombatEvent {kind:'damage'|'heal'|'shield'|'cast'|'death'|'transform'|'reward'|'interrupt'|'hero-hit'|'enemy-strike'|'ward-break'|'boss-phase';target:number;amount?:number;hero?:number;skill?:SkillId;critical?:boolean;action?:CombatMode;attacker?:number;impact?:'strike'|'heavy'|'curse';absorbed?:number;}
 export interface Stats {hp:number;mp:number;atk:number;armor:number;speed:number;regen:number;}
 export const xpGoal=(level:number)=>Math.round(45+level*19+level**1.5*6);
 export function stats(h:Hero):Stats {
@@ -232,7 +232,7 @@ function enemyAttack(r:Run,e:Enemy,events:CombatEvent[]){
   for(const {h,i}of victims){
     const s=stats(h),raw=Math.max(1,e.atk*(e.intent==='heavy'?1.85:e.intent==='curse'?1.3:1)-s.armor*(e.intent==='curse'?.35:1));
     let damage=Math.round(raw);const absorbed=Math.min(h.shield,damage);h.shield-=absorbed;damage-=absorbed;
-    h.hp=Math.max(0,h.hp-damage);if(e.intent==='curse')h.mp=Math.max(0,h.mp-Math.max(2,Math.floor(s.mp*.07)));events.push({kind:'hero-hit',target:i,amount:damage});
+    h.hp=Math.max(0,h.hp-damage);if(e.intent==='curse')h.mp=Math.max(0,h.mp-Math.max(2,Math.floor(s.mp*.07)));events.push({kind:'hero-hit',target:i,amount:damage,attacker:e.id,impact:e.intent,absorbed});
   }
 }
 /** Advance active combat only. The UI owns pause/background policy. Fixed substeps keep clocks deterministic. */

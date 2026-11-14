@@ -1,3 +1,4 @@
+import {enemyCenter,enemyMeterWidth,fitLabel} from './battle-layout.ts';
 import {bossPhases} from './bosses.ts';
 import {CHAPTERS,FOES,chapterIndex,MODE_INFO} from './content.ts';
 import type {Run,CombatEvent,Enemy} from './engine.ts';
@@ -48,6 +49,7 @@ export class Arena {
       if(event.kind==='interrupt')this.floats.push({x,y:y-20,text:'INTERRUPTED',color:'#85f3dc',start:now});
       if(event.kind==='heal'&&event.hero===-1)this.floats.push({x,y,text:`+${event.amount}`,color:'#8cedb5',start:now});
       if(event.kind==='transform'){this.flashes.push({target:event.target,hero:0,kind:'transform',start:now,variant:0});this.motions.set(event.target,{});const e=r.enemies.find(e=>e.id===event.target);if(e)for(const pose of POSES)art(poseAsset(creatureStem(e),pose));}
+      if(event.kind==='hero-hit')this.flashes.push({target:event.attacker??r.enemies[0]?.id??0,hero:event.target,kind:(event.amount??0)>0?'hero-hit':'hero-block',start:now,variant:0,heavy:event.impact==='heavy',curse:event.impact==='curse'});
       if(event.kind==='enemy-strike'){const state=this.motions.get(event.target)??{};state.strikeAt=r.time;this.motions.set(event.target,state);}
       if(event.kind==='death'){const state=this.motions.get(event.target)??{};state.deathAt=r.time;state.hurtAt=r.time;this.motions.set(event.target,state);}
     }
@@ -64,7 +66,7 @@ export class Arena {
     r.enemies.forEach((e,i)=>{
       const state=this.motions.get(e.id)??{},fade=e.hp<=0?deathOpacity(state,r.time):1;
       const size=count===1?Math.min(w*.76,h*.82):count===2?Math.min(w*.48,h*.68):Math.min(w*.34,h*.60);
-      const x=count===1?w/2:count===2?w*(i===0?.28:.72):w*(i===0?.18:i===1?.5:.82);
+      const x=enemyCenter(w,count,i);
       const base=h*(count===3&&i===1?.72:.86),bob=this.motion&&e.hp>0?Math.sin(r.time*1.4+i*2)*1.5:0;
       const stem=creatureStem(e),bounds=CREATURE_BOUNDS[stem]??[.1,.1,.9,.94],top=base-size*(CREATURE_ANCHORS[stem]??.94);
       const rect={id:e.id,x:x-size/2+size*bounds[0],y:top+size*bounds[1],w:size*(bounds[2]-bounds[0]),h:size*(bounds[3]-bounds[1])};this.rects.push(rect);
@@ -82,7 +84,7 @@ export class Arena {
         c.translate(x+recoil,base+bob);c.scale(breathe,breathe);c.drawImage(sprite,-dw/2,-dh*(CREATURE_ANCHORS[stem]??.94),dw,dh);c.setTransform(Math.min(2,window.devicePixelRatio||1),0,0,Math.min(2,window.devicePixelRatio||1),0,0);
       }
       if(e.hp>0){
-        const barWidth=count===1?Math.min(w-44,300):Math.min(size*.94,170),barY=Math.max(e.boss?58:36,rect.y-10);
+        const barWidth=enemyMeterWidth(w,count),barY=Math.max(e.boss?58:36,rect.y-10);
         this.label(e,x,barY,barWidth,chosen,r);
       }
       c.restore();
@@ -95,15 +97,15 @@ export class Arena {
   label(e:Enemy,x:number,y:number,w:number,selected:boolean,r:Run){
     const c=this.ctx;
     c.textAlign='center';c.font=`600 ${e.boss?14:11}px system-ui`;c.lineWidth=3;c.strokeStyle='#0b1a2dee';c.fillStyle=selected?'#fff3c5':'#f2f5ef';
-    const name=e.name.length>23&&r.enemies.length>1?e.name.slice(0,21)+'…':e.name;c.strokeText(name,x,y-7);c.fillText(name,x,y-7);
+    const name=fitLabel(e.name,w-4,text=>c.measureText(text).width);c.strokeText(name,x,y-7);c.fillText(name,x,y-7);
     c.fillStyle='#112338ee';this.round(x-w/2,y,w,6,3);c.fill();c.fillStyle=e.boss?'#edb476':selected?'#90dfad':'#c3d6cc';this.round(x-w/2,y,w*Math.max(0,e.hp/e.maxHp),6,3);c.fill();
     if(e.chapterBoss){c.fillStyle='#101f2dcc';for(let i=1;i<bossPhases(r.trip?.wave??r.wave).length;i++)c.fillRect(x-w/2+w*i/bossPhases(r.trip?.wave??r.wave).length-1,y,2,6);}
     if(e.preparation>0){
-      c.fillStyle='#1a1428ee';this.round(x-w/2,y+11,w,16,3);c.fill();c.fillStyle=e.intent==='heal'?'#a7edbd':'#ffd79a';c.font='700 9px system-ui';c.fillText(`${e.intent==='heal'?'MENDING':e.intent==='curse'?'CURSE':e.intent==='strike'?'STRIKE':'HEAVY BLOW'} · ${e.preparation.toFixed(1)}s`,x,y+22);
+      c.fillStyle='#1a1428ee';this.round(x-w/2,y+11,w,16,3);c.fill();c.fillStyle=e.intent==='heal'?'#a7edbd':'#ffd79a';c.font='700 9px system-ui';c.fillText(`${e.intent==='heal'?'MENDING':e.intent==='curse'?'CURSE':e.intent==='strike'?'STRIKE':'HEAVY BLOW'} · ${e.preparation.toFixed(1)}s`,x,y+22,w-8);
     }else{
       c.font='600 8px system-ui';c.fillStyle='#f2f6e9';c.strokeStyle='#0b1a2d';c.lineWidth=3;
       const status=e.ward?`SEAL: ${MODE_INFO[e.ward].name.toUpperCase()}`:e.exposedUntil>r.time?'EXPOSED':e.markedUntil>r.time?'MARKED':e.chapterBoss?`FORM ${e.form} / 2`:e.boss?'WARDEN':e.role==='guard'&&r.enemies.some(a=>a.id!==e.id&&a.hp>0)?'PROTECTING':`WEAK: ${FOES[e.family]!.weakness.toUpperCase()}`;
-      c.strokeText(status,x,y+20);c.fillText(status,x,y+20);
+      c.strokeText(status,x,y+20,w-4);c.fillText(status,x,y+20,w-4);
     }
   }
   effects(now:number,r:Run){
