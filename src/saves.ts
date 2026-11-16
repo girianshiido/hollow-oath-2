@@ -1,5 +1,5 @@
 import {bossPhases} from './bosses.ts';
-import {CLASS_IDS,CLASSES,SKILLS,SANCTUARIES,FOES,COMBAT_MODES} from './content.ts';
+import {CLASS_IDS,CLASSES,SKILLS,SANCTUARIES,FOES,COMBAT_MODES,MAGIC_MODES,MAX_MAGIC_LEVEL} from './content.ts';
 import type {ClassId} from './content.ts';
 import {stats} from './engine.ts';
 import type {Hero,Run,Enemy,Trip} from './engine.ts';
@@ -16,6 +16,7 @@ function hero(v:unknown):v is Hero {
   if(!['level','xp','hp','mp','weapon','armor','focus','clock','shield','shieldUntil','tauntUntil'].every(k=>number(v[k])))return false;
   if(!number(v.level,1,99)||!Number.isInteger(v.level)||!['weapon','armor','focus'].every(k=>number(v[k],1,32)&&Number.isInteger(v[k])))return false;
   if(!Array.isArray(v.skills)||v.skills.length!==2||!v.skills.every(s=>number(s,1,6)&&Number.isInteger(s)))return false;
+  if(v.magic!==undefined&&(!object(v.magic)||!MAGIC_MODES.every(mode=>number((v.magic as Record<string,unknown>)[mode],1,MAX_MAGIC_LEVEL)&&Number.isInteger((v.magic as Record<string,unknown>)[mode]))))return false;
   if(!Array.isArray(v.cooldowns)||v.cooldowns.length!==2||!v.cooldowns.every(s=>number(s,0,30)))return false;
   const h=v as unknown as Hero,s=stats(h);
   return h.hp<=s.hp+.001&&h.mp<=s.mp+.001&&h.cooldowns.every((c,i)=>c<=SKILLS[CLASSES[h.classId].skills[i] as keyof typeof SKILLS].cooldown+.01);

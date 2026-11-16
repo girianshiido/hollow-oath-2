@@ -7,3 +7,5 @@ art-sources/
 qa/
 
 __pycache__/
+
+.qa-tools/

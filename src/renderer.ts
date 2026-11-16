@@ -1,4 +1,4 @@
-import {enemyCenter,enemyMeterWidth,fitLabel} from './battle-layout.ts';
+import {enemyCenter,enemyMeterWidth,fitLabel,arenaUiScale} from './battle-layout.ts';
 import {bossPhases} from './bosses.ts';
 import {CHAPTERS,FOES,chapterIndex,MODE_INFO} from './content.ts';
 import type {Run,CombatEvent,Enemy} from './engine.ts';
@@ -84,7 +84,7 @@ export class Arena {
         c.translate(x+recoil,base+bob);c.scale(breathe,breathe);c.drawImage(sprite,-dw/2,-dh*(CREATURE_ANCHORS[stem]??.94),dw,dh);c.setTransform(Math.min(2,window.devicePixelRatio||1),0,0,Math.min(2,window.devicePixelRatio||1),0,0);
       }
       if(e.hp>0){
-        const barWidth=enemyMeterWidth(w,count),barY=Math.max(e.boss?58:36,rect.y-10);
+        const barWidth=enemyMeterWidth(w,count),barY=Math.max((e.boss?58:36)*arenaUiScale(w),rect.y-10);
         this.label(e,x,barY,barWidth,chosen,r);
       }
       c.restore();
@@ -95,7 +95,7 @@ export class Arena {
     }
   }
   label(e:Enemy,x:number,y:number,w:number,selected:boolean,r:Run){
-    const c=this.ctx;
+    const c=this.ctx,scale=arenaUiScale(this.width);c.save();c.translate(x,y);c.scale(scale,scale);x=0;y=0;w/=scale;
     c.textAlign='center';c.font=`600 ${e.boss?14:11}px system-ui`;c.lineWidth=3;c.strokeStyle='#0b1a2dee';c.fillStyle=selected?'#fff3c5':'#f2f5ef';
     const name=fitLabel(e.name,w-4,text=>c.measureText(text).width);c.strokeText(name,x,y-7);c.fillText(name,x,y-7);
     c.fillStyle='#112338ee';this.round(x-w/2,y,w,6,3);c.fill();c.fillStyle=e.boss?'#edb476':selected?'#90dfad':'#c3d6cc';this.round(x-w/2,y,w*Math.max(0,e.hp/e.maxHp),6,3);c.fill();
@@ -107,6 +107,7 @@ export class Arena {
       const status=e.ward?`SEAL: ${MODE_INFO[e.ward].name.toUpperCase()}`:e.exposedUntil>r.time?'EXPOSED':e.markedUntil>r.time?'MARKED':e.chapterBoss?`FORM ${e.form} / 2`:e.boss?'WARDEN':e.role==='guard'&&r.enemies.some(a=>a.id!==e.id&&a.hp>0)?'PROTECTING':`WEAK: ${FOES[e.family]!.weakness.toUpperCase()}`;
       c.strokeText(status,x,y+20,w-4);c.fillText(status,x,y+20,w-4);
     }
+    c.restore();
   }
   effects(now:number,r:Run){
     const c=this.ctx,w=this.width,h=this.height;

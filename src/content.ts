@@ -108,3 +108,7 @@ export const MODE_INFO:Record<CombatMode,{name:string;icon:string;cost:number;co
  mend:{name:'Heal',icon:'heart',cost:8,color:'#8ff0bf',text:'Heals this hero on each action until full HP or insufficient mana, then returns to steel.'}
 };
 export const foeUnlockWave=(family:number)=>family<32?1:(family-31)*2;
+
+export const MAGIC_MODES=['ember','rime','storm','mend'] as const;
+export type MagicMode=typeof MAGIC_MODES[number];
+export const MAX_MAGIC_LEVEL=10;

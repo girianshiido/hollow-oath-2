@@ -23,3 +23,145 @@ html,body,#app{touch-action:pan-y;-webkit-user-select:none;user-select:none;-web
 
 /* Enemy hits identify the victim, actual HP loss and fully absorbed strikes. */
 .hero-panel.taking-hit{--impact-color:#ff997c;border-color:var(--impact-color);box-shadow:inset 0 0 18px #ff654d45,0 0 9px #ff654d66}.hero-panel.taking-hit:after{content:"";position:absolute;pointer-events:none;left:5px;top:7px;width:35px;height:35px;border-radius:50%;background:linear-gradient(48deg,transparent 43%,#fff8df 48% 52%,transparent 57%),linear-gradient(-36deg,transparent 43%,var(--impact-color) 48% 52%,transparent 57%),radial-gradient(circle,#ffe1b799,transparent 72%);z-index:3}.hero-panel.taking-hit>img{filter:brightness(1.45) sepia(.3)}.hero-panel.blocked-hit{--impact-color:#ffe19c;box-shadow:inset 0 0 17px #eac27133,0 0 9px #eac27166}.hero-panel.blocked-hit:after{background:radial-gradient(circle,transparent 48%,#ffe19c 52% 59%,transparent 64%)}.hero-panel.curse-hit{--impact-color:#d3a2ff;box-shadow:inset 0 0 18px #b35cff44,0 0 9px #b35cff66}.hero-panel.strong-hit{outline:1px solid var(--impact-color);outline-offset:1px}.hero-panel.fallen.taking-hit{filter:none;opacity:1}.hero-impact{position:absolute;z-index:6;right:8px;top:-15px;text-align:center;pointer-events:none;color:#ffcab6;visibility:hidden;line-height:1;text-shadow:-1px -1px 2px #07121d,1px -1px 2px #07121d,-1px 1px 2px #07121d,1px 2px 3px #07121d}.taking-hit .hero-impact{visibility:visible}.hero-impact b{font-size:23px;font-weight:850}.hero-impact small{display:block;font-size:7px;font-weight:750;letter-spacing:.6px;margin-top:3px;color:#fff0de}.strong-hit .hero-impact b{font-size:27px}.blocked-hit .hero-impact b{font-size:12px;color:#ffe5a3}.curse-hit .hero-impact b{color:#e2c5ff}@media(max-width:360px){.hero-panel.taking-hit:after{width:29px;height:33px;left:4px;top:6px}}
+
+/* Responsive party rows: direct commands, readable phones and full tablet space. */
+#app{max-width:1200px;width:100%}
+.page{width:100%;max-width:1040px;margin-inline:auto}
+.battle-screen{height:100svh;height:100dvh;min-height:0;max-height:none;overflow:auto;overscroll-behavior:contain}
+.party-controls{display:flex;flex-direction:column;gap:5px;padding:4px 10px 6px;flex-shrink:0;min-width:0}
+.party-controls .hero-panel{display:grid;grid-template-columns:31px minmax(0,1fr);gap:4px 7px;align-items:center;padding:5px;min-width:0}
+.party-controls .hero-panel>img{width:31px;height:32px;object-fit:cover}
+.party-controls .hero-vitals{min-width:0}
+.party-controls .hero-name{margin-bottom:3px;font-size:10px;line-height:12px;gap:7px}
+.party-controls .hero-name strong{flex:1;min-width:0;white-space:nowrap}
+.party-controls .hero-name small{font-size:8px}
+.party-controls .hero-order{display:inline;font-size:8px;margin:0;min-height:0;max-width:40%;line-height:12px}
+.hero-meters{display:grid;grid-template-columns:1fr 1fr;gap:7px;min-width:0}
+.hero-meters .vital{height:12px;margin:0}
+.hero-meters .vital span{font-size:8px;line-height:12px}
+.hero-actions{grid-column:1/-1;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;min-width:0}
+.hero-actions .skill-button{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:1px;min-width:0;width:100%;height:70px;min-height:70px;padding:12px 2px 5px}
+.hero-actions .skill-icon{display:block;line-height:0;margin:0}
+.hero-actions .skill-icon .icon{width:17px;height:17px}
+.hero-actions .skill-button strong{display:flex;align-items:center;justify-content:center;min-height:20px;max-width:100%;font-size:9px;line-height:10px;white-space:normal;overflow-wrap:anywhere;letter-spacing:0}
+.hero-actions .skill-cost{margin:0;font-size:10px;line-height:11px;white-space:nowrap}
+.action-rank{position:absolute;left:3px;top:3px;font-size:7px;line-height:8px;color:#b9cbd0}
+.hero-actions .key-hint{top:3px;right:3px;font-size:7px}
+.hero-actions .skill-cooldown{top:15px;font-size:12px}
+.order-button:before{display:none}
+.order-button.active{border-color:var(--skill-color);background:color-mix(in srgb,var(--skill-color),#102330 82%);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--skill-color),transparent 60%)}
+.order-button.active strong{color:var(--skill-color)}
+.companion-hint{text-align:center;font-size:9px;line-height:12px;color:var(--muted);margin:0}
+.magic-training .section-head span{max-width:45%}
+@media(max-width:359px){
+ .party-controls{padding:3px 9px 5px;gap:4px}
+ .party-controls .hero-panel{grid-template-columns:27px minmax(0,1fr);padding:4px;gap:3px 6px}
+ .party-controls .hero-panel>img{width:27px;height:27px}
+ .party-controls .hero-name{font-size:9px;line-height:10px;margin-bottom:3px}
+ .party-controls .hero-order{font-size:7px;line-height:10px}
+ .hero-meters .vital{height:10px}.hero-meters .vital span{font-size:8px;line-height:10px}
+ .hero-actions{grid-template-columns:repeat(10,minmax(0,1fr));gap:3px}
+ .hero-actions .order-button{grid-column:span 2}
+ .hero-actions .special-button{grid-column:span 5}
+ .hero-actions .skill-button{height:44px;min-height:44px;padding:10px 2px 3px}
+ .hero-actions .skill-icon{display:none}
+ .hero-actions .skill-button strong{min-height:13px;line-height:12px;font-size:10px;overflow-wrap:normal}
+ .hero-actions .skill-cost{font-size:9px;line-height:10px}
+ .hero-actions .skill-cooldown{top:12px;font-size:11px}
+ .arena-wrap{min-height:140px}
+ .boss-hud{display:grid;grid-template-columns:1fr auto;gap:2px 8px;padding:3px 10px;min-height:28px}
+ .boss-hud .boss-phase-name{font-size:10px;line-height:11px}
+ .boss-hud small{grid-column:1/-1;font-size:7px;line-height:8px;text-align:center}
+}
+@media(min-width:600px){
+ .page{padding-inline:clamp(24px,4vw,46px)}
+ .page-head{padding-top:calc(24px + env(safe-area-inset-top))}
+ .page-head h1{font-size:33px}.intro{font-size:16px;max-width:650px}
+ .primary,.secondary{min-height:54px;font-size:15px}
+ .title-main{max-width:440px;margin-top:clamp(80px,13svh,170px)}
+ .game-title{font-size:80px}.game-title em{font-size:44px}
+ .title-tagline{font-size:16px}.title-top .edition{font-size:11px}
+ .title-sound{font-size:12px}.title-foot{font-size:10px;padding:24px}
+ .title-tools .subtle{font-size:13px;gap:8px}
+ .character-grid{gap:20px}.character-caption strong{font-size:27px}.character-caption small{font-size:14px}
+ .character-detail h2{font-size:34px}.character-detail>p:not(.eyebrow){font-size:16px}
+ .skill-chips span{font-size:13px}.sticky-action{max-width:600px;margin-inline:auto}
+ .section-head h2{font-size:26px}.section-head>span{font-size:12px}
+ .shop-item{padding:18px;gap:15px}.shop-item h3{font-size:16px}.shop-item h3 small{font-size:12px}.shop-item p{font-size:13px}
+ .buy-button{font-size:13px;min-height:48px;min-width:82px}
+ .hero-tab span{font-size:17px}.hero-tab small{font-size:11px}.hero-tab img{width:45px;height:50px}
+ .stat-strip>span{font-size:13px}.fine{font-size:13px}
+ .battle-head{padding:14px 20px 10px}.battle-heading h1{font-size:30px}.battle-heading .eyebrow{font-size:11px}
+ .battle-head .icon-button{width:44px;height:44px}.battle-head .icon{width:21px;height:21px}
+ .battle-progress{font-size:13px;padding:4px 24px 14px}.battle-progress .thin-track{height:5px}
+ .arena-wrap{margin-inline:16px;min-height:220px}
+ .arena-badge{font-size:10px;padding:7px 9px}.arena-info{width:38px;height:38px}.arena-info .icon{width:20px;height:20px}
+ .arena-bottom{font-size:12px;bottom:14px}
+ .target-row{padding:10px 18px 7px;gap:10px;min-height:44px}.target-chip{font-size:12px;min-height:36px}.target-chip .icon{width:16px;height:16px}
+ .party-controls{padding:6px 18px 10px;gap:10px}
+ .party-controls .hero-panel{grid-template-columns:44px minmax(0,1fr);padding:10px;gap:8px 12px}
+ .party-controls .hero-panel>img{width:44px;height:44px}
+ .party-controls .hero-name{font-size:16px;line-height:18px;margin-bottom:5px}
+ .party-controls .hero-name small,.party-controls .hero-order{font-size:11px;line-height:15px}
+ .hero-meters{gap:12px}.hero-meters .vital{height:16px}.hero-meters .vital span{font-size:11px;line-height:16px}
+ .hero-actions{gap:8px}
+ .hero-actions .skill-button{height:92px;min-height:92px;padding:17px 5px 7px;gap:3px}
+ .hero-actions .skill-icon .icon{width:26px;height:26px}
+ .hero-actions .skill-button strong{font-size:14px;line-height:15px;min-height:17px}
+ .hero-actions .skill-cost{font-size:13px;line-height:15px}
+ .action-rank{font-size:10px;line-height:12px;top:4px;left:5px}
+ .hero-actions .key-hint{font-size:10px;top:4px;right:5px}.hero-actions .skill-cooldown{font-size:18px;top:20px}
+ .companion-hint{font-size:12px;line-height:16px}
+ .battle-foot{padding:0 20px 10px;font-size:11px}.battle-foot .currency{font-size:13px}
+ .sheet{width:min(90vw,620px)}.sheet-body>p,.guide p{font-size:15px}.slider-label,.toggle{font-size:16px}
+ .sheet-head h2{font-size:32px}.boss-hud{min-height:52px;padding:6px 0;gap:5px}
+ .boss-phase-name{font-size:16px}.boss-hud small{font-size:11px}
+ .boss-phase-marks i{width:8px;height:8px}
+}
+@media(min-width:900px){
+ .character-grid:not(.recruit-grid){grid-template-columns:repeat(4,minmax(0,1fr))}
+ .character-detail{max-width:720px}.recruit-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .recruit-grid .character-card:last-child{grid-column:auto;display:block;max-height:none}
+ .recruit-grid .character-card:last-child img{width:100%;aspect-ratio:1.12}
+ .recruit-grid .character-card:last-child .character-caption{left:0;height:auto;display:block;padding:26px 11px 10px;background:linear-gradient(transparent,#081728ed)}
+ .recruit-grid .character-card:last-child .character-caption strong{font-size:27px}
+}
+@media(min-width:900px) and (orientation:landscape){
+ .party-controls .hero-panel{grid-template-columns:38px minmax(0,1fr);padding:8px;gap:6px 10px}
+ .party-controls .hero-panel>img{width:38px;height:38px}
+ .hero-actions .skill-button{height:80px;min-height:80px;padding:15px 4px 6px;gap:2px}
+ .hero-actions .skill-icon .icon{width:22px;height:22px}
+ .hero-actions .skill-button strong{font-size:13px;line-height:14px}
+ .hero-actions .skill-cost{font-size:12px;line-height:14px}
+}
+@media(min-width:700px) and (max-height:600px){
+ .battle-screen{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,42%);grid-template-rows:auto auto auto minmax(0,1fr) auto;grid-template-areas:"head head" "progress party" "boss party" "arena party" "targets foot";overflow:hidden}
+ .battle-head{grid-area:head;padding:6px 12px}.battle-heading h1{font-size:20px}
+ .battle-head .icon-button{width:34px;height:34px}.battle-heading .eyebrow{font-size:8px}
+ .battle-progress{grid-area:progress;font-size:10px;padding:3px 14px 7px}
+ .boss-hud{grid-area:boss;min-height:30px;padding:3px;gap:2px}.boss-phase-name{font-size:11px}.boss-hud small{font-size:8px}
+ .arena-wrap{grid-area:arena;min-height:0;margin-inline:9px}
+ .target-row{grid-area:targets;min-height:30px;padding:4px 9px;font-size:9px}.target-chip{font-size:9px;min-height:26px}
+ .party-controls{grid-area:party;overflow-y:auto;align-self:stretch;padding:4px 8px;gap:6px}
+ .party-controls .hero-panel{grid-template-columns:28px minmax(0,1fr);padding:5px;gap:4px 6px}
+ .party-controls .hero-panel>img{width:28px;height:29px}
+ .party-controls .hero-name{font-size:10px;line-height:12px;margin-bottom:3px}
+ .party-controls .hero-name small,.party-controls .hero-order{font-size:8px;line-height:10px}
+ .hero-meters .vital{height:11px}.hero-meters .vital span{font-size:8px;line-height:11px}
+ .hero-actions{gap:3px}
+ .hero-actions .skill-button{height:56px;min-height:56px;padding:9px 2px 3px;gap:1px}
+ .hero-actions .skill-icon .icon{width:14px;height:14px}
+ .hero-actions .skill-button strong{font-size:8px;line-height:9px;min-height:16px}
+ .hero-actions .skill-cost{font-size:9px;line-height:10px}
+ .action-rank,.hero-actions .key-hint{font-size:6px;line-height:7px;top:2px}
+ .hero-actions .skill-cooldown{font-size:11px;top:12px}
+ .battle-foot{grid-area:foot;font-size:8px;padding:4px 10px}.battle-foot .currency{font-size:10px}
+ .arena-badge{font-size:7px;padding:5px}.arena-info{width:28px;height:28px}.arena-bottom{font-size:9px}
+ .boss-scene{grid-column:1/-1;grid-row:1/-1}
+}
+
+@media(min-width:360px) and (max-width:699px) and (max-height:620px){
+ .hero-actions .skill-button{height:62px;min-height:62px;padding:11px 2px 4px}
+ .hero-actions .skill-icon .icon{width:16px;height:16px}
+ .hero-actions .skill-button strong{min-height:16px;line-height:9px}
+}

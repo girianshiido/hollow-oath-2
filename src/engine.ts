@@ -1,11 +1,12 @@
+import {modeCost,magicLevel,magicPower,magicUpgradeCost} from './magic.ts';
 import {chapterEndurance,bossPhases,bossWard,bossMove,bossForm,bossPhase} from './bosses.ts';
-import {CLASSES,CLASS_IDS,SKILLS,FOES,CHAPTERS,SANCTUARIES,ABYSS_RULES,chapterIndex,COMBAT_MODES,MODE_INFO,foeUnlockWave} from './content.ts';
-import type {ClassId,SkillId,EnemyRole,CombatMode} from './content.ts';
+import {CLASSES,CLASS_IDS,SKILLS,FOES,CHAPTERS,SANCTUARIES,ABYSS_RULES,chapterIndex,COMBAT_MODES,MAGIC_MODES,MAX_MAGIC_LEVEL,foeUnlockWave} from './content.ts';
+import type {ClassId,SkillId,EnemyRole,CombatMode,MagicMode} from './content.ts';
 
 export interface Hero {
   classId:ClassId; name:string; level:number; xp:number; hp:number; mp:number;
   weapon:number; armor:number; focus:number; skills:[number,number]; cooldowns:[number,number];
-  clock:number; shield:number; shieldUntil:number; tauntUntil:number;mode?:CombatMode;
+  clock:number; shield:number; shieldUntil:number; tauntUntil:number;mode?:CombatMode;magic?:Record<MagicMode,number>;
 }
 export interface Enemy {
   id:number; family:number; name:string; role:EnemyRole; hp:number; maxHp:number; atk:number; armor:number; speed:number;
@@ -32,7 +33,7 @@ export function stats(h:Hero):Stats {
     armor:c.armor+l*.72+(h.armor-1)*2.4,speed:c.speed+Math.min(.35,l*.008),regen:(.85+l*.022+(h.focus-1)*.045)*(h.classId==='hexweaver'?1.15:1)};
 }
 export function newHero(classId:ClassId,level=1):Hero {
-  const h:Hero={classId,name:CLASSES[classId].person,level,xp:0,hp:0,mp:0,weapon:1,armor:1,focus:1,skills:[1,1],cooldowns:[0,0],clock:0,shield:0,shieldUntil:0,tauntUntil:0,mode:'steel'};
+  const h:Hero={classId,name:CLASSES[classId].person,level,xp:0,hp:0,mp:0,weapon:1,armor:1,focus:1,skills:[1,1],cooldowns:[0,0],clock:0,shield:0,shieldUntil:0,tauntUntil:0,mode:'steel',magic:{ember:1,rime:1,storm:1,mend:1}};
   const s=stats(h);h.hp=s.hp;h.mp=s.mp;return h;
 }
 export function newRun(classId:ClassId,name?:string):Run {
@@ -90,6 +91,11 @@ export function buyGear(r:Run,hero:number,slot:'weapon'|'armor'|'focus'):boolean
 export function buySkill(r:Run,hero:number,index:number):boolean{
   const h=r.heroes[hero];if(!h||!canPrepare(r)||(index!==0&&index!==1)||h.skills[index]!>=6)return false;
   const cost=upgradeCost(h,index);if(r.essence<cost)return false;r.essence-=cost;h.skills[index]!++;return true;
+}
+export function buyMagic(r:Run,hero:number,mode:MagicMode):boolean{
+  const h=r.heroes[hero];if(!h||!canPrepare(r)||!MAGIC_MODES.includes(mode)||magicLevel(h,mode)>=MAX_MAGIC_LEVEL)return false;
+  const cost=magicUpgradeCost(h,mode);if(r.essence<cost)return false;
+  r.essence-=cost;h.magic??={ember:1,rime:1,storm:1,mend:1};h.magic[mode]=magicLevel(h,mode)+1;return true;
 }
 function refill(r:Run){for(const h of r.heroes){const s=stats(h);h.hp=s.hp;h.mp=s.mp;h.clock=0;h.cooldowns=[0,0];h.shield=0;h.shieldUntil=0;h.tauntUntil=0;}}
 export function resume(r:Run):boolean {
@@ -254,16 +260,16 @@ export function tick(r:Run,seconds:number):CombatEvent[]{
       h.clock+=dt*s.speed;
       if(h.clock>=1){
         h.clock-=1;const e=target(r),index=r.heroes.indexOf(h);let action=h.mode??'steel';
-        if(action==='mend'&&h.hp>=s.hp-.01||h.mp<MODE_INFO[action].cost){h.mode='steel';action='steel';}
+        if(action==='mend'&&h.hp>=s.hp-.01||h.mp<modeCost(h,action)){h.mode='steel';action='steel';}
         if(action==='mend'){
-          h.mp-=MODE_INFO.mend.cost;const amount=Math.min(s.hp-h.hp,Math.round(s.hp*.09+s.atk*.65));h.hp+=amount;
+          h.mp-=modeCost(h,'mend');const amount=Math.min(s.hp-h.hp,Math.round((s.hp*.09+s.atk*.65)*magicPower(h,'mend')));h.hp+=amount;
           events.push({kind:'heal',target:index,hero:index,amount,action:'mend'});if(h.hp>=s.hp-.01)h.mode='steel';
         }else if(e){
-          h.mp-=MODE_INFO[action].cost;
+          h.mp-=modeCost(h,action);
           const element=action==='steel'?'physical':action==='ember'?'fire':action==='rime'?'ice':'light';
-          const before=events.length;hurtEnemy(r,e,s.atk*(action==='steel'?1:CLASSES[h.classId].magic?1.8:1.6),element,events,index);
+          const before=events.length;hurtEnemy(r,e,s.atk*(action==='steel'?1:CLASSES[h.classId].magic?1.8:1.6)*magicPower(h,action),element,events,index);
           for(let j=before;j<events.length;j++)if(events[j]!.kind==='damage')events[j]!.action=action;
-          if(action==='rime')e.slowUntil=Math.max(e.slowUntil,r.time+1.1);
+          if(action==='rime')e.slowUntil=Math.max(e.slowUntil,r.time+1.1+(magicLevel(h,'rime')-1)*.09);
         }
       }
     }
